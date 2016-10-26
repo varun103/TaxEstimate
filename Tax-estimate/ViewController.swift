@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var uiTaxLabel: UILabel!
+    
+    @IBOutlet weak var uiTaxField: UITextField!
+    
+    @IBAction func textEntered(sender: UITextField) {
+        print(uiTaxField.text)
+    }
+    @IBAction func calculate(sender: UIButton) {
+        let inputSalary = Int(uiTaxField.text!)
+        uiTaxLabel.text = String(inputSalary)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +30,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+ 
+    func testFieldShouldReturn(textField :UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func printTextField(){
+        print(uiTaxField.text)
+    }
 }
 
