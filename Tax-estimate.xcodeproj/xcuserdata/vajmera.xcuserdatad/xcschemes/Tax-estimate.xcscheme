@@ -37,6 +37,11 @@
                BlueprintName = "Tax-estimateTests"
                ReferencedContainer = "container:Tax-estimate.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "Tax_estimateTests/unspecifiedMethod_-[Tax_estimateTests (null)]()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

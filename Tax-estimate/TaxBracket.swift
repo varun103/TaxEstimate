@@ -12,32 +12,39 @@ class TaxBracket{
     
     let bracket: Int;
     
-    var startRange: Int;
+    var startRange: Double;
     
-    var endRange: Int?;
+    var endRange: Double?;
     
-    var percentage: Float;
+    var percentage: Double;
     
     
-    init(bracket:Int, startRange:Int, endRange:Int){
+    init(bracket:Int, startRange:Double, endRange:Double?){
         self.bracket = bracket
         self.startRange = startRange
         self.endRange = endRange
         self.percentage = TaxBracket.calcBracket(self.bracket)
     }
     
+    func getTax(income: Double) throws -> Double {
+        if income >= self.endRange{
+            throw TaxCalculationError.OutOfTaxBracket
+        } else{
+            return income * self.percentage
+        }
+    }
     
-    func getTaxForFullRange() -> Float{
+    func getTaxForFullRange() -> Double {
         if self.endRange != nil{
-            return Float(self.endRange! - self.startRange) * self.percentage
+            return (self.endRange! - self.startRange) * self.percentage
         }else
         {
             return 0.0
         }
     }
     
-    class func calcBracket(_bracket:Int) -> Float{
-        return Float(_bracket) * 0.01
+    class func calcBracket(_bracket:Int) -> Double{
+        return Double(_bracket) * 0.01
     }
     
 }
