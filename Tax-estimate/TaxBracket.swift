@@ -43,7 +43,7 @@ class TaxBracket{
         }
     }
     
-    class func calcBracket(_bracket:Int) -> Double{
+    static func calcBracket(_bracket:Int) -> Double{
         return Double(_bracket) * 0.01
     }
     

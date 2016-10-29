@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaxBrackets {
+class TaxBrackets: TaxBracketsProtocol{
     
     private let income: Float
     private var federal_tax: Float
@@ -30,6 +30,9 @@ class TaxBrackets {
         return 0
     }
     
+    func getTaxBracket() -> TaxBracket? {
+        return nil
+    }
     
     func initializeTaxBracketMap(){
         taxBrackets[10]=9275

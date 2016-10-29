@@ -201,13 +201,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimateTests/Tax_estimateTests.swift"
-            timestampString = "499248634.402611"
+            timestampString = "499468642.405722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "Tax_estimateTests"
-            landmarkType = "3">
+            startingLineNumber = "69"
+            endingLineNumber = "69">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -233,7 +231,7 @@
                   moduleName = "Tax-estimateTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/Tax_estimateTests.swift"
-                  timestampString = "499249053.979196"
+                  timestampString = "499468556.167263"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -248,7 +246,7 @@
                   moduleName = "Tax-estimateTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/Tax_estimateTests.swift"
-                  timestampString = "499249053.979375"
+                  timestampString = "499468556.167471"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -263,7 +261,7 @@
                   moduleName = "Tax-estimateTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/Tax_estimateTests.swift"
-                  timestampString = "499249053.979498"
+                  timestampString = "499468556.167674"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -314,6 +312,197 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "Tax_estimateTests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimateTests/Tax_estimateTests.swift"
+            timestampString = "499468069.70923"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "testGetTaxForRange()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tax_estimateTests.Tax_estimateTests.testGetTaxForRange (Tax_estimateTests.Tax_estimateTests)() -&gt; ()"
+                  moduleName = "Tax-estimateTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/Tax_estimateTests.swift"
+                  timestampString = "499468556.169438"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "159">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tax_estimateTests.Tax_estimateTests.(testGetTaxForRange (Tax_estimateTests.Tax_estimateTests) -&gt; () -&gt; ()).(implicit closure #1)"
+                  moduleName = "Tax-estimateTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/Tax_estimateTests.swift"
+                  timestampString = "499468556.169617"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tax_estimateTests.Tax_estimateTests.(testGetTaxForRange (Tax_estimateTests.Tax_estimateTests) -&gt; () -&gt; ()).(implicit closure #2)"
+                  moduleName = "Tax-estimateTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/Tax_estimateTests.swift"
+                  timestampString = "499468556.169859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "9">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimateTests/Tax_estimateTests.swift"
+            timestampString = "499468642.405722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "testGetTaxForRangeThrowsError()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimateTests/Tax_estimateTests.swift"
+            timestampString = "499468642.405722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "testGetTaxForRangeThrowsError()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimateTests/Tax_estimateTests.swift"
+            timestampString = "499468642.405722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "testGetTaxForRangeThrowsError()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimateTests/Tax_estimateTests.swift"
+            timestampString = "499468642.405722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "testGetTaxForRangeThrowsError()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimateTests/Tax_estimateTests.swift"
+            timestampString = "499468642.405722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "testGetTaxForRangeThrowsError()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/User.swift"
+            timestampString = "499471898.625383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init(filingStatus:income:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/User.swift"
+            timestampString = "499473014.303764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "User"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/User.swift"
+            timestampString = "499473355.976797"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "User"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
