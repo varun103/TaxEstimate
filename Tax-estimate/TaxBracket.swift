@@ -10,13 +10,13 @@ import UIKit
 
 class TaxBracket{
     
-    let bracket: Int;
+    private let bracket: Int
     
-    var startRange: Double;
+    private var startRange: Double
     
-    var endRange: Double?;
+    private var endRange: Double?
     
-    var percentage: Double;
+    private var percentage: Double
     
     
     init(bracket:Int, startRange:Double, endRange:Double?){

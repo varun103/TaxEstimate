@@ -1,5 +1,5 @@
 //
-//  TaxBracketsProtocol.swift
+//  TaxType.swift
 //  Tax-estimate
 //
 //  Created by Varun Ajmera on 10/29/16.
@@ -8,7 +8,11 @@
 
 import UIKit
 
-protocol TaxBracketsProtocol {
+enum TaxType {
+    
+    case Fed
+    
+    case State
 
-    func getTaxBracketForUser(user: UserProtocol) -> TaxBracket?
 }
+

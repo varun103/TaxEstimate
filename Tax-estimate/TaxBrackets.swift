@@ -13,7 +13,8 @@ class TaxBrackets: TaxBracketsProtocol{
     private let income: Float
     private var federal_tax: Float
     
-    private var taxBrackets = [Float: Float]()
+    private var taxBrackets = [FilingStatus: [TaxBracket]]()
+    
     
     init(income:Float){
         self.income = income
@@ -22,25 +23,24 @@ class TaxBrackets: TaxBracketsProtocol{
     }
     
     
-    func getTaxBracket() -> Int {
-    
-        if self.income > taxBrackets[10]{
-           self.federal_tax = self.federal_tax + (taxBrackets[10]! * 0.10)
-        }
-        return 0
-    }
-    
-    func getTaxBracket() -> TaxBracket? {
+    func getTaxBracketForUser(user: UserProtocol) -> TaxBracket? {
         return nil
     }
     
-    func initializeTaxBracketMap(){
-        taxBrackets[10]=9275
-        taxBrackets[15]=37650
-        taxBrackets[25]=91150
-        taxBrackets[28]=190150
-        taxBrackets[33]=413350
-        taxBrackets[35]=415050
-        taxBrackets[39.5]=0
+    private func initializeTaxBracketMap(){
+        
+    }
+    
+    func readFile(){
+        let filePath = NSBundle.mainBundle().resourcePath!
+        print(filePath)
+        
+        let file = "/Users/vajmera/tax.txt"
+        do {
+            let fileContent = try NSString(contentsOfFile: file, encoding: NSUTF8StringEncoding)
+            print(fileContent)
+        } catch{
+            
+        }
     }
 }
