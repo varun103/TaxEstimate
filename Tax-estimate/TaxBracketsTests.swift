@@ -27,7 +27,7 @@ class TaxBracketsTests: XCTestCase {
     }
 
     func testReadFile() {
-        let tb = TaxBrackets(income:1000)
-        tb.readFile()
+        //let tb = TaxBrackets(income:1000)
+       // tb.readFile()
     }
 }

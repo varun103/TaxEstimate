@@ -1,5 +1,5 @@
 //
-//  FilingStatus.swift
+//  AppError.swift
 //  Tax-estimate
 //
 //  Created by Varun Ajmera on 10/29/16.
@@ -8,13 +8,7 @@
 
 import UIKit
 
-
-enum FilingStatusEnum {
+enum AppError: ErrorType {
     
-    case Single
-    
-    case Married
-    
-    case Head
-    
+    case RunTimeError
 }

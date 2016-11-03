@@ -14,6 +14,12 @@
 		553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553594A11DBDD285002478B1 /* LaunchScreen.storyboard */; };
 		553594AE1DBDD285002478B1 /* Tax_estimateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553594AD1DBDD285002478B1 /* Tax_estimateTests.swift */; };
 		55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FAD1DC57D7A001800C4 /* TaxType.swift */; };
+		55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55540FAF1DC5C89C001800C4 /* fedtax.txt */; };
+		55540FB21DC5CD67001800C4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB11DC5CD67001800C4 /* AppError.swift */; };
+		55540FB41DC72F0E001800C4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB31DC72F0E001800C4 /* Utils.swift */; };
+		55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB51DC731D5001800C4 /* UtilsTest.swift */; };
+		55540FB81DC73604001800C4 /* testFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55540FB71DC73604001800C4 /* testFile.txt */; };
+		55540FBA1DC74144001800C4 /* BracketEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB91DC74144001800C4 /* BracketEnum.swift */; };
 		556A4D581DC1E5C300529007 /* TaxCalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A4D571DC1E5C300529007 /* TaxCalculationError.swift */; };
 		556EC59A1DC5545A0002314A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC5991DC5545A0002314A /* User.swift */; };
 		556EC59C1DC554990002314A /* FilingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC59B1DC554990002314A /* FilingStatus.swift */; };
@@ -47,6 +53,12 @@
 		553594AD1DBDD285002478B1 /* Tax_estimateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_estimateTests.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		553594AF1DBDD285002478B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55540FAD1DC57D7A001800C4 /* TaxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxType.swift; sourceTree = "<group>"; };
+		55540FAF1DC5C89C001800C4 /* fedtax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fedtax.txt; sourceTree = "<group>"; };
+		55540FB11DC5CD67001800C4 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		55540FB31DC72F0E001800C4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		55540FB51DC731D5001800C4 /* UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
+		55540FB71DC73604001800C4 /* testFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testFile.txt; sourceTree = "<group>"; };
+		55540FB91DC74144001800C4 /* BracketEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketEnum.swift; sourceTree = "<group>"; };
 		556A4D571DC1E5C300529007 /* TaxCalculationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxCalculationError.swift; sourceTree = "<group>"; };
 		556EC5991DC5545A0002314A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		556EC59B1DC554990002314A /* FilingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilingStatus.swift; sourceTree = "<group>"; };
@@ -79,7 +91,7 @@
 		5535948C1DBDD285002478B1 = {
 			isa = PBXGroup;
 			children = (
-				553594971DBDD285002478B1 /* Tax-estimate */,
+				553594971DBDD285002478B1 /* TaxEstimate */,
 				553594AC1DBDD285002478B1 /* Tax-estimateTests */,
 				553594961DBDD285002478B1 /* Products */,
 			);
@@ -94,7 +106,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		553594971DBDD285002478B1 /* Tax-estimate */ = {
+		553594971DBDD285002478B1 /* TaxEstimate */ = {
 			isa = PBXGroup;
 			children = (
 				553594981DBDD285002478B1 /* AppDelegate.swift */,
@@ -111,7 +123,12 @@
 				556EC59D1DC558F50002314A /* UserProtocol.swift */,
 				556EC59F1DC55CFD0002314A /* TaxBracketsProtocol.swift */,
 				55540FAD1DC57D7A001800C4 /* TaxType.swift */,
+				55540FAF1DC5C89C001800C4 /* fedtax.txt */,
+				55540FB11DC5CD67001800C4 /* AppError.swift */,
+				55540FB31DC72F0E001800C4 /* Utils.swift */,
+				55540FB91DC74144001800C4 /* BracketEnum.swift */,
 			);
+			name = TaxEstimate;
 			path = "Tax-estimate";
 			sourceTree = "<group>";
 		};
@@ -122,6 +139,8 @@
 				553594AD1DBDD285002478B1 /* Tax_estimateTests.swift */,
 				553594AF1DBDD285002478B1 /* Info.plist */,
 				55F59B451DC0A9CD00CA0574 /* TaxBracketTests.swift */,
+				55540FB51DC731D5001800C4 /* UtilsTest.swift */,
+				55540FB71DC73604001800C4 /* testFile.txt */,
 			);
 			path = "Tax-estimateTests";
 			sourceTree = "<group>";
@@ -209,6 +228,7 @@
 			files = (
 				553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */,
 				553594A01DBDD285002478B1 /* Assets.xcassets in Resources */,
+				55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */,
 				5535949E1DBDD285002478B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55540FB81DC73604001800C4 /* testFile.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +256,10 @@
 				5581C53C1DBF4174006C0A3D /* TaxBrackets.swift in Sources */,
 				556EC5A01DC55CFD0002314A /* TaxBracketsProtocol.swift in Sources */,
 				55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */,
+				55540FB21DC5CD67001800C4 /* AppError.swift in Sources */,
 				556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */,
 				553594991DBDD285002478B1 /* AppDelegate.swift in Sources */,
+				55540FB41DC72F0E001800C4 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,9 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55540FBA1DC74144001800C4 /* BracketEnum.swift in Sources */,
 				55F59B461DC0A9CD00CA0574 /* TaxBracketTests.swift in Sources */,
 				556EC5A21DC56F030002314A /* TaxBracketsTests.swift in Sources */,
 				553594AE1DBDD285002478B1 /* Tax_estimateTests.swift in Sources */,
+				55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

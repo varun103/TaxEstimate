@@ -10,19 +10,19 @@ import UIKit
 
 class User : UserProtocol {
     
-    var status: FilingStatus
+    var status: FilingStatusEnum
     
     var income: Double
     
     var taxBracket: TaxBracket
     
-    init(filingStatus: FilingStatus, income: Double){
+    init(filingStatus: FilingStatusEnum, income: Double){
         self.status = filingStatus
         self.income = income
         self.taxBracket = User.setTaxBracket()
     }
     
-    func getStatus() -> FilingStatus{
+    func getStatus() -> FilingStatusEnum{
         return self.status
     }
     

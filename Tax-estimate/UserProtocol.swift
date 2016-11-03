@@ -13,7 +13,7 @@ protocol UserProtocol {
     
     var income: Double {get}
     
-    var status: FilingStatus {get}
+    var status: FilingStatusEnum {get}
     
     var taxBracket: TaxBracket {get}
     

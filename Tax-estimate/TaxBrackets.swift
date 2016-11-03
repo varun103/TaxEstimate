@@ -13,7 +13,7 @@ class TaxBrackets: TaxBracketsProtocol{
     private let income: Float
     private var federal_tax: Float
     
-    private var taxBrackets = [FilingStatus: [TaxBracket]]()
+    private var taxBrackets = [FilingStatusEnum: [TaxBracket]]()
     
     
     init(income:Float){
@@ -28,19 +28,18 @@ class TaxBrackets: TaxBracketsProtocol{
     }
     
     private func initializeTaxBracketMap(){
+        var readlinesArray :[String] = []
         
-    }
-    
-    func readFile(){
-        let filePath = NSBundle.mainBundle().resourcePath!
-        print(filePath)
-        
-        let file = "/Users/vajmera/tax.txt"
         do {
-            let fileContent = try NSString(contentsOfFile: file, encoding: NSUTF8StringEncoding)
-            print(fileContent)
+            let readlines =  try Utility.readFile("tax", type:"txt")
+            readlinesArray = Utility.splitString(readlines, separator: "\n")
         } catch{
             
         }
+        
+        for line in readlinesArray{
+            print(line)
+        }
     }
+    
 }
