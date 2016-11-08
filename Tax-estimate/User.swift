@@ -14,7 +14,7 @@ class User : UserProtocol {
     
     var income: Double
     
-    var taxBracket: TaxBracket
+    var taxBracket: Bracket
     
     init(filingStatus: FilingStatusEnum, income: Double){
         self.status = filingStatus
@@ -30,11 +30,11 @@ class User : UserProtocol {
         return self.income
     }
     
-    func getTaxBracket() -> TaxBracket{
+    func getTaxBracket() -> Bracket{
         return self.taxBracket
     }
     
-    static func setTaxBracket() -> TaxBracket {
-        return TaxBracket(bracket:0,startRange: 0,endRange: 0)
+    static func setTaxBracket() -> Bracket {
+        return Bracket(bracket:0,startRange: 0,endRange: 0)
     }
 }

@@ -15,6 +15,6 @@ protocol UserProtocol {
     
     var status: FilingStatusEnum {get}
     
-    var taxBracket: TaxBracket {get}
+    var taxBracket: Bracket {get}
     
 }

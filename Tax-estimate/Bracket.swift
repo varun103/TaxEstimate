@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaxBracket{
+class Bracket{
     
     private let bracket: Int
     
@@ -23,7 +23,7 @@ class TaxBracket{
         self.bracket = bracket
         self.startRange = startRange
         self.endRange = endRange
-        self.percentage = TaxBracket.calcBracket(self.bracket)
+        self.percentage = Bracket.calcBracket(self.bracket)
     }
     
     func getTax(income: Double) throws -> Double {

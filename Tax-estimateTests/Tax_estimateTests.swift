@@ -27,17 +27,17 @@ class Tax_estimateTests: XCTestCase {
     }
     
     func testGetTaxForFullRange(){
-        let tb = TaxBracket(bracket: 10,startRange: 0,endRange: 9000)
+        let tb = Bracket(bracket: 10,startRange: 0,endRange: 9000)
         XCTAssertEqual(900.0, tb.getTaxForFullRange())
     }
     
     func testGetTaxForMaxRange(){
-        let tb = TaxBracket(bracket: 40, startRange: 100000, endRange: nil)
+        let tb = Bracket(bracket: 40, startRange: 100000, endRange: nil)
         XCTAssertEqual(0.0, tb.getTaxForFullRange())
     }
     
     func testGetTaxForRange() {
-        let tb = TaxBracket(bracket: 10, startRange: 0, endRange: 10000)
+        let tb = Bracket(bracket: 10, startRange: 0, endRange: 10000)
         do{
             let original = try tb.getTax(5000)
             XCTAssertEqual(500.0, original )
@@ -47,7 +47,7 @@ class Tax_estimateTests: XCTestCase {
     }
     
     func testGetTaxForRangeThrowsError() {
-        let tb = TaxBracket(bracket: 10, startRange: 0, endRange: 10000)
+        let tb = Bracket(bracket: 10, startRange: 0, endRange: 10000)
         do{
             try tb.getTax(5000)
         } catch let e as TaxCalculationError {

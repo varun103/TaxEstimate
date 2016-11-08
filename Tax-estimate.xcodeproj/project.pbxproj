@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5507520E1DD082F900676627 /* BracketEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB91DC74144001800C4 /* BracketEnum.swift */; };
 		553594991DBDD285002478B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553594981DBDD285002478B1 /* AppDelegate.swift */; };
 		5535949B1DBDD285002478B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535949A1DBDD285002478B1 /* ViewController.swift */; };
 		5535949E1DBDD285002478B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5535949C1DBDD285002478B1 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		55540FB41DC72F0E001800C4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB31DC72F0E001800C4 /* Utils.swift */; };
 		55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB51DC731D5001800C4 /* UtilsTest.swift */; };
 		55540FB81DC73604001800C4 /* testFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55540FB71DC73604001800C4 /* testFile.txt */; };
-		55540FBA1DC74144001800C4 /* BracketEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB91DC74144001800C4 /* BracketEnum.swift */; };
 		556A4D581DC1E5C300529007 /* TaxCalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A4D571DC1E5C300529007 /* TaxCalculationError.swift */; };
 		556EC59A1DC5545A0002314A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC5991DC5545A0002314A /* User.swift */; };
 		556EC59C1DC554990002314A /* FilingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC59B1DC554990002314A /* FilingStatus.swift */; };
@@ -27,7 +27,7 @@
 		556EC5A01DC55CFD0002314A /* TaxBracketsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC59F1DC55CFD0002314A /* TaxBracketsProtocol.swift */; };
 		556EC5A21DC56F030002314A /* TaxBracketsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC5A11DC56F030002314A /* TaxBracketsTests.swift */; };
 		5581C53C1DBF4174006C0A3D /* TaxBrackets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581C53B1DBF4174006C0A3D /* TaxBrackets.swift */; };
-		55F59B441DC03A7700CA0574 /* TaxBracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* TaxBracket.swift */; };
+		55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* Bracket.swift */; };
 		55F59B461DC0A9CD00CA0574 /* TaxBracketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B451DC0A9CD00CA0574 /* TaxBracketTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +66,7 @@
 		556EC59F1DC55CFD0002314A /* TaxBracketsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketsProtocol.swift; sourceTree = "<group>"; };
 		556EC5A11DC56F030002314A /* TaxBracketsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaxBracketsTests.swift; path = "../Tax-estimate/TaxBracketsTests.swift"; sourceTree = "<group>"; };
 		5581C53B1DBF4174006C0A3D /* TaxBrackets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBrackets.swift; sourceTree = "<group>"; };
-		55F59B431DC03A7700CA0574 /* TaxBracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracket.swift; sourceTree = "<group>"; };
+		55F59B431DC03A7700CA0574 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
 		55F59B451DC0A9CD00CA0574 /* TaxBracketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +116,7 @@
 				553594A11DBDD285002478B1 /* LaunchScreen.storyboard */,
 				553594A41DBDD285002478B1 /* Info.plist */,
 				5581C53B1DBF4174006C0A3D /* TaxBrackets.swift */,
-				55F59B431DC03A7700CA0574 /* TaxBracket.swift */,
+				55F59B431DC03A7700CA0574 /* Bracket.swift */,
 				556A4D571DC1E5C300529007 /* TaxCalculationError.swift */,
 				556EC5991DC5545A0002314A /* User.swift */,
 				556EC59B1DC554990002314A /* FilingStatus.swift */,
@@ -249,7 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				556A4D581DC1E5C300529007 /* TaxCalculationError.swift in Sources */,
-				55F59B441DC03A7700CA0574 /* TaxBracket.swift in Sources */,
+				5507520E1DD082F900676627 /* BracketEnum.swift in Sources */,
+				55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */,
 				556EC59A1DC5545A0002314A /* User.swift in Sources */,
 				5535949B1DBDD285002478B1 /* ViewController.swift in Sources */,
 				556EC59C1DC554990002314A /* FilingStatus.swift in Sources */,
@@ -267,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55540FBA1DC74144001800C4 /* BracketEnum.swift in Sources */,
 				55F59B461DC0A9CD00CA0574 /* TaxBracketTests.swift in Sources */,
 				556EC5A21DC56F030002314A /* TaxBracketsTests.swift in Sources */,
 				553594AE1DBDD285002478B1 /* Tax_estimateTests.swift in Sources */,

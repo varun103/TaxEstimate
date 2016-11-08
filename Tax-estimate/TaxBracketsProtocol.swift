@@ -10,5 +10,5 @@ import UIKit
 
 protocol TaxBracketsProtocol {
 
-    func getTaxBracketForUser(user: UserProtocol) -> TaxBracket?
+    func getTaxBracketForUser(user: UserProtocol) -> Bracket?
 }
