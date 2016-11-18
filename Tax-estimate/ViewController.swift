@@ -14,12 +14,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var uiTaxField: UITextField!
     
-    @IBAction func textEntered(sender: UITextField) {
-        print(uiTaxField.text)
+    @IBAction func textEntered(_ sender: UITextField) {
+        print(uiTaxField.text!)
     }
-    @IBAction func calculate(sender: UIButton) {
+    @IBAction func calculate(_ sender: UIButton) {
         let inputSalary = Int(uiTaxField.text!)
-        uiTaxLabel.text = String(inputSalary)
+        uiTaxLabel.text = String(describing: inputSalary)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +31,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
  
-    func testFieldShouldReturn(textField :UITextField) -> Bool{
+    func testFieldShouldReturn(_ textField :UITextField) -> Bool{
         textField.resignFirstResponder()
         return true
     }
     
     func printTextField(){
-        print(uiTaxField.text)
+        print(uiTaxField.text!)
     }
 }
 

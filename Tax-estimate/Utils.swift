@@ -11,27 +11,27 @@ import UIKit
 
 class Utility {
     
-    static func readFile(filename:String, type: String) throws -> String {
-        let fileURL = NSBundle.mainBundle().pathForResource(filename, ofType: type)
+    static func readFile(_ filename:String, type: String) throws -> String {
+        let fileURL = Bundle.main.path(forResource: filename, ofType: type)
         
         if fileURL == nil {
-            throw AppError.RunTimeError
+            throw AppError.runTimeError
         }
         // Read from the file
         var readString = ""
         do {
-            readString = try String(contentsOfFile: fileURL!, encoding: NSUTF8StringEncoding)
+            readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
         } catch let error as NSError {
             print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
         }
         return readString
     }
     
-    static func csvParser(csvLine: String) -> [String]{
+    static func csvParser(_ csvLine: String) -> [String]{
         return splitString(csvLine, separator: ",")
     }
     
-    static func splitString(content:String, separator: String) -> [String]{
-        return content.componentsSeparatedByString(separator)
+    static func splitString(_ content:String, separator: String) -> [String]{
+        return content.components(separatedBy: separator)
     }
 }

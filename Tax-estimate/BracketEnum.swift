@@ -10,12 +10,12 @@ import UIKit
 
 enum BracketEnum :Int {
     
-    case Rate = 0
-    case Single_start = 1
-    case Single_end = 2
-    case Married_start = 3
-    case Married_end = 4
-    case Head_start = 5
-    case Head_end = 6
+    case rate = 0
+    case single_start = 1
+    case single_end = 2
+    case married_start = 3
+    case married_end = 4
+    case head_start = 5
+    case head_end = 6
     
 }

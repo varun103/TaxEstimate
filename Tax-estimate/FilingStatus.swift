@@ -11,10 +11,10 @@ import UIKit
 
 enum FilingStatusEnum {
     
-    case Single
+    case single
     
-    case Married
+    case married
     
-    case Head
+    case head
     
 }

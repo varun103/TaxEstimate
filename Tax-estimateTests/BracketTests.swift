@@ -49,9 +49,9 @@ class Tax_estimateTests: XCTestCase {
     func testGetTaxForRangeThrowsError() {
         let tb = Bracket(bracket: 10, startRange: 0, endRange: 10000)
         do{
-            try tb.getTax(5000)
+            try _ = tb.getTax(5000)
         } catch let e as TaxCalculationError {
-            XCTAssertTrue(e == TaxCalculationError.OutOfTaxBracket)
+            XCTAssertTrue(e == TaxCalculationError.outOfTaxBracket)
         } catch {
             XCTFail("Exception throw")
         }

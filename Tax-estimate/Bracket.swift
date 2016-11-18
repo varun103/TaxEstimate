@@ -7,28 +7,52 @@
 //
 
 import UIKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l < r
+    case (nil, _?):
+        return true
+    default:
+        return false
+    }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l >= r
+    default:
+        return !(lhs < rhs)
+    }
+}
+
 
 class Bracket{
     
-    private let bracket: Double?
+    fileprivate let bracket: Double
     
-    private var startRange: Double?
+    fileprivate var startRange: Double?
     
-    private var endRange: Double?
+    fileprivate var endRange: Double?
     
-    private var percentage: Double
+    fileprivate var percentage: Double
     
     
-    init(bracket:Double?, startRange:Double?, endRange:Double?){
+    init(bracket:Double, startRange:Double?, endRange:Double?){
         self.bracket = bracket
         self.startRange = startRange
         self.endRange = endRange
-        self.percentage = Bracket.calcBracket(self.bracket!)
+        self.percentage = Bracket.calcBracket(self.bracket)
     }
     
-    func getTax(income: Double) throws -> Double {
+    func getTax(_ income: Double) throws -> Double {
         if income >= self.endRange{
-            throw TaxCalculationError.OutOfTaxBracket
+            throw TaxCalculationError.outOfTaxBracket
         } else{
             return income * self.percentage
         }
@@ -43,7 +67,19 @@ class Bracket{
         }
     }
     
-    static func calcBracket(_bracket:Double) -> Double{
+    func getMax() -> Double?{
+        return self.endRange
+    }
+    
+    func getMin()-> Double{
+        return self.startRange!
+    }
+    
+    func value()-> Double{
+        return self.bracket
+    }
+        
+    static func calcBracket(_ _bracket:Double) -> Double{
         return Double(_bracket) * 0.01
     }
     

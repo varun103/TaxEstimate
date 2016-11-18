@@ -8,8 +8,8 @@
 
 import UIKit
 
-enum TaxCalculationError: ErrorType{
+enum TaxCalculationError: Error{
     
-    case OutOfTaxBracket
+    case outOfTaxBracket
     
 }

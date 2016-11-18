@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AppError: ErrorType {
+enum AppError: Error {
     
-    case RunTimeError
+    case runTimeError
 }
