@@ -1,0 +1,2 @@
+rate,single_start,single_end,married_start,married_end,head_start,head_end
+10,0,9275,0,18550,0,13250

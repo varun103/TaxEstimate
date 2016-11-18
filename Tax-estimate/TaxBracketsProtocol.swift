@@ -10,5 +10,9 @@ import UIKit
 
 protocol TaxBracketsProtocol {
 
-    func getTaxBracketForUser(user: UserProtocol) -> Bracket?
+    func getTaxBrackets() ->  [FilingStatusEnum: [TaxType: [Bracket]]]
+    
+    func forFed(filingStatus: FilingStatusEnum) -> [Bracket]
+    
+    func forState(state: TaxType, filingStatus: FilingStatusEnum) -> [Bracket]
 }

@@ -11,10 +11,13 @@ import UIKit
 
 protocol UserProtocol {
     
-    var income: Double {get}
+    var income: Double {set get}
     
     var status: FilingStatusEnum {get}
     
     var taxBracket: Bracket {get}
     
+    func getFederalTax() -> Double
+    
+    func getStateTax() -> Double
 }

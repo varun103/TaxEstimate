@@ -10,52 +10,123 @@ import UIKit
 
 class TaxBrackets: TaxBracketsProtocol{
     
+    private let file_type = "txt"
     private let income: Float
     private var federal_tax: Float
+    private var dependencies: Dependencies
     
-    private let fed_tax_file = "tax"
-    private let file_type = "txt"
-    
-    
-    private var taxBrackets = [FilingStatusEnum: [Bracket]]()
+    //core DS
+    private var taxBrackets = [FilingStatusEnum: [TaxType: [Bracket]]]()
     
     
-    init(income:Float){
+    init(income:Float, dependencies: Dependencies) {
         self.income = income
         self.federal_tax = 0.0
+        self.dependencies = dependencies
         initializeTaxBracketMap()
     }
     
-    
-    func getTaxBracketForUser(user: UserProtocol) -> Bracket? {
-        return nil
+    convenience init(income:Float){
+        self.init(income: income, dependencies: Dependencies())
     }
     
+    convenience init(){
+        self.init(income: 0.0, dependencies: Dependencies())
+    }
+    
+    func getTaxBrackets() -> [FilingStatusEnum: [TaxType: [Bracket]]] {
+        return self.taxBrackets
+    }
+    
+    func forFed(filingStatus: FilingStatusEnum) -> [Bracket] {
+        var abc = self.taxBrackets[filingStatus]!
+        if let bc = abc[TaxType.FED] {
+            return bc
+        } else{
+            
+        }
+    }
+    
+    func forState(taxType: TaxType, filingStatus: FilingStatusEnum) -> [Bracket] {
+        var abc = self.taxBrackets[filingStatus]!
+        if let bc = abc[taxType] {
+            return bc
+        } else{
+            
+        }
+    }
+
+    
+    
     private func initializeTaxBracketMap(){
-        var readlinesArray :[String] = []
+        
+        var bracketInfoArray :[String] = []
+        
+        let taxTypes = self.dependencies.getTaxTypes()
+        
+        var singleMap:[TaxType:[Bracket]] = [:]
+        var marriedMap:[TaxType:[Bracket]] = [:]
+        var headMap:[TaxType:[Bracket]] = [:]
         
         do {
-            let readlines =  try Utility.readFile(fed_tax_file, type:file_type)
-            readlinesArray = Utility.splitString(readlines, separator: "\n")
             
-            
-            for line in readlinesArray {
-                var elements = Utility.splitString(line, separator: ",")
-                let rate = elements[BracketEnum.Rate.rawValue]
+            for taxType in taxTypes {
                 
-                let single_start_range = elements[BracketEnum.Single_start.rawValue]
-                let single_end_range = elements[BracketEnum.Single_end.rawValue]
+                let bracketInfoFileName = taxType.rawValue
+                let bracketInfoFileContents =  try Utility.readFile(bracketInfoFileName, type:file_type)
+                
+                // each line = element in array
+                bracketInfoArray = Utility.splitString(bracketInfoFileContents, separator: "\n")
+                
+                var singleBrackets:[Bracket] = []
+                var marriedBrackets:[Bracket] = []
+                var headBrackets:[Bracket]=[]
                 
                 
-                
-                //fed_bracket = TaxBracket(bracket: <#T##Int#>, startRange: <#T##Double#>, endRange: <#T##Double?#>)
+                var count = 0
+                for bracketInfo in bracketInfoArray {
+                    if count == 0 {
+                        count = count + 1
+                        continue
+                    }
+                    var elements = Utility.splitString(bracketInfo, separator: ",")
+                    let rate = Double(elements[BracketEnum.Rate.rawValue])
+                    
+                    let single_start = Double(elements[BracketEnum.Single_start.rawValue])
+                    let single_end = Double(elements[BracketEnum.Single_end.rawValue])
+                    singleBrackets.append(Bracket(bracket: rate, startRange: single_start, endRange: single_end))
+                    
+                    let married_start = Double(elements[BracketEnum.Married_start.rawValue])
+                    let married_end = Double(elements[BracketEnum.Married_end.rawValue])
+                    marriedBrackets.append(Bracket(bracket: rate, startRange: married_start, endRange: married_end))
+                    
+                    let head_start = Double(elements[BracketEnum.Head_start.rawValue])
+                    let head_end = Double(elements[BracketEnum.Head_end.rawValue])
+                    headBrackets.append(Bracket(bracket: rate!, startRange: head_start!, endRange: head_end))
+                    
+                    count = count + 1
+                    
+                }
+                singleMap[taxType] = singleBrackets
+                marriedMap[taxType] = marriedBrackets
+                headMap[taxType] = headBrackets
             }
-        } catch{
+            
+            self.taxBrackets[FilingStatusEnum.Single] = singleMap
+            self.taxBrackets[FilingStatusEnum.Married] = marriedMap
+            self.taxBrackets[FilingStatusEnum.Head] = headMap
+            
+        } catch {
             
         }
         
-        for line in readlinesArray{
-            print(line)
+    }
+    
+    //static dependencies
+    class Dependencies {
+        
+        func getTaxTypes() -> [TaxType]{
+            return TaxType.all
         }
     }
     

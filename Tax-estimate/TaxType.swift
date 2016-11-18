@@ -14,7 +14,13 @@ enum TaxType: String{
     
     case CA = "CATax"
     
-    static let taxTypes = [FED, CA]
+    case TEST = "TestTax"
+    
+    static let all = [FED, CA]
+    
+    static let states = [CA]
+    
+    static let test = [TEST]
 
 }
 
