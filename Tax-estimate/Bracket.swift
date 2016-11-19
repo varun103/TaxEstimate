@@ -34,20 +34,28 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class Bracket{
     
-    fileprivate let bracket: Double
+    fileprivate let rate: Double
     
-    fileprivate var startRange: Double?
+    fileprivate var startRange: Double
     
     fileprivate var endRange: Double?
     
     fileprivate var percentage: Double
     
+    private var taxForBracket: Double?
+
+    private var totalTaxIncPreviousBrackets: Double?
     
-    init(bracket:Double, startRange:Double?, endRange:Double?){
-        self.bracket = bracket
+    var next: Bracket?
+    var previous: Bracket?
+    
+    
+    init(rate:Double, startRange:Double, endRange:Double?){
+        self.rate = rate
         self.startRange = startRange
         self.endRange = endRange
-        self.percentage = Bracket.calcBracket(self.bracket)
+        self.percentage = Bracket.calcBracket(self.rate)
+        self.setTaxForBracket()
     }
     
     func getTax(_ income: Double) throws -> Double {
@@ -57,28 +65,60 @@ class Bracket{
             return income * self.percentage
         }
     }
-    
-    func getTaxForFullRange() -> Double {
-        if self.endRange != nil{
-            return (self.endRange! - self.startRange!) * self.percentage
-        }else
-        {
-            return 0.0
-        }
-    }
-    
+        
     func getMax() -> Double?{
         return self.endRange
     }
     
     func getMin()-> Double{
-        return self.startRange!
+        return self.startRange
+    }
+    
+    func getRate()-> Double{
+        return self.rate
     }
     
     func value()-> Double{
-        return self.bracket
+        return self.rate
     }
+    
+    func taxForFullRange()-> Double {
+        return self.taxForBracket!
+    }
+    
+    func totalTaxWPreviousBrackets()-> Double {
+        return self.totalTaxIncPreviousBrackets!
+    }
+    
+    func setNext(nextBracket: Bracket?){
+        self.next = nextBracket
+    }
+    
+    func hasNext()-> Bool{
+        return self.next != nil
         
+    }
+    func setPrevious(previousBracket:Bracket?){
+        self.previous = previousBracket
+        self.setTotalTaxIncPreviousBrackets()
+    }
+    
+    private func setTaxForBracket() {
+        if let _max = self.endRange {
+            self.taxForBracket = (_max - self.startRange) * self.percentage
+        } else {
+            self.taxForBracket = 0.0
+        }
+    }
+    
+    private func setTotalTaxIncPreviousBrackets() {
+        if let _prev = self.previous {
+            self.totalTaxIncPreviousBrackets = _prev.totalTaxWPreviousBrackets() + self.taxForFullRange()
+        } else {
+            self.totalTaxIncPreviousBrackets = self.taxForFullRange()
+        }
+    }
+    
     static func calcBracket(_ _bracket:Double) -> Double{
         return Double(_bracket) * 0.01
     }

@@ -34,4 +34,11 @@ class Utility {
     static func splitString(_ content:String, separator: String) -> [String]{
         return content.components(separatedBy: separator)
     }
+    
+    static func getFileContentsAsStringArray(fileName:String, type:String) throws -> [String] {
+        let bracketInfoFileName = fileName
+        let bracketInfoFileContents =  try Utility.readFile(bracketInfoFileName, type:type)
+        return Utility.splitString(bracketInfoFileContents, separator: "\n")
+    }
+
 }

@@ -9,43 +9,78 @@
 import UIKit
 
 
+/// An implementation of linked list which holds all the brackets for a taxType
+/// All the brackets are linked starting from the lowest to the highest
 class TaxBrackets {
     
-    private var brackets:[Bracket]
+    private var head:Bracket?
+    private var count: Int
     
-    init(brackets:[Bracket]){
-        self.brackets = brackets
+    init(){
+        self.count = 0
     }
     
-    convenience init(){
-        let _temp: [Bracket] = []
-        self.init(brackets:_temp)
-    }
+
+    /// Add bracket to the linked List
+    ///
+    /// - Parameter bracket: bracket to be added
     func add(bracket: Bracket){
-        self.brackets.append(bracket)
+        
+        if self.head == nil {
+            head = bracket
+            bracket.setPrevious(previousBracket: nil)
+            self.count += 1
+        }else{
+            var node = head!
+            
+            while(node.next != nil){
+                node = node.next!
+            }
+            node.setNext(nextBracket: bracket)
+            bracket.setPrevious(previousBracket: node)
+            self.count += 1
+        }
     }
     
-    func get() ->  [Bracket]{
-        return self.brackets
-    }
-    
-    func getBracket(income:Double ) -> Bracket {
-        
-        var _fit:Bracket?
-        
-        for bracket:Bracket in self.brackets{
-            if let bracketMax = bracket.getMax(){
-                if income < bracketMax {
-                    _fit = bracket
-                    break
-                } else{
-                    continue
-                }
-            } else{
-                _fit = bracket
+    func get(index:Int) throws ->Bracket{
+        var _counter = 0
+        var node:Bracket
+
+        if index > (self.count + 1) {
+            throw AppError.runTimeError
+        } else {
+            node = self.head!
+            while(_counter != index){
+                node = node.next!
+                _counter += 1
             }
         }
-        return _fit!
+        return node
     }
+    
+    func isEmpty() -> Bool{
+        return self.head == nil
+    }
+    
+    func findBracket(income:Double)-> Bracket{
+        return _findBracket(income: income, node: self.head!)
+    }
+    
+    private func _findBracket(income:Double, node:Bracket) -> Bracket{
+        if let _max = node.getMax() {
+            if (income > _max && node.hasNext() ){
+                return _findBracket(income: income, node: node.next!)
+            } else {
+                return node
+            }
+        } else {
+            return node
+        }
+    }
+    
+    func size() -> Int {
+        return self.count
+    }
+    
     
 }

@@ -9,7 +9,7 @@
 import XCTest
 @testable import Tax_estimate
 
-class Tax_estimateTests: XCTestCase {
+class BracketTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,23 +21,19 @@ class Tax_estimateTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
     
     func testGetTaxForFullRange(){
-        let tb = Bracket(bracket: 10,startRange: 0,endRange: 9000)
-        XCTAssertEqual(900.0, tb.getTaxForFullRange())
+        let tb = Bracket(rate: 10,startRange: 0,endRange: 9000)
+        XCTAssertEqual(900.0, tb.taxForFullRange())
     }
     
     func testGetTaxForMaxRange(){
-        let tb = Bracket(bracket: 40, startRange: 100000, endRange: nil)
-        XCTAssertEqual(0.0, tb.getTaxForFullRange())
+        let tb = Bracket(rate: 40, startRange: 100000, endRange: nil)
+        XCTAssertEqual(0.0, tb.taxForFullRange())
     }
     
     func testGetTaxForRange() {
-        let tb = Bracket(bracket: 10, startRange: 0, endRange: 10000)
+        let tb = Bracket(rate: 10, startRange: 0, endRange: 10000)
         do{
             let original = try tb.getTax(5000)
             XCTAssertEqual(500.0, original )
@@ -45,9 +41,9 @@ class Tax_estimateTests: XCTestCase {
             XCTFail("Exception thrown")
         }
     }
-    
+        
     func testGetTaxForRangeThrowsError() {
-        let tb = Bracket(bracket: 10, startRange: 0, endRange: 10000)
+        let tb = Bracket(rate: 10, startRange: 0, endRange: 10000)
         do{
             try _ = tb.getTax(5000)
         } catch let e as TaxCalculationError {

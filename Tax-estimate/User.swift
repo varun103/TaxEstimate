@@ -46,6 +46,6 @@ class User : UserProtocol {
     }
     
     static func setTaxBracket() -> Bracket {
-        return Bracket(bracket:0,startRange: 0,endRange: 0)
+        return Bracket(rate:0,startRange: 0,endRange: 0)
     }
 }

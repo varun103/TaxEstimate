@@ -44,7 +44,7 @@ class UtilsTest: XCTestCase {
     
     func testNewLine(){
         do {
-        let fileString = try Utility.readFile("tax", type: "txt")
+        let fileString = try Utility.readFile("fedtax", type: "txt")
         let components = Utility.splitString(fileString, separator: "\n")
         XCTAssertEqual(8, components.capacity)
         } catch {

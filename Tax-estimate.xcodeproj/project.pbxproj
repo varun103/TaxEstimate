@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5507520E1DD082F900676627 /* BracketEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB91DC74144001800C4 /* BracketEnum.swift */; };
 		551D85901DDEF42C00FCC1F4 /* TaxBracketsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551D858F1DDEF42C00FCC1F4 /* TaxBracketsTests.swift */; };
+		551D85921DDF0AB100FCC1F4 /* TODOs in Resources */ = {isa = PBXBuildFile; fileRef = 551D85911DDF0AB100FCC1F4 /* TODOs */; };
 		553594991DBDD285002478B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553594981DBDD285002478B1 /* AppDelegate.swift */; };
 		5535949B1DBDD285002478B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535949A1DBDD285002478B1 /* ViewController.swift */; };
 		5535949E1DBDD285002478B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5535949C1DBDD285002478B1 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		551D858F1DDEF42C00FCC1F4 /* TaxBracketsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketsTests.swift; sourceTree = "<group>"; };
+		551D85911DDF0AB100FCC1F4 /* TODOs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODOs; sourceTree = "<group>"; };
 		553594951DBDD285002478B1 /* Tax-estimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tax-estimate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553594981DBDD285002478B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5535949A1DBDD285002478B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				55540FB91DC74144001800C4 /* BracketEnum.swift */,
 				558B61F21DD1C93E00D644D8 /* TestTax.txt */,
 				555BF3731DDED6E400C69B48 /* TaxBrackets.swift */,
+				551D85911DDF0AB100FCC1F4 /* TODOs */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551D85921DDF0AB100FCC1F4 /* TODOs in Resources */,
 				553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */,
 				553594A01DBDD285002478B1 /* Assets.xcassets in Resources */,
 				55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */,

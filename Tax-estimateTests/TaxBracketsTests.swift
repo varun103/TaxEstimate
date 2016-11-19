@@ -22,17 +22,78 @@ class TaxBracketsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testGetBracket(){
-        let b1 = Bracket(bracket: 10, startRange: 0, endRange: 1000)
-        let b2 = Bracket(bracket: 20, startRange: 1001, endRange: nil)
-        
-        let brackets:[Bracket] = [b1,b2]
-        
-        let taxBrackets:TaxBrackets = TaxBrackets(brackets: brackets)
-        
-        XCTAssertEqual(10, taxBrackets.getBracket(income: 999).value())
-        
-        XCTAssertEqual(20, taxBrackets.getBracket(income: 1001).value())
+//    func testGetBracket(){
+//        let b1 = Bracket(rate: 10, startRange: 0, endRange: 1000)
+//        let b2 = Bracket(rate: 20, startRange: 1001, endRange: nil)
+//                
+//        let taxBrackets:TaxBrackets = TaxBrackets()
+//        
+//        XCTAssertEqual(10, taxBrackets.getBracket(income: 999).value())
+//        
+//        XCTAssertEqual(20, taxBrackets.getBracket(income: 1001).value())
+//    }
+    
+    func testIsEmpty(){
+        let taxBrackets:TaxBrackets = TaxBrackets()
+        XCTAssertTrue(taxBrackets.isEmpty())
     }
+    
+    func testCount(){
+        let taxBrackets:TaxBrackets = TaxBrackets()
+        XCTAssertEqual(0,taxBrackets.size())
+        
+        let b1 = Bracket(rate: 10, startRange: 0, endRange: 1000)
+        let b2 = Bracket(rate: 20, startRange: 1001, endRange: nil)
+
+        taxBrackets.add(bracket: b1)
+        XCTAssertEqual(1,taxBrackets.size())
+        
+        taxBrackets.add(bracket: b2)
+        XCTAssertEqual(2,taxBrackets.size())
+    }
+    
+    func testGetTotalTax(){
+        let b1 = Bracket(rate: 10, startRange: 0, endRange: 1000)
+        let b2 = Bracket(rate: 20, startRange: 1000, endRange: 2000)
+        let b3 = Bracket(rate: 30, startRange: 2000, endRange: nil)
+
+        
+        let taxBrackets:TaxBrackets = TaxBrackets()
+        taxBrackets.add(bracket: b1)
+        taxBrackets.add(bracket: b2)
+        taxBrackets.add(bracket: b3)
+
+        XCTAssertEqual(100, b1.totalTaxWPreviousBrackets())
+        XCTAssertEqual(300, b2.totalTaxWPreviousBrackets())
+        XCTAssertEqual(300, b3.totalTaxWPreviousBrackets())
+    }
+    
+    func testFindBracket(){
+        let b1 = Bracket(rate: 10, startRange: 0, endRange: 1000)
+        let b2 = Bracket(rate: 20, startRange: 1000, endRange: 2000)
+        let b3 = Bracket(rate: 30, startRange: 2000, endRange: nil)
+        
+        
+        let taxBrackets:TaxBrackets = TaxBrackets()
+        taxBrackets.add(bracket: b1)
+        taxBrackets.add(bracket: b2)
+        taxBrackets.add(bracket: b3)
+        
+        XCTAssertEqual(b1.getRate(), taxBrackets.findBracket(income: 999).getRate())
+        XCTAssertEqual(b2.getRate(), taxBrackets.findBracket(income: 1999).getRate())
+        XCTAssertEqual(b3.getRate(), taxBrackets.findBracket(income: 9990).getRate())
+
+    }
+
+    
+    func testAdd(){
+        let b1 = Bracket(rate: 10, startRange: 0, endRange: 1000)
+        let b2 = Bracket(rate: 20, startRange: 1001, endRange: nil)
+        
+        let taxBrackets:TaxBrackets = TaxBrackets()
+        taxBrackets.add(bracket: b1)
+        taxBrackets.add(bracket: b2)
+    }
+    
     
 }

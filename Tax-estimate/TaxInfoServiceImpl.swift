@@ -12,12 +12,17 @@ import Darwin
 class TaxInfoServiceImpl: TaxInfoService{
     
     private let file_type = "txt"
-    fileprivate let income: Float
-    fileprivate var federal_tax: Float
-    fileprivate var dependencies: Dependencies
+    private let income: Float
+    private var federal_tax: Float
+    private var dependencies: Dependencies
     
     //core DS
     fileprivate var taxInfo = [FilingStatusEnum: [TaxType: TaxBrackets]]()
+    
+//    static let instance: TaxInfoServiceImp {
+//        let taxInfoServiceImp = TaxInfoServiceImpl()
+//        return taxInfoServiceImp
+//    }()
     
     
     init(income:Float, dependencies: Dependencies) {
@@ -57,7 +62,7 @@ class TaxInfoServiceImpl: TaxInfoService{
         }
     }
     
-    fileprivate func initializeTaxBracketMap(){
+    private func initializeTaxBracketMap(){
         
         var bracketInfoArray :[String] = []
         
@@ -71,11 +76,7 @@ class TaxInfoServiceImpl: TaxInfoService{
             
             for taxType in taxTypes {
                 
-                let bracketInfoFileName = taxType.rawValue
-                let bracketInfoFileContents =  try Utility.readFile(bracketInfoFileName, type:file_type)
-                
-                // each line = element in array
-                bracketInfoArray = Utility.splitString(bracketInfoFileContents, separator: "\n")
+                try bracketInfoArray =  Utility.getFileContentsAsStringArray(fileName: taxType.rawValue, type:file_type)
                 
                 let singleBrackets: TaxBrackets = TaxBrackets()
                 let marriedBrackets: TaxBrackets = TaxBrackets()
@@ -83,7 +84,10 @@ class TaxInfoServiceImpl: TaxInfoService{
                 
                 
                 var count = 0
+                
                 for bracketInfo in bracketInfoArray {
+                    
+                    //first line is the heading
                     if count == 0 {
                         count = count + 1
                         continue
@@ -93,15 +97,18 @@ class TaxInfoServiceImpl: TaxInfoService{
                     
                     let single_start = Double(elements[BracketEnum.single_start.rawValue])
                     let single_end = Double(elements[BracketEnum.single_end.rawValue])
-                    singleBrackets.add(bracket: Bracket(bracket: rate!, startRange: single_start, endRange: single_end))
+                    
+                    singleBrackets.add(bracket: Bracket(rate: rate!, startRange: single_start!, endRange: single_end))
                     
                     let married_start = Double(elements[BracketEnum.married_start.rawValue])
                     let married_end = Double(elements[BracketEnum.married_end.rawValue])
-                    marriedBrackets.add(bracket: Bracket(bracket: rate!, startRange: married_start, endRange: married_end))
+                    
+                    marriedBrackets.add(bracket: Bracket(rate: rate!, startRange: married_start!, endRange: married_end))
                     
                     let head_start = Double(elements[BracketEnum.head_start.rawValue])
                     let head_end = Double(elements[BracketEnum.head_end.rawValue])
-                    headBrackets.add(bracket: Bracket(bracket: rate!, startRange: head_start!, endRange: head_end))
+                    
+                    headBrackets.add(bracket: Bracket(rate: rate!, startRange: head_start!, endRange: head_end))
                     
                     count = count + 1
                     
@@ -120,6 +127,7 @@ class TaxInfoServiceImpl: TaxInfoService{
         }
         
     }
+    
     
     //static dependencies
     class Dependencies {
