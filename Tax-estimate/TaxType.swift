@@ -10,13 +10,13 @@ import UIKit
 
 enum TaxType: String{
     
-    case FED = "fedTax"
+    case FED = "fedtax"
     
     case CA = "CATax"
     
     case TEST = "TestTax"
     
-    static let all = [FED, CA]
+    static let all = [FED]
     
     static let states = [CA]
     

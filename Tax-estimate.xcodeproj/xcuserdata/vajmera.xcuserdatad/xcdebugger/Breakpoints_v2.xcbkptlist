@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ViewController.swift"
-            timestampString = "498996449.986974"
+            timestampString = "501297914.809696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "printTextField()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ViewController.swift"
-            timestampString = "498996449.986974"
+            timestampString = "501297914.809696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "printTextField()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ViewController.swift"
-            timestampString = "498996449.986974"
+            timestampString = "501297914.809696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ViewController.swift"
-            timestampString = "498996449.986974"
+            timestampString = "501297914.809696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "testFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ViewController.swift"
-            timestampString = "498996449.986974"
+            timestampString = "501297914.809696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ViewController.swift"
-            timestampString = "498996449.986974"
+            timestampString = "501297914.809696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ViewController.swift"
-            timestampString = "498994811.931236"
+            timestampString = "501297914.809696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "calculate(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -407,7 +407,7 @@
                   moduleName = "Tax-estimate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimate/User.swift"
-                  timestampString = "501288571.909461"
+                  timestampString = "501298100.501183"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -422,12 +422,12 @@
                   moduleName = "Tax-estimate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimate/User.swift"
-                  timestampString = "501288571.910712"
+                  timestampString = "501298100.529686"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -435,7 +435,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/User.swift"
@@ -582,11 +582,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "TaxBrackets"
             landmarkType = "3">
          </BreakpointContent>
@@ -598,11 +598,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109">
+            startingLineNumber = "107"
+            endingLineNumber = "107">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -612,11 +612,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157">
+            startingLineNumber = "155"
+            endingLineNumber = "155">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -626,11 +626,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118">
+            startingLineNumber = "116"
+            endingLineNumber = "116">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -640,11 +640,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94">
+            startingLineNumber = "92"
+            endingLineNumber = "92">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -686,11 +686,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143">
+            startingLineNumber = "141"
+            endingLineNumber = "141">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -700,11 +700,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139">
+            startingLineNumber = "137"
+            endingLineNumber = "137">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -714,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135">
+            startingLineNumber = "133"
+            endingLineNumber = "133">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -728,11 +728,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140">
+            startingLineNumber = "138"
+            endingLineNumber = "138">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -742,11 +742,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114">
+            startingLineNumber = "112"
+            endingLineNumber = "112">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -772,11 +772,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105">
+            startingLineNumber = "103"
+            endingLineNumber = "103">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -926,46 +926,46 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimateTests/TaxInfoTests.swift"
-            timestampString = "501147459.536182"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "testGetTaxInfo()"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Tax_estimateTests.TaxInfoTests.testGetTaxInfo () -&gt; ()"
                   moduleName = "Tax-estimateTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxInfoTests.swift"
-                  timestampString = "501288573.215488"
+                  timestampString = "501297515.846627"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "818">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "839">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Tax_estimateTests.TaxInfoTests.(testGetTaxInfo () -&gt; ()).(implicit closure #4)"
                   moduleName = "Tax-estimateTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxInfoTests.swift"
-                  timestampString = "501288573.216992"
+                  timestampString = "501297515.847908"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
                   offsetFromSymbolStart = "41">
                </Location>
             </Locations>
@@ -1033,53 +1033,6 @@
             endingLineNumber = "66"
             landmarkName = "testGetTotalTax()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tax_estimateTests.TaxBracketsTests.testGetTotalTax () -&gt; ()"
-                  moduleName = "Tax-estimateTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxBracketsTests.swift"
-                  timestampString = "501288573.219403"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "377">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tax_estimateTests.TaxBracketsTests.(testGetTotalTax () -&gt; ()).(implicit closure #1)"
-                  moduleName = "Tax-estimateTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxBracketsTests.swift"
-                  timestampString = "501288573.221205"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tax_estimateTests.TaxBracketsTests.(testGetTotalTax () -&gt; ()).(implicit closure #2)"
-                  moduleName = "Tax-estimateTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxBracketsTests.swift"
-                  timestampString = "501288573.222824"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1112,53 +1065,6 @@
             endingLineNumber = "68"
             landmarkName = "testGetTotalTax()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tax_estimateTests.TaxBracketsTests.testGetTotalTax () -&gt; ()"
-                  moduleName = "Tax-estimateTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxBracketsTests.swift"
-                  timestampString = "501288573.225049"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "1193">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tax_estimateTests.TaxBracketsTests.(testGetTotalTax () -&gt; ()).(implicit closure #5)"
-                  moduleName = "Tax-estimateTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxBracketsTests.swift"
-                  timestampString = "501288573.226401"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "34">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Tax_estimateTests.TaxBracketsTests.(testGetTotalTax () -&gt; ()).(implicit closure #6)"
-                  moduleName = "Tax-estimateTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxBracketsTests.swift"
-                  timestampString = "501288573.228079"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1168,11 +1074,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxBrackets.swift"
-            timestampString = "501288505.620027"
+            timestampString = "501297289.597268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "findBracket(income:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1190,6 +1096,38 @@
             startingLineNumber = "98"
             endingLineNumber = "98"
             landmarkName = "hasNext()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimateTests/TaxInfoTests.swift"
+            timestampString = "501297318.314802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "testGetTaxInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/User.swift"
+            timestampString = "501297993.126529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getTaxBracket()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

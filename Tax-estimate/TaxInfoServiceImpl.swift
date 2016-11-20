@@ -12,33 +12,25 @@ import Darwin
 class TaxInfoServiceImpl: TaxInfoService{
     
     private let file_type = "txt"
-    private let income: Float
-    private var federal_tax: Float
     private var dependencies: Dependencies
-    
+    private static var taxInfoServiceImpl:TaxInfoServiceImpl?
+
     //core DS
-    fileprivate var taxInfo = [FilingStatusEnum: [TaxType: TaxBrackets]]()
+    private var taxInfo = [FilingStatusEnum: [TaxType: TaxBrackets]]()
     
-//    static let instance: TaxInfoServiceImp {
-//        let taxInfoServiceImp = TaxInfoServiceImpl()
-//        return taxInfoServiceImp
-//    }()
+    static func getInstance()->TaxInfoServiceImpl{
+        if let _instance = taxInfoServiceImpl {
+            return _instance
+        }else{
+            return TaxInfoServiceImpl()
+        }
+    }
     
-    
-    init(income:Float, dependencies: Dependencies) {
-        self.income = income
-        self.federal_tax = 0.0
-        self.dependencies = dependencies
+    private init() {
+        self.dependencies = Dependencies()
         initializeTaxBracketMap()
     }
     
-    convenience init(income:Float){
-        self.init(income: income, dependencies: Dependencies())
-    }
-    
-    convenience init(){
-        self.init(income: 0.0, dependencies: Dependencies())
-    }
     
     func getCatalogue() -> [FilingStatusEnum: [TaxType: TaxBrackets]] {
         return self.taxInfo
@@ -60,6 +52,15 @@ class TaxInfoServiceImpl: TaxInfoService{
         } else{
             exit(0)
         }
+    }
+    
+    /// Dependancy injection - only to be used for testing
+    ///
+    /// - Parameter dependencies: dependencies
+    func setDependencies(dependencies: Dependencies){
+        self.dependencies = dependencies
+        self.taxInfo = [FilingStatusEnum: [TaxType: TaxBrackets]]()
+        initializeTaxBracketMap()
     }
     
     private func initializeTaxBracketMap(){
@@ -127,8 +128,7 @@ class TaxInfoServiceImpl: TaxInfoService{
         }
         
     }
-    
-    
+        
     //static dependencies
     class Dependencies {
         

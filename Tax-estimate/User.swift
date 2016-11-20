@@ -22,7 +22,7 @@ class User : UserProtocol {
         self.status = filingStatus
         self.income = income
         self.taxBracket = User.setTaxBracket()
-        self.taxInfo = TaxInfoServiceImpl()
+        self.taxInfo = TaxInfoServiceImpl.getInstance()
     }
     
     func getStatus() -> FilingStatusEnum{
@@ -33,8 +33,8 @@ class User : UserProtocol {
         return self.income
     }
     
-    func getTaxBracket() -> TaxBrackets{
-        return self.taxInfo.getFedBrackets(self.status)
+    func getTaxBracket() -> Bracket{
+        return self.taxInfo.getFedBrackets(self.status).findBracket(income: self.getIncome())
     }
     
     func getFederalTax() -> Double {

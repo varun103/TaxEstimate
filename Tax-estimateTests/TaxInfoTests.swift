@@ -23,8 +23,9 @@ class TaxInfoTests: XCTestCase {
     func testGetTaxInfo(){
         let dependenies = TestDependencies()
 
-        let info = TaxInfoServiceImpl(income: 0.0, dependencies: dependenies)
+        let info = TaxInfoServiceImpl.getInstance()
         
+        info.setDependencies(dependencies: dependenies)
         let taxCatalogue = info.getCatalogue()
         
         XCTAssertNotNil(taxCatalogue)

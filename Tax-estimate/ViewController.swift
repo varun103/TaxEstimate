@@ -18,8 +18,9 @@ class ViewController: UIViewController {
         print(uiTaxField.text!)
     }
     @IBAction func calculate(_ sender: UIButton) {
-        let inputSalary = Int(uiTaxField.text!)
-        uiTaxLabel.text = String(describing: inputSalary)
+        let inputSalary = Double(uiTaxField.text!)
+        var user: User = User(filingStatus: FilingStatusEnum.single, income: inputSalary!)
+        uiTaxLabel.text = String(describing: user.getTaxBracket().getRate())
     }
     override func viewDidLoad() {
         super.viewDidLoad()
