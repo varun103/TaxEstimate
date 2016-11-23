@@ -83,27 +83,50 @@
                                     <action selector="textEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="blL-ZS-noX"/>
                                 </connections>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBa-Xr-Z98">
-                                <rect key="frame" x="20" y="197" width="119" height="107"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBa-Xr-Z98">
+                                <rect key="frame" x="20" y="197" width="175" height="107"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="KsH-sD-Q7E"/>
+                                    <constraint firstAttribute="width" constant="175" id="Z8c-r5-zzA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="Ejt-3q-QhQ"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="zed-ok-H4T"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-pF-rCR">
+                                <rect key="frame" x="287" y="197" width="100" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="6NQ-HM-5E3"/>
+                                    <constraint firstAttribute="width" constant="100" id="O6Z-au-9gD"/>
+                                </constraints>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="DkF-pF-rCR" firstAttribute="top" secondItem="lkC-hH-7AY" secondAttribute="bottom" constant="33" id="2kW-4J-a4d"/>
+                            <constraint firstItem="qBa-Xr-Z98" firstAttribute="top" secondItem="DkF-pF-rCR" secondAttribute="top" id="2of-hh-F6H"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="trailing" secondItem="6oW-y2-RDx" secondAttribute="trailing" id="LFa-G5-KYQ"/>
                             <constraint firstItem="6oW-y2-RDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="ThK-HB-ZzM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DkF-pF-rCR" secondAttribute="trailing" constant="7" id="Uqi-Yy-fjQ"/>
                             <constraint firstItem="L9x-Gg-XXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VcO-Sy-Mcc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L9x-Gg-XXc" secondAttribute="bottom" constant="44" id="dCZ-gD-ius"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="top" secondItem="6oW-y2-RDx" secondAttribute="bottom" constant="8" id="dMh-iw-5Xt"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="leading" secondItem="6oW-y2-RDx" secondAttribute="leading" id="dcD-XR-P0X"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ej4-af-yOx"/>
                             <constraint firstItem="L9x-Gg-XXc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jcU-C4-hql"/>
+                            <constraint firstItem="qBa-Xr-Z98" firstAttribute="top" secondItem="lkC-hH-7AY" secondAttribute="bottom" constant="33" id="nd3-XF-mhS"/>
+                            <constraint firstItem="qBa-Xr-Z98" firstAttribute="bottom" secondItem="DkF-pF-rCR" secondAttribute="bottom" id="s5j-2z-1c6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qBa-Xr-Z98" secondAttribute="leading" id="sjV-q1-ILj"/>
+                            <constraint firstItem="qBa-Xr-Z98" firstAttribute="leading" secondItem="lkC-hH-7AY" secondAttribute="leading" id="ty5-eg-3LP"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vZU-dV-djW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="401K Calculator" id="OvI-xb-wib"/>
                     <connections>
                         <outlet property="calculateButton" destination="L9x-Gg-XXc" id="NSG-QP-loY"/>
+                        <outlet property="filingStatusPicker" destination="qBa-Xr-Z98" id="QeH-qD-fSi"/>
                         <outlet property="uiTaxField" destination="lkC-hH-7AY" id="cq3-49-g9g"/>
                         <outlet property="uiTaxLabel" destination="6oW-y2-RDx" id="6z4-1a-EIW"/>
                     </connections>
@@ -114,7 +137,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="1324.6376811594205" y="376.63043478260875"/>
+            <point key="canvasLocation" x="1492.753623188406" y="359.51086956521743"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TDx-zi-GY8">

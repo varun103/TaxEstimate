@@ -9,12 +9,16 @@
 import UIKit
 
 
-enum FilingStatusEnum {
+enum FilingStatusEnum :String{
     
-    case single
+    case single = "SINGLE"
     
-    case married
+    case married = "MARRIED FILING JOINTLY"
     
-    case head
+    case head = "HEAD OF HOUSEHOLD"
+    
+    static func allValues() -> [String]{
+        return [single.rawValue, married.rawValue, head.rawValue]
+    }
     
 }
