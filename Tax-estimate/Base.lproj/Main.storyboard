@@ -40,20 +40,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Enter you 2016 taxable income" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-hH-7AY">
-                                <rect key="frame" x="20" y="161" width="374" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="textEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="blL-ZS-noX"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="60" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oW-y2-RDx">
-                                <rect key="frame" x="20" y="108" width="374" height="53"/>
+                                <rect key="frame" x="20" y="94" width="374" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="jbu-cd-Dme"/>
+                                    <constraint firstAttribute="height" constant="32" id="jbu-cd-Dme"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Enter">
@@ -71,8 +61,9 @@
                                 <color key="backgroundColor" red="0.36862745098039218" green="0.54117647058823526" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
                                 <color key="tintColor" red="0.43577378334565103" green="0.62025273415152482" blue="0.93605531416141696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="-1"/>
                                 <state key="normal" title="CALCULATE">
-                                    <color key="titleColor" red="0.38431372549019605" green="0.93725490196078431" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.36862745098039218" green="0.93725490196078431" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <color key="backgroundColor" red="0.36862745099999999" green="0.54117647059999996" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,17 +73,31 @@
                                     <segue destination="yzg-cX-gFl" kind="show" id="zJm-OE-0J9"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Enter you 2016 taxable income" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-hH-7AY">
+                                <rect key="frame" x="20" y="134" width="374" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="blL-ZS-noX"/>
+                                </connections>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBa-Xr-Z98">
+                                <rect key="frame" x="20" y="197" width="119" height="107"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.87058823529411766" green="0.90980392156862744" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="trailing" secondItem="6oW-y2-RDx" secondAttribute="trailing" id="LFa-G5-KYQ"/>
+                            <constraint firstItem="6oW-y2-RDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="ThK-HB-ZzM"/>
                             <constraint firstItem="L9x-Gg-XXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VcO-Sy-Mcc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L9x-Gg-XXc" secondAttribute="bottom" constant="44" id="dCZ-gD-ius"/>
-                            <constraint firstItem="lkC-hH-7AY" firstAttribute="top" secondItem="6oW-y2-RDx" secondAttribute="bottom" id="dMh-iw-5Xt"/>
+                            <constraint firstItem="lkC-hH-7AY" firstAttribute="top" secondItem="6oW-y2-RDx" secondAttribute="bottom" constant="8" id="dMh-iw-5Xt"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="leading" secondItem="6oW-y2-RDx" secondAttribute="leading" id="dcD-XR-P0X"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ej4-af-yOx"/>
                             <constraint firstItem="L9x-Gg-XXc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jcU-C4-hql"/>
-                            <constraint firstItem="lkC-hH-7AY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="161" id="lGM-51-LWI"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vZU-dV-djW"/>
                         </constraints>
                     </view>

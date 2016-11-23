@@ -35,12 +35,35 @@ class ViewController: UIViewController {
         // Add shadow to the text box
         uiTaxField.layer.shadowColor = UIColor.gray.cgColor
         uiTaxField.layer.shadowRadius = 2.0
+        uiTaxField.layer.shadowOffset = CGSize(width: 1, height: -1)
         uiTaxField.layer.masksToBounds = false
         uiTaxField.layer.shadowOpacity = 0.7
 
         // Round the text box
-        uiTaxField.layer.cornerRadius = 5
+        uiTaxField.layer.cornerRadius = 15
         
+
+        let gradient: CAGradientLayer = CAGradientLayer()
+        
+        gradient.colors = [UIColor(red: 250.0/255.0, green: 253/255.0, blue: 254/255.0, alpha:50.0/255.0).cgColor, UIColor.clear.cgColor]
+        gradient.cornerRadius = 15
+        gradient.locations = [0.0 , 0.35]
+        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
+        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
+//        gradient.frame = CGRect(x: 1.0, y: 1.0, width: calculateButton.frame.size.width, height: calculateButton.frame.size.height)
+        gradient.frame = calculateButton.bounds
+        calculateButton.layer.insertSublayer(gradient, at: 1)
+
+        
+        calculateButton.layer.shadowColor = UIColor.gray.cgColor
+        calculateButton.layer.shadowRadius = 2.0
+        calculateButton.layer.masksToBounds = false
+        calculateButton.layer.shadowOffset = CGSize(width: 2, height:2)
+
+        calculateButton.layer.shadowOpacity = 0.7
+        calculateButton.layer.cornerRadius = 15
+
+//        calculateButton.titleLabel?.textColor = UIColor(colorLiteralRed: 98.0/255.0, green: 239.0/255.0, blue: 171.0/255.0, alpha: 100.0/255.0)
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
