@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V12-B6-42P">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="w1x-M0-mCb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YJW-gc-teG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -37,54 +37,38 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="60" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oW-y2-RDx">
-                                <rect key="frame" x="20" y="94" width="374" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="jbu-cd-Dme"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Enter">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="20" name="ChalkboardSE-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9x-Gg-XXc">
-                                <rect key="frame" x="20" y="637" width="374" height="55"/>
-                                <color key="backgroundColor" red="0.36862745098039218" green="0.54117647058823526" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                            <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9x-Gg-XXc">
+                                <rect key="frame" x="16" y="568" width="343" height="55"/>
+                                <color key="backgroundColor" red="0.23921568627450979" green="0.42745098039215684" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
                                 <color key="tintColor" red="0.43577378334565103" green="0.62025273415152482" blue="0.93605531416141696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="titleShadowOffset" width="0.0" height="-1"/>
                                 <state key="normal" title="CALCULATE">
                                     <color key="titleColor" red="0.36862745098039218" green="0.93725490196078431" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <color key="backgroundColor" red="0.36862745099999999" green="0.54117647059999996" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </variation>
                                 <connections>
                                     <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="to4-DL-9wK"/>
                                     <segue destination="yzg-cX-gFl" kind="show" id="zJm-OE-0J9"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Enter you 2016 taxable income" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-hH-7AY">
-                                <rect key="frame" x="20" y="134" width="374" height="30"/>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Enter you 2016 taxable income" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-hH-7AY">
+                                <rect key="frame" x="16" y="104" width="343" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LRh-ga-8gk"/>
+                                </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="textEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="blL-ZS-noX"/>
                                 </connections>
                             </textField>
-                            <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBa-Xr-Z98">
-                                <rect key="frame" x="20" y="197" width="175" height="107"/>
+                            <pickerView opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBa-Xr-Z98">
+                                <rect key="frame" x="16" y="177" width="175" height="107"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="KsH-sD-Q7E"/>
@@ -95,25 +79,26 @@
                                     <outlet property="delegate" destination="8bC-Xf-vdC" id="zed-ok-H4T"/>
                                 </connections>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-pF-rCR">
-                                <rect key="frame" x="287" y="197" width="100" height="107"/>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-pF-rCR">
+                                <rect key="frame" x="272" y="177" width="80" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="6NQ-HM-5E3"/>
-                                    <constraint firstAttribute="width" constant="100" id="O6Z-au-9gD"/>
+                                    <constraint firstAttribute="width" constant="80" id="O6Z-au-9gD"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="RSB-ua-Lo7"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="qsl-cX-cDd"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="DkF-pF-rCR" firstAttribute="top" secondItem="lkC-hH-7AY" secondAttribute="bottom" constant="33" id="2kW-4J-a4d"/>
                             <constraint firstItem="qBa-Xr-Z98" firstAttribute="top" secondItem="DkF-pF-rCR" secondAttribute="top" id="2of-hh-F6H"/>
-                            <constraint firstItem="lkC-hH-7AY" firstAttribute="trailing" secondItem="6oW-y2-RDx" secondAttribute="trailing" id="LFa-G5-KYQ"/>
-                            <constraint firstItem="6oW-y2-RDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="ThK-HB-ZzM"/>
+                            <constraint firstItem="lkC-hH-7AY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="3cg-ne-t98"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DkF-pF-rCR" secondAttribute="trailing" constant="7" id="Uqi-Yy-fjQ"/>
                             <constraint firstItem="L9x-Gg-XXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VcO-Sy-Mcc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L9x-Gg-XXc" secondAttribute="bottom" constant="44" id="dCZ-gD-ius"/>
-                            <constraint firstItem="lkC-hH-7AY" firstAttribute="top" secondItem="6oW-y2-RDx" secondAttribute="bottom" constant="8" id="dMh-iw-5Xt"/>
-                            <constraint firstItem="lkC-hH-7AY" firstAttribute="leading" secondItem="6oW-y2-RDx" secondAttribute="leading" id="dcD-XR-P0X"/>
                             <constraint firstItem="lkC-hH-7AY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ej4-af-yOx"/>
                             <constraint firstItem="L9x-Gg-XXc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jcU-C4-hql"/>
                             <constraint firstItem="qBa-Xr-Z98" firstAttribute="top" secondItem="lkC-hH-7AY" secondAttribute="bottom" constant="33" id="nd3-XF-mhS"/>
@@ -127,8 +112,8 @@
                     <connections>
                         <outlet property="calculateButton" destination="L9x-Gg-XXc" id="NSG-QP-loY"/>
                         <outlet property="filingStatusPicker" destination="qBa-Xr-Z98" id="QeH-qD-fSi"/>
+                        <outlet property="statePicker" destination="DkF-pF-rCR" id="7Uj-cC-6tH"/>
                         <outlet property="uiTaxField" destination="lkC-hH-7AY" id="cq3-49-g9g"/>
-                        <outlet property="uiTaxLabel" destination="6oW-y2-RDx" id="6z4-1a-EIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +122,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="1492.753623188406" y="359.51086956521743"/>
+            <point key="canvasLocation" x="1491" y="377"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TDx-zi-GY8">
@@ -148,9 +133,9 @@
                         <viewControllerLayoutGuide type="bottom" id="fzd-4K-3sz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rhs-mM-82x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeU-9G-zX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -177,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgj-Ea-Psm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511.19999999999999" y="378.26086956521743"/>
+            <point key="canvasLocation" x="554" y="377"/>
         </scene>
     </scenes>
 </document>
