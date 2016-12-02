@@ -34,6 +34,7 @@
 		558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558B61F21DD1C93E00D644D8 /* TestTax.txt */; };
 		55D2E0271DE52EF6005CCBF2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */; };
 		55DA161E1DE42945008BCAA0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA161D1DE42945008BCAA0 /* File.swift */; };
+		55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */; };
 		55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* Bracket.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		558B61F21DD1C93E00D644D8 /* TestTax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTax.txt; sourceTree = "<group>"; };
 		55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		55DA161D1DE42945008BCAA0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		55F59B431DC03A7700CA0574 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				551D85911DDF0AB100FCC1F4 /* TODOs */,
 				55DA161D1DE42945008BCAA0 /* File.swift */,
 				55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */,
+				55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -281,6 +284,7 @@
 				55D2E0271DE52EF6005CCBF2 /* CustomTextField.swift in Sources */,
 				5535949B1DBDD285002478B1 /* ViewController.swift in Sources */,
 				556EC59C1DC554990002314A /* FilingStatus.swift in Sources */,
+				55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */,
 				5581C53C1DBF4174006C0A3D /* TaxInfoServiceImpl.swift in Sources */,
 				556EC5A01DC55CFD0002314A /* TaxInfoService.swift in Sources */,
 				55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */,

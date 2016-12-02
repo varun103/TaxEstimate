@@ -1,5 +1,7 @@
 
 
+
+work items
 1 - --- Convert TaxBrackets to be an implementation of a linkedlist - DONE
 2 - --- Convert TaxInfo service to a singleton - DONE
 3 - Implement UI
@@ -9,4 +11,24 @@
 
 4 - Add 2nd page to show the analysis
 5 - Add State Taxes
+6 - Keyboard does not toggle
+7 - 2nd page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Features
+
+- Save state
+- reset saved state
 
