@@ -29,7 +29,6 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var takeHomeIncome: UILabel!
     @IBOutlet weak var overallIncome: UILabel!
     
-    private var resultsMap:[String:Double] = [:]
     
     
     var user: User?
@@ -37,19 +36,7 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        initializeResultMap()
-        
         self.result.text = String(format:"%f",user!.getIncome())
     }
     
-    private func initializeResultMap() {
-        self.resultsMap[_fedTax] = 0.0
-        self.resultsMap[_stateTax] = 0.0
-        self.resultsMap[_fedBracket] = 0.0
-        self.resultsMap[_stateBracket] = 0.0
-        self.resultsMap[_contribution401] = 0.0
-        self.resultsMap[_takeHomeIncome] = 0.0
-        self.resultsMap[_overallIncome] = 0.0
-
-    }
  }

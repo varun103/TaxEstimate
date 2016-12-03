@@ -18,9 +18,12 @@ class User : UserProtocol {
     
     var taxInfo: TaxInfoService
     
-    init(filingStatus: FilingStatusEnum, income: Double){
+    var state: TaxType
+    
+    init(filingStatus: FilingStatusEnum, income: Double, state: TaxType){
         self.status = filingStatus
         self.income = income
+        self.state = state
         self.taxBracket = User.setTaxBracket()
         self.taxInfo = TaxInfoServiceImpl.getInstance()
     }
@@ -43,6 +46,10 @@ class User : UserProtocol {
     
     func getStateTax() -> Double {
         return 0.0
+    }
+    
+    func getState() -> TaxType{
+        return self.state
     }
     
     static func setTaxBracket() -> Bracket {

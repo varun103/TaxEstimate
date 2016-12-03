@@ -11,13 +11,9 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var uiTaxLabel: UILabel!
-    
     @IBOutlet weak var calculateButton: UIButton!
-    
     @IBOutlet weak var filingStatusPicker: UIPickerView!
-    
     @IBOutlet weak var statePicker: UIPickerView!
-    
     @IBOutlet weak var uiTaxField: UITextField!
     
     private var layer = CALayer()
@@ -30,12 +26,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     let innerShadow: CAGradientLayer = CAGradientLayer()
     
     
-    
     private var filingStatusValues = FilingStatusEnum.allValues()
     
     private var stateValue = TaxType.states
     
     @IBAction func textEntered(_ sender: UITextField) {
+        
         print(uiTaxField.text!)
     }
     
@@ -44,10 +40,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if let inputValue = uiTaxField.text {
             if let inputSalary = Double(inputValue) {
                 self.userIncomeEnterd = true
-                self.user = User(filingStatus: FilingStatusEnum.single, income: inputSalary)
+                self.user = User(filingStatus: FilingStatusEnum.single, income: inputSalary, state: TaxType.CA)
+            } else{
+                self.userIncomeEnterd = false
             }
         } else{
-            //do nothing
+            self.userIncomeEnterd = false
         }
     }
     
@@ -67,7 +65,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         
         self.uiTaxField.delegate = self
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,7 +95,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             label = UILabel()
         }
         
-        label!.font = UIFont(name: "Chalkboard SE", size: 17.0)
+        label!.font = Config.getAppFont(size: 17.0)
         label!.textColor = UIColor(red: 60.0/255.0, green: 88.0/255.0, blue: 199.0/255.0, alpha: 100.0)
         if (pickerView.tag == 1)  {
             label!.text = filingStatusValues[row]
@@ -108,13 +105,66 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return label!
     }
     
-    
-    private func enhanceNavigationBar(){
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 35.0/255.0, green: 220.0/255.0, blue: 147.0/255.0, alpha: 90.0/255.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Chalkboard SE", size: 18) ?? UIFont.systemFont(ofSize: 17.0), NSForegroundColorAttributeName: UIColor(red: 15.0/255.0, green: 44.0/255.0, blue: 163.0/255.0, alpha: 150.0/255.0)]
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if (pickerView.tag == 1){
+           _ = filingStatusValues[row]
+        }else if(pickerView.tag == 2){
+            _ = stateValue[row]
+        }
+        
     }
     
+    private func enhanceNavigationBar(){
+        self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
+    }
+    
+   
+    // This needed to be added since the gradients
+    // were not covering the complete view
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.gradient.frame = self.calculateButton.bounds
+        self.innerShadow.frame = self.calculateButton.bounds
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    
+    // Textfield func for the touch on BG
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToResults"{
+            
+            if let resultsPage = segue.destination as? ResultsViewController{
+                resultsPage.user = self.user
+            }
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return self.userIncomeEnterd
+    }
+    
+    func printTextField(){
+        print(uiTaxField.text!)
+    }
+    
+    
+ 
     private func enhanceTextField(){
+
         self.innerShadow.colors = [UIColor.gray.cgColor, UIColor(red: 240.0/255.0, green: 235/255.0, blue: 235/255.0, alpha:50.0/255.0).cgColor]
         self.innerShadow.cornerRadius = 5
         self.innerShadow.locations = [0.0 , 0.05]
@@ -126,10 +176,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Round the edges on the text box
         self.uiTaxField.layer.cornerRadius = 15
         
-        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:"Enter you taxable income", attributes:[NSFontAttributeName : UIFont(name: "Chalkboard SE", size: 16)])
+        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:"Enter you taxable income", attributes:[NSFontAttributeName : Config.getAppFont(size: 16.0)])
         self.uiTaxField.contentVerticalAlignment = UIControlContentVerticalAlignment.bottom
     }
     
+
     private func addGradientToButton(){
         
         gradient.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:180.0/255.0).cgColor, UIColor.clear.cgColor]
@@ -148,45 +199,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.calculateButton.layer.shadowOpacity = 0.7
         self.calculateButton.layer.cornerRadius = 15
         
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        self.gradient.frame = self.calculateButton.bounds
-        self.innerShadow.frame = self.calculateButton.bounds
-        
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true;
-    }
-    
-    
-    //textfield func for the touch on BG
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super.touchesBegan(touches, with: event)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToResults"{
-            
-            if let resultsPage = segue.destination as? ResultsViewController{
-                resultsPage.user = self.user
-            }
-            
-        }
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return self.userIncomeEnterd
-    }
-    
-    func printTextField(){
-        print(uiTaxField.text!)
     }
 }
 

@@ -30,6 +30,7 @@
 		556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC59D1DC558F50002314A /* UserProtocol.swift */; };
 		556EC5A01DC55CFD0002314A /* TaxInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC59F1DC55CFD0002314A /* TaxInfoService.swift */; };
 		5581C53C1DBF4174006C0A3D /* TaxInfoServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581C53B1DBF4174006C0A3D /* TaxInfoServiceImpl.swift */; };
+		558221911DF387A9008783A0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558221901DF387A9008783A0 /* Config.swift */; };
 		558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */; };
 		558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558B61F21DD1C93E00D644D8 /* TestTax.txt */; };
 		55D2E0271DE52EF6005CCBF2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */; };
@@ -76,6 +77,7 @@
 		556EC59F1DC55CFD0002314A /* TaxInfoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxInfoService.swift; sourceTree = "<group>"; };
 		556EC5A11DC56F030002314A /* TaxInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaxInfoTests.swift; path = "/Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxInfoTests.swift"; sourceTree = "<absolute>"; };
 		5581C53B1DBF4174006C0A3D /* TaxInfoServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxInfoServiceImpl.swift; sourceTree = "<group>"; };
+		558221901DF387A9008783A0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxTypeTests.swift; sourceTree = "<group>"; };
 		558B61F21DD1C93E00D644D8 /* TestTax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTax.txt; sourceTree = "<group>"; };
 		55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				55DA161D1DE42945008BCAA0 /* File.swift */,
 				55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */,
 				55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */,
+				558221901DF387A9008783A0 /* Config.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -288,6 +291,7 @@
 				5581C53C1DBF4174006C0A3D /* TaxInfoServiceImpl.swift in Sources */,
 				556EC5A01DC55CFD0002314A /* TaxInfoService.swift in Sources */,
 				55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */,
+				558221911DF387A9008783A0 /* Config.swift in Sources */,
 				55540FB21DC5CD67001800C4 /* AppError.swift in Sources */,
 				55DA161E1DE42945008BCAA0 /* File.swift in Sources */,
 				556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */,
