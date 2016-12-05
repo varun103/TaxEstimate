@@ -218,11 +218,14 @@
                     </view>
                     <connections>
                         <outlet property="contribution401" destination="Sud-Kz-Uxa" id="59S-15-rTJ"/>
+                        <outlet property="contributionAmount" destination="Sud-Kz-Uxa" id="2ml-3n-WYl"/>
                         <outlet property="fedTax" destination="T9f-kg-b2P" id="GJr-c0-cbD"/>
-                        <outlet property="overallIncome" destination="Pb8-Qt-rUc" id="crX-yq-PlC"/>
+                        <outlet property="fedTaxAmount" destination="T9f-kg-b2P" id="DST-16-DK4"/>
+                        <outlet property="overallIncome" destination="5J1-eP-ub6" id="Hls-OF-oye"/>
                         <outlet property="result" destination="t9a-TJ-AHr" id="tps-FL-t0k"/>
                         <outlet property="stateTax" destination="57u-5h-Dpq" id="MO0-aQ-LzR"/>
-                        <outlet property="takeHomeIncome" destination="5J1-eP-ub6" id="Lvw-tB-Xgf"/>
+                        <outlet property="stateTaxAmount" destination="57u-5h-Dpq" id="8BH-aR-BMe"/>
+                        <outlet property="takeHomeIncome" destination="Pb8-Qt-rUc" id="Gyp-aB-x3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeU-9G-zX8" userLabel="First Responder" sceneMemberID="firstResponder"/>

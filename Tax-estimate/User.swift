@@ -41,7 +41,13 @@ class User : UserProtocol {
     }
     
     func getFederalTax() -> Double {
-        return 0.0
+        var _fedTax:Double = 0.0
+        do {
+            try _fedTax = self.getTaxBracket().getTax(self.getIncome())
+        } catch {
+            
+        }
+        return _fedTax
     }
     
     func getStateTax() -> Double {

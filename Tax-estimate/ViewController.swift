@@ -16,19 +16,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var uiTaxField: UITextField!
     
-    private var layer = CALayer()
-    
-    private var userIncomeEnterd: Bool = false
-    
-    private var user:User?
-    
     let gradient: CAGradientLayer = CAGradientLayer()
     let innerShadow: CAGradientLayer = CAGradientLayer()
     
-    
+    private var layer = CALayer()
+    private var userIncomeEnterd: Bool = false
+    private var user:User?
     private var filingStatusValues = FilingStatusEnum.allValues()
-    
+    private var selectedFilingStatus: String?
     private var stateValue = TaxType.states
+    private var selectedState: String?
     
     @IBAction func textEntered(_ sender: UITextField) {
         
@@ -40,7 +37,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if let inputValue = uiTaxField.text {
             if let inputSalary = Double(inputValue) {
                 self.userIncomeEnterd = true
-                self.user = User(filingStatus: FilingStatusEnum.single, income: inputSalary, state: TaxType.CA)
+                let inc = self.filingStatusPicker.selectedRow(inComponent: 0)
+                let abc = self.statePicker.selectedRow(inComponent: 0)
+                self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType.CA)
             } else{
                 self.userIncomeEnterd = false
             }
@@ -60,9 +59,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.filingStatusPicker.dataSource = self
         self.filingStatusPicker.delegate = self
         
+        self.filingStatusPicker.selectRow(0, inComponent: 0, animated: true)
+        
         self.statePicker.delegate = self
         self.statePicker.dataSource = self
         
+        self.statePicker.selectRow(0, inComponent: 0, animated: true)
+
         
         self.uiTaxField.delegate = self
     }
@@ -108,9 +111,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if (pickerView.tag == 1){
-           _ = filingStatusValues[row]
+            self.selectedFilingStatus = filingStatusValues[row]
         }else if(pickerView.tag == 2){
-            _ = stateValue[row]
+            self.selectedState = stateValue[row]
         }
         
     }
@@ -120,7 +123,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
     }
     
-   
+    
     // This needed to be added since the gradients
     // were not covering the complete view
     override func viewDidLayoutSubviews() {
@@ -160,11 +163,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func printTextField(){
         print(uiTaxField.text!)
     }
-    
-    
- 
+        
     private func enhanceTextField(){
-
+        
         self.innerShadow.colors = [UIColor.gray.cgColor, UIColor(red: 240.0/255.0, green: 235/255.0, blue: 235/255.0, alpha:50.0/255.0).cgColor]
         self.innerShadow.cornerRadius = 5
         self.innerShadow.locations = [0.0 , 0.05]
@@ -180,7 +181,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.uiTaxField.contentVerticalAlignment = UIControlContentVerticalAlignment.bottom
     }
     
-
+    
     private func addGradientToButton(){
         
         gradient.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:180.0/255.0).cgColor, UIColor.clear.cgColor]

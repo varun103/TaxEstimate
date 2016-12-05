@@ -59,11 +59,7 @@ class Bracket{
     }
     
     func getTax(_ income: Double) throws -> Double {
-        if income >= self.endRange{
-            throw TaxCalculationError.outOfTaxBracket
-        } else{
-            return income * self.percentage
-        }
+        return ((income - self.startRange) * self.percentage + self.getTotalTaxForPreviousBrackets())
     }
         
     func getMax() -> Double?{
@@ -98,6 +94,15 @@ class Bracket{
         return self.next != nil
         
     }
+    
+    func getTotalTaxForPreviousBrackets()-> Double {
+        var _prevTax: Double = 0.0
+        if let _prev = self.previous {
+           _prevTax  = _prev.totalTaxWPreviousBrackets()
+        }
+        return _prevTax
+    }
+    
     func setPrevious(previousBracket:Bracket?){
         self.previous = previousBracket
         self.setTotalTaxIncPreviousBrackets()

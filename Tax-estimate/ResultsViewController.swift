@@ -11,15 +11,6 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    private final let _fedTax = "Fed Tax"
-    private final let _stateTax = "StateTax"
-    
-    private final let _fedBracket = "Fed Bracket"
-    private final let _stateBracket = "State Bracket"
-
-    private final let _contribution401 = "401k Conribution"
-    private final let _takeHomeIncome = "Take Home Income"
-    private final let _overallIncome = "Overall Income"
     
     private final let textCellIdentifier = "resultCell"
     
@@ -29,6 +20,11 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var takeHomeIncome: UILabel!
     @IBOutlet weak var overallIncome: UILabel!
     
+    @IBOutlet weak var fedTaxAmount: UILabel!
+    @IBOutlet weak var stateTaxAmount: UILabel!
+    @IBOutlet weak var contributionAmount: UILabel!
+    @IBOutlet weak var overallIncomeAmount: UILabel!
+    @IBOutlet weak var takeHomeIncomeAmount: UILabel!
     
     
     var user: User?
@@ -37,6 +33,8 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         
         self.result.text = String(format:"%f",user!.getIncome())
+        self.fedTaxAmount.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
+
     }
     
  }
