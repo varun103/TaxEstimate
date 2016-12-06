@@ -16,6 +16,9 @@
 		553594A01DBDD285002478B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5535949F1DBDD285002478B1 /* Assets.xcassets */; };
 		553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553594A11DBDD285002478B1 /* LaunchScreen.storyboard */; };
 		553594AE1DBDD285002478B1 /* BracketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553594AD1DBDD285002478B1 /* BracketTests.swift */; };
+		554A4B551DF58CED00ABE981 /* CA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B521DF58CED00ABE981 /* CA.txt */; };
+		554A4B561DF58CED00ABE981 /* MA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B531DF58CED00ABE981 /* MA.txt */; };
+		554A4B571DF58CED00ABE981 /* WA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B541DF58CED00ABE981 /* WA.txt */; };
 		55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FAD1DC57D7A001800C4 /* TaxType.swift */; };
 		55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55540FAF1DC5C89C001800C4 /* fedtax.txt */; };
 		55540FB21DC5CD67001800C4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB11DC5CD67001800C4 /* AppError.swift */; };
@@ -62,6 +65,9 @@
 		553594A91DBDD285002478B1 /* Tax-estimateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tax-estimateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553594AD1DBDD285002478B1 /* BracketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BracketTests.swift; path = "/Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/BracketTests.swift"; sourceTree = "<absolute>"; tabWidth = 4; usesTabs = 0; };
 		553594AF1DBDD285002478B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		554A4B521DF58CED00ABE981 /* CA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CA.txt; sourceTree = "<group>"; };
+		554A4B531DF58CED00ABE981 /* MA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MA.txt; sourceTree = "<group>"; };
+		554A4B541DF58CED00ABE981 /* WA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WA.txt; sourceTree = "<group>"; };
 		55540FAD1DC57D7A001800C4 /* TaxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxType.swift; sourceTree = "<group>"; };
 		55540FAF1DC5C89C001800C4 /* fedtax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fedtax.txt; sourceTree = "<group>"; };
 		55540FB11DC5CD67001800C4 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 		553594971DBDD285002478B1 /* TaxEstimate */ = {
 			isa = PBXGroup;
 			children = (
+				554A4B521DF58CED00ABE981 /* CA.txt */,
+				554A4B531DF58CED00ABE981 /* MA.txt */,
+				554A4B541DF58CED00ABE981 /* WA.txt */,
 				553594981DBDD285002478B1 /* AppDelegate.swift */,
 				5535949A1DBDD285002478B1 /* ViewController.swift */,
 				5535949C1DBDD285002478B1 /* Main.storyboard */,
@@ -258,10 +267,13 @@
 			files = (
 				551D85921DDF0AB100FCC1F4 /* TODOs in Resources */,
 				553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */,
+				554A4B561DF58CED00ABE981 /* MA.txt in Resources */,
 				553594A01DBDD285002478B1 /* Assets.xcassets in Resources */,
 				55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */,
 				5535949E1DBDD285002478B1 /* Main.storyboard in Resources */,
 				558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */,
+				554A4B571DF58CED00ABE981 /* WA.txt in Resources */,
+				554A4B551DF58CED00ABE981 /* CA.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

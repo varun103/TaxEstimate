@@ -36,14 +36,19 @@ class User : UserProtocol {
         return self.income
     }
     
-    func getTaxBracket() -> Bracket{
+    func getFedTaxBracket() -> Bracket{
         return self.taxInfo.getFedBrackets(self.status).findBracket(income: self.getIncome())
     }
+    
+    func getStateTaxBracket() -> Bracket{
+        return self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.getIncome())
+    }
+
     
     func getFederalTax() -> Double {
         var _fedTax:Double = 0.0
         do {
-            try _fedTax = self.getTaxBracket().getTax(self.getIncome())
+            try _fedTax = self.getFedTaxBracket().getTax(self.getIncome())
         } catch {
             
         }
@@ -51,7 +56,13 @@ class User : UserProtocol {
     }
     
     func getStateTax() -> Double {
-        return 0.0
+        var _fedTax:Double = 0.0
+        do {
+            try _fedTax = self.getStateTaxBracket().getTax(self.getIncome())
+        } catch {
+            
+        }
+        return _fedTax
     }
     
     func getState() -> TaxType{

@@ -136,13 +136,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9a-TJ-AHr">
-                                <rect key="frame" x="69" y="407" width="263" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fed Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-Zr-Qle">
                                 <rect key="frame" x="21" y="108" width="190" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -213,6 +206,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="18500" translatesAutoresizingMaskIntoConstraints="NO" id="y2p-bl-cfU">
+                                <rect key="frame" x="54" y="435" width="306" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -222,7 +219,6 @@
                         <outlet property="fedTax" destination="T9f-kg-b2P" id="GJr-c0-cbD"/>
                         <outlet property="fedTaxAmount" destination="T9f-kg-b2P" id="DST-16-DK4"/>
                         <outlet property="overallIncome" destination="5J1-eP-ub6" id="Hls-OF-oye"/>
-                        <outlet property="result" destination="t9a-TJ-AHr" id="tps-FL-t0k"/>
                         <outlet property="stateTax" destination="57u-5h-Dpq" id="MO0-aQ-LzR"/>
                         <outlet property="stateTaxAmount" destination="57u-5h-Dpq" id="8BH-aR-BMe"/>
                         <outlet property="takeHomeIncome" destination="Pb8-Qt-rUc" id="Gyp-aB-x3w"/>
@@ -255,4 +251,5 @@
             <point key="canvasLocation" x="554" y="377"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.13333333333333333" green="0.86274509803921573" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -39,7 +39,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 self.userIncomeEnterd = true
                 let inc = self.filingStatusPicker.selectedRow(inComponent: 0)
                 let abc = self.statePicker.selectedRow(inComponent: 0)
-                self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType.CA)
+                self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType(rawValue: stateValue[abc])!)
             } else{
                 self.userIncomeEnterd = false
             }

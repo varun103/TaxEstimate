@@ -28,7 +28,11 @@ class TaxInfoServiceImpl: TaxInfoService{
     
     private init() {
         self.dependencies = Dependencies()
-        initializeTaxBracketMap()
+        do {
+        try initializeTaxBracketMap()
+        } catch {
+            print("Could not initialize the Tax Catalogue")
+        }
     }
     
     
@@ -57,13 +61,13 @@ class TaxInfoServiceImpl: TaxInfoService{
     /// Dependancy injection - only to be used for testing
     ///
     /// - Parameter dependencies: dependencies
-    func setDependencies(dependencies: Dependencies){
+    func setDependencies(dependencies: Dependencies) throws{
         self.dependencies = dependencies
         self.taxInfo = [FilingStatusEnum: [TaxType: TaxBrackets]]()
-        initializeTaxBracketMap()
+        try initializeTaxBracketMap()
     }
     
-    private func initializeTaxBracketMap(){
+    private func initializeTaxBracketMap() throws{
         
         var bracketInfoArray :[String] = []
         
@@ -124,7 +128,7 @@ class TaxInfoServiceImpl: TaxInfoService{
             self.taxInfo[FilingStatusEnum.head] = headMap
             
         } catch {
-            
+            throw TaxCalculationError.catalogueProcessingError
         }
         
     }

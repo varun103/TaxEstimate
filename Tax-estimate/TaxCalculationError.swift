@@ -12,4 +12,5 @@ enum TaxCalculationError: Error{
     
     case outOfTaxBracket
     
+    case catalogueProcessingError
 }

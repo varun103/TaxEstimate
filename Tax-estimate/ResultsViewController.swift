@@ -32,8 +32,9 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        self.result.text = String(format:"%f",user!.getIncome())
         self.fedTaxAmount.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
+        self.stateTaxAmount.text = Config.addCommasToNumber(number: (user?.getStateTax())!)
+
 
     }
     
