@@ -43,6 +43,10 @@ class User : UserProtocol {
     func getStateTaxBracket() -> Bracket{
         return self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.getIncome())
     }
+    
+    func getTakeHomeIncome() -> Double {
+        return self.income - ( self.getFederalTax() + self.getStateTax())
+    }
 
     
     func getFederalTax() -> Double {
@@ -71,5 +75,12 @@ class User : UserProtocol {
     
     static func setTaxBracket() -> Bracket {
         return Bracket(rate:0,startRange: 0,endRange: 0)
+    }
+    
+    
+    public class Builder{
+        
+        
+        
     }
 }

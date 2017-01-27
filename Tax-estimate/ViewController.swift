@@ -108,16 +108,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return label!
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if (pickerView.tag == 1){
-            self.selectedFilingStatus = filingStatusValues[row]
-        }else if(pickerView.tag == 2){
-            self.selectedState = stateValue[row]
-        }
-        
-    }
-    
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]

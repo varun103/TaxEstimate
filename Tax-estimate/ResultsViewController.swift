@@ -34,6 +34,7 @@ class ResultsViewController: UIViewController {
         
         self.fedTaxAmount.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
         self.stateTaxAmount.text = Config.addCommasToNumber(number: (user?.getStateTax())!)
+        self.takeHomeIncome.text = Config.addCommasToNumber(number: (user?.getTakeHomeIncome())!)
 
 
     }
