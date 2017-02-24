@@ -20,12 +20,12 @@ class TaxInfoTests: XCTestCase {
         super.tearDown()
     }
 
-    func testGetTaxInfo(){
+    func testGetTaxInfo() throws {
         let dependenies = TestDependencies()
 
         let info = TaxInfoServiceImpl.getInstance()
         
-        info.setDependencies(dependencies: dependenies)
+        try info.setDependencies(dependencies: dependenies)
         let taxCatalogue = info.getCatalogue()
         
         XCTAssertNotNil(taxCatalogue)

@@ -19,6 +19,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var contribution401: UILabel!
     @IBOutlet weak var takeHomeIncome: UILabel!
     @IBOutlet weak var overallIncome: UILabel!
+    @IBOutlet weak var taxSavings: UILabel!
     
     @IBOutlet weak var fedTaxAmount: UILabel!
     @IBOutlet weak var stateTaxAmount: UILabel!
@@ -26,8 +27,14 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var overallIncomeAmount: UILabel!
     @IBOutlet weak var takeHomeIncomeAmount: UILabel!
     
+    @IBAction func contributionSlider(_ sender: UISlider) {
+        let currentValue = Int(sender.value)
+        self.contribution401.text = "\(currentValue)"
+        calculateTaxSavings(amount: currentValue)
+    }
     
     var user: User?
+    
     @IBOutlet weak var result: UILabel!
     
     override func viewDidLoad() {
@@ -36,7 +43,14 @@ class ResultsViewController: UIViewController {
         self.stateTaxAmount.text = Config.addCommasToNumber(number: (user?.getStateTax())!)
         self.takeHomeIncome.text = Config.addCommasToNumber(number: (user?.getTakeHomeIncome())!)
 
-
     }
     
+    private func calculateTaxSavings(amount: Int){
+        
+        user?.setContributionAmount(newContributionAmout: amount)
+        //viewDidLoad()
+        //self.taxSavings.text = "\(Double(amount) * (user?.getFedTaxBracket().getPercentage())!)"
+        self.taxSavings.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
+    
  }
+}

@@ -74,6 +74,10 @@ class Bracket{
         return self.rate
     }
     
+    func getPercentage() -> Double {
+        return self.percentage
+    }
+    
     func value()-> Double{
         return self.rate
     }

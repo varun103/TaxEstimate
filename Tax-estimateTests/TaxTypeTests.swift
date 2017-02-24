@@ -23,6 +23,6 @@ class TaxTypeTests: XCTestCase {
 
     func testAll(){
         let allTaxTypes = TaxType.all
-        XCTAssertEqual(2, allTaxTypes.count)
+        XCTAssertEqual(4, allTaxTypes.count)
     }
 }

@@ -16,7 +16,6 @@
 		5535949E1DBDD285002478B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5535949C1DBDD285002478B1 /* Main.storyboard */; };
 		553594A01DBDD285002478B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5535949F1DBDD285002478B1 /* Assets.xcassets */; };
 		553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553594A11DBDD285002478B1 /* LaunchScreen.storyboard */; };
-		553594AE1DBDD285002478B1 /* BracketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553594AD1DBDD285002478B1 /* BracketTests.swift */; };
 		554A4B551DF58CED00ABE981 /* CA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B521DF58CED00ABE981 /* CA.txt */; };
 		554A4B561DF58CED00ABE981 /* MA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B531DF58CED00ABE981 /* MA.txt */; };
 		554A4B571DF58CED00ABE981 /* WA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B541DF58CED00ABE981 /* WA.txt */; };
@@ -26,8 +25,10 @@
 		55540FB41DC72F0E001800C4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB31DC72F0E001800C4 /* Utils.swift */; };
 		55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB51DC731D5001800C4 /* UtilsTest.swift */; };
 		55540FB81DC73604001800C4 /* testFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55540FB71DC73604001800C4 /* testFile.txt */; };
-		555BF3721DDED14000C69B48 /* TaxInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC5A11DC56F030002314A /* TaxInfoTests.swift */; };
 		555BF3741DDED6E400C69B48 /* TaxBrackets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555BF3731DDED6E400C69B48 /* TaxBrackets.swift */; };
+		55623CA21E5A542A006C0EE3 /* UserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55623CA11E5A542A006C0EE3 /* UserTest.swift */; };
+		55623CA51E5A6D33006C0EE3 /* BracketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55623CA31E5A6D33006C0EE3 /* BracketTests.swift */; };
+		55623CA61E5A6D33006C0EE3 /* TaxInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55623CA41E5A6D33006C0EE3 /* TaxInfoTests.swift */; };
 		556A4D581DC1E5C300529007 /* TaxCalculationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A4D571DC1E5C300529007 /* TaxCalculationError.swift */; };
 		556EC59A1DC5545A0002314A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC5991DC5545A0002314A /* User.swift */; };
 		556EC59C1DC554990002314A /* FilingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EC59B1DC554990002314A /* FilingStatus.swift */; };
@@ -66,7 +67,6 @@
 		553594A21DBDD285002478B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553594A41DBDD285002478B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553594A91DBDD285002478B1 /* Tax-estimateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tax-estimateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		553594AD1DBDD285002478B1 /* BracketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BracketTests.swift; path = "/Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/BracketTests.swift"; sourceTree = "<absolute>"; tabWidth = 4; usesTabs = 0; };
 		553594AF1DBDD285002478B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		554A4B521DF58CED00ABE981 /* CA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CA.txt; sourceTree = "<group>"; };
 		554A4B531DF58CED00ABE981 /* MA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MA.txt; sourceTree = "<group>"; };
@@ -79,12 +79,14 @@
 		55540FB71DC73604001800C4 /* testFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testFile.txt; sourceTree = "<group>"; };
 		55540FB91DC74144001800C4 /* BracketEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketEnum.swift; sourceTree = "<group>"; };
 		555BF3731DDED6E400C69B48 /* TaxBrackets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBrackets.swift; sourceTree = "<group>"; };
+		55623CA11E5A542A006C0EE3 /* UserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTest.swift; sourceTree = "<group>"; };
+		55623CA31E5A6D33006C0EE3 /* BracketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketTests.swift; sourceTree = "<group>"; };
+		55623CA41E5A6D33006C0EE3 /* TaxInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxInfoTests.swift; sourceTree = "<group>"; };
 		556A4D571DC1E5C300529007 /* TaxCalculationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxCalculationError.swift; sourceTree = "<group>"; };
 		556EC5991DC5545A0002314A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		556EC59B1DC554990002314A /* FilingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilingStatus.swift; sourceTree = "<group>"; };
 		556EC59D1DC558F50002314A /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		556EC59F1DC55CFD0002314A /* TaxInfoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxInfoService.swift; sourceTree = "<group>"; };
-		556EC5A11DC56F030002314A /* TaxInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaxInfoTests.swift; path = "/Users/vajmera/projects/ios/Tax-estimate/Tax-estimateTests/TaxInfoTests.swift"; sourceTree = "<absolute>"; };
 		5581C53B1DBF4174006C0A3D /* TaxInfoServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxInfoServiceImpl.swift; sourceTree = "<group>"; };
 		558221901DF387A9008783A0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxTypeTests.swift; sourceTree = "<group>"; };
@@ -173,13 +175,14 @@
 		553594AC1DBDD285002478B1 /* Tax-estimateTests */ = {
 			isa = PBXGroup;
 			children = (
-				556EC5A11DC56F030002314A /* TaxInfoTests.swift */,
-				553594AD1DBDD285002478B1 /* BracketTests.swift */,
+				55623CA31E5A6D33006C0EE3 /* BracketTests.swift */,
+				55623CA41E5A6D33006C0EE3 /* TaxInfoTests.swift */,
 				553594AF1DBDD285002478B1 /* Info.plist */,
 				55540FB51DC731D5001800C4 /* UtilsTest.swift */,
 				55540FB71DC73604001800C4 /* testFile.txt */,
 				558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */,
 				551D858F1DDEF42C00FCC1F4 /* TaxBracketsTests.swift */,
+				55623CA11E5A542A006C0EE3 /* UserTest.swift */,
 			);
 			path = "Tax-estimateTests";
 			sourceTree = "<group>";
@@ -325,10 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555BF3721DDED14000C69B48 /* TaxInfoTests.swift in Sources */,
+				55623CA61E5A6D33006C0EE3 /* TaxInfoTests.swift in Sources */,
 				551D85901DDEF42C00FCC1F4 /* TaxBracketsTests.swift in Sources */,
 				558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */,
-				553594AE1DBDD285002478B1 /* BracketTests.swift in Sources */,
+				55623CA21E5A542A006C0EE3 /* UserTest.swift in Sources */,
+				55623CA51E5A6D33006C0EE3 /* BracketTests.swift in Sources */,
 				55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

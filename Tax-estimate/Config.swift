@@ -10,7 +10,7 @@ import UIKit
 
 class Config {
     
-    private static let fontType = "Chalkboard SE"
+    private static let fontType = "Avenir Next Medium"
     
     // NAVIGATION BAR
     static let navigationBarColor:UIColor =  UIColor(red: 35.0/255.0, green: 220.0/255.0, blue: 147.0/255.0, alpha: 90.0/255.0)
@@ -24,7 +24,7 @@ class Config {
     
     
     // NUMBER FORMATTING
-    static func addCommasToNumber(number: Double) -> String{
+    static func addCommasToNumber(number: Int) -> String{
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         return numberFormatter.string(from: NSNumber(value: number))!
