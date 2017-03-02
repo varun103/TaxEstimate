@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5507520E1DD082F900676627 /* BracketEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB91DC74144001800C4 /* BracketEnum.swift */; };
+		550DC6CB1E6424AD005A459F /* PreTaxDeduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */; };
+		550DC6CD1E6437C0005A459F /* PreTaxDeductionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */; };
+		550DC6CF1E643DD6005A459F /* PreTaxDeductions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */; };
 		551D85901DDEF42C00FCC1F4 /* TaxBracketsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551D858F1DDEF42C00FCC1F4 /* TaxBracketsTests.swift */; };
 		551D85921DDF0AB100FCC1F4 /* TODOs in Resources */ = {isa = PBXBuildFile; fileRef = 551D85911DDF0AB100FCC1F4 /* TODOs */; };
 		552877E51E4B1250002408FD /* AppSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552877E41E4B1250002408FD /* AppSelectorViewController.swift */; };
@@ -19,6 +22,7 @@
 		554A4B551DF58CED00ABE981 /* CA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B521DF58CED00ABE981 /* CA.txt */; };
 		554A4B561DF58CED00ABE981 /* MA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B531DF58CED00ABE981 /* MA.txt */; };
 		554A4B571DF58CED00ABE981 /* WA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B541DF58CED00ABE981 /* WA.txt */; };
+		5551137E1E5FD58C00CC7597 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551137D1E5FD58C00CC7597 /* Settings.swift */; };
 		55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FAD1DC57D7A001800C4 /* TaxType.swift */; };
 		55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55540FAF1DC5C89C001800C4 /* fedtax.txt */; };
 		55540FB21DC5CD67001800C4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB11DC5CD67001800C4 /* AppError.swift */; };
@@ -56,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeduction.swift; sourceTree = "<group>"; };
+		550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeductionTests.swift; sourceTree = "<group>"; };
+		550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeductions.swift; sourceTree = "<group>"; };
 		551D858F1DDEF42C00FCC1F4 /* TaxBracketsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketsTests.swift; sourceTree = "<group>"; };
 		551D85911DDF0AB100FCC1F4 /* TODOs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODOs; sourceTree = "<group>"; };
 		552877E41E4B1250002408FD /* AppSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSelectorViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 		554A4B521DF58CED00ABE981 /* CA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CA.txt; sourceTree = "<group>"; };
 		554A4B531DF58CED00ABE981 /* MA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MA.txt; sourceTree = "<group>"; };
 		554A4B541DF58CED00ABE981 /* WA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WA.txt; sourceTree = "<group>"; };
+		5551137D1E5FD58C00CC7597 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		55540FAD1DC57D7A001800C4 /* TaxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxType.swift; sourceTree = "<group>"; };
 		55540FAF1DC5C89C001800C4 /* fedtax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fedtax.txt; sourceTree = "<group>"; };
 		55540FB11DC5CD67001800C4 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -167,6 +175,9 @@
 				558221901DF387A9008783A0 /* Config.swift */,
 				55D461451DF94B7600454DBC /* Deductions.swift */,
 				552877E41E4B1250002408FD /* AppSelectorViewController.swift */,
+				5551137D1E5FD58C00CC7597 /* Settings.swift */,
+				550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */,
+				550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -183,6 +194,7 @@
 				558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */,
 				551D858F1DDEF42C00FCC1F4 /* TaxBracketsTests.swift */,
 				55623CA11E5A542A006C0EE3 /* UserTest.swift */,
+				550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */,
 			);
 			path = "Tax-estimateTests";
 			sourceTree = "<group>";
@@ -305,9 +317,11 @@
 				5507520E1DD082F900676627 /* BracketEnum.swift in Sources */,
 				55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */,
 				556EC59A1DC5545A0002314A /* User.swift in Sources */,
+				550DC6CF1E643DD6005A459F /* PreTaxDeductions.swift in Sources */,
 				55D2E0271DE52EF6005CCBF2 /* CustomTextField.swift in Sources */,
 				5535949B1DBDD285002478B1 /* ViewController.swift in Sources */,
 				556EC59C1DC554990002314A /* FilingStatus.swift in Sources */,
+				550DC6CB1E6424AD005A459F /* PreTaxDeduction.swift in Sources */,
 				55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */,
 				5581C53C1DBF4174006C0A3D /* TaxInfoServiceImpl.swift in Sources */,
 				556EC5A01DC55CFD0002314A /* TaxInfoService.swift in Sources */,
@@ -319,6 +333,7 @@
 				556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */,
 				553594991DBDD285002478B1 /* AppDelegate.swift in Sources */,
 				555BF3741DDED6E400C69B48 /* TaxBrackets.swift in Sources */,
+				5551137E1E5FD58C00CC7597 /* Settings.swift in Sources */,
 				55540FB41DC72F0E001800C4 /* Utils.swift in Sources */,
 				552877E51E4B1250002408FD /* AppSelectorViewController.swift in Sources */,
 			);
@@ -331,6 +346,7 @@
 				55623CA61E5A6D33006C0EE3 /* TaxInfoTests.swift in Sources */,
 				551D85901DDEF42C00FCC1F4 /* TaxBracketsTests.swift in Sources */,
 				558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */,
+				550DC6CD1E6437C0005A459F /* PreTaxDeductionTests.swift in Sources */,
 				55623CA21E5A542A006C0EE3 /* UserTest.swift in Sources */,
 				55623CA51E5A6D33006C0EE3 /* BracketTests.swift in Sources */,
 				55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class User : UserProtocol {
+class User : UserProtocol, DeductionDelegate {
     
     var status: FilingStatusEnum
     
@@ -18,26 +18,32 @@ class User : UserProtocol {
     // income that is taxed
     var taxableIncome: Double
     
-    var taxBracket: Bracket
     var fedTaxBracket: Bracket
+    
     var stateTaxBracket: Bracket
+    
+//    var medicareTaxBracket: Bracket
+//    
+//    var socialSecurityTaxBracket: Bracket
     
     var taxInfo: TaxInfoService
     
     var state: TaxType
     
-    var contribution401K: Int
+    var preTaxDeductionAmount: Int
+    
+    var preTaxDeductions: PreTaxDeductions
     
     init(filingStatus: FilingStatusEnum, income: Double, state: TaxType){
         self.status = filingStatus
         self.initialIncome = income
         self.state = state
-        self.taxBracket = User.setTaxBracket()
         self.taxInfo = TaxInfoServiceImpl.getInstance()
-        self.contribution401K = 0
+        self.preTaxDeductionAmount = 0
         self.taxableIncome = self.initialIncome
-        self.fedTaxBracket = taxBracket
-        self.stateTaxBracket = taxBracket
+        self.fedTaxBracket = User.setTaxBracket()
+        self.stateTaxBracket = User.setTaxBracket()
+        self.preTaxDeductions = PreTaxDeductionsImpl()
         calculateTax()
     }
     
@@ -62,7 +68,7 @@ class User : UserProtocol {
     }
     
     func getTakeHomeIncome() -> Int {
-        return Int(self.initialIncome) - ( self.getFederalTax() + self.getStateTax())
+        return Int(self.initialIncome) - (self.getFederalTax() + self.getStateTax())
     }
 
     func getTakeHomeIncomeAfterOtherTaxes(){
@@ -72,7 +78,7 @@ class User : UserProtocol {
     func getFederalTax() -> Int {
         var _fedTax:Double = 0.0
         do {
-            try _fedTax = self.getFedTaxBracket().getTax(self.getTaxableIncome())
+            try _fedTax = getFedTaxBracket().getTax(getTaxableIncome())
         } catch {
             
         }
@@ -82,7 +88,7 @@ class User : UserProtocol {
     func getStateTax() -> Int {
         var _stateTax:Double = 0.0
         do {
-            try _stateTax = self.getStateTaxBracket().getTax(self.getTaxableIncome())
+            try _stateTax = getStateTaxBracket().getTax(getTaxableIncome())
         } catch {
             
         }
@@ -94,19 +100,41 @@ class User : UserProtocol {
     }
     
     func getContributionAmount() -> Int{
-        return self.contribution401K
+        return self.preTaxDeductionAmount
     }
     
-    func setContributionAmount(newContributionAmout: Int){
-        self.contribution401K = newContributionAmout
-        self.taxableIncome = self.initialIncome - Double(self.contribution401K)
+    func setContributionAmount(){
+
+        var amount:Int = 0
+        for preTaxD in self.preTaxDeductions.all {
+            amount = amount + preTaxD.contributionAmount
+        }
+        self.preTaxDeductionAmount = amount
+        self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
         calculateTax()
     }
     
     func getTaxSavings() -> Int {
-        return (Int((Double(self.contribution401K)) * self.getFedTaxBracket().getPercentage()))
+        return (Int((Double(self.preTaxDeductionAmount)) * self.getFedTaxBracket().getPercentage()))
     }
     
+    
+    func addPreTaxDeduction(deduction: PreTaxDeduction) {
+        self.preTaxDeductions.add(preTaxDeduction: deduction)
+        deduction.delegate = self
+    }
+    
+    
+    func deductionAmountChanged(_sender: PreTaxDeduction) {
+        var amount:Int = 0
+        for preTaxD in self.preTaxDeductions.all {
+            amount = amount + preTaxD.contributionAmount
+        }
+        self.preTaxDeductionAmount = amount
+        self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
+        calculateTax()
+    }
+
     static func setTaxBracket() -> Bracket {
         return Bracket(rate:0,startRange: 0,endRange: 0)
     }
@@ -114,9 +142,7 @@ class User : UserProtocol {
     private func calculateTax(){
         self.fedTaxBracket = self.taxInfo.getFedBrackets(self.status).findBracket(income: self.taxableIncome)
         self.stateTaxBracket = self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.taxableIncome)
+
     }
     
-    public class Builder{
-        
-    }
 }
