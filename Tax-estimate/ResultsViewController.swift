@@ -53,7 +53,7 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
     
-        self.navigationItem.title = "Pre-Tax Deductions"
+        self.navigationItem.title = "Pre-Tax Contributions"
 
         self.fedTaxAmount.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
         self.stateTaxAmount.text = Config.addCommasToNumber(number: (user?.getStateTax())!)

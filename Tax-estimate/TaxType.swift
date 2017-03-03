@@ -11,11 +11,15 @@ import UIKit
 enum TaxType: String{
     
     case FED = "fedtax"
+    case STATE = "state"
     
     case CA = "CA"
     case MA = "MA"
     case NY = "NY"
     case WA = "WA"
+    
+    case MED = "medicare"
+    case SS = "socical security"
     
     case TEST = "TestTax"
     
@@ -24,6 +28,7 @@ enum TaxType: String{
     static let states = [CA.rawValue, MA.rawValue, NY.rawValue, WA.rawValue]
     
     static let test = [TEST]
+    
 
 }
 

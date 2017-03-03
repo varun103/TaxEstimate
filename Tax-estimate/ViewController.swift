@@ -110,6 +110,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
+        self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
     }
     
@@ -144,6 +145,10 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
                 resultsPage.user = self.user
             }
         }
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

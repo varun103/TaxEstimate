@@ -27,6 +27,11 @@ class AppSelectorViewController: UIViewController {
         addShadowToCircularButton(button: self.taxSavings401KButton)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
+    }
     
     private func addGradientToButton(){
         addGradientToCircularButton(button: self.taxSavings401KButton)

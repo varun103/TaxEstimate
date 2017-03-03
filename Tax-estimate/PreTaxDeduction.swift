@@ -15,6 +15,8 @@ protocol PreTaxDeduction: class {
     var contributionAmount:Int {get set}
     
     var delegate:DeductionDelegate? {get set}
+    
+    var affects:[TaxType]{get}
 }
 
 protocol DeductionDelegate {
@@ -27,6 +29,8 @@ protocol DeductionDelegate {
 class FourOOneKPreTaxDeduction : PreTaxDeduction,CustomStringConvertible {
     
     var delegate: DeductionDelegate?
+    
+    var affects: [TaxType] = TaxType.all
     
     internal var MAX_CONTRIBUTION_AMOUNT: Int = Settings.MAX_401K_CONTRIBUTION
 
@@ -56,6 +60,8 @@ class FourOOneKPreTaxDeduction : PreTaxDeduction,CustomStringConvertible {
 final class FSAHealthPreTaxDeduction: PreTaxDeduction, CustomStringConvertible{
     
     var delegate: DeductionDelegate?
+
+    var affects: [TaxType] = TaxType.all
 
     internal var MAX_CONTRIBUTION_AMOUNT: Int = Settings.MAX_FSA_CONTRIBUTION
     
