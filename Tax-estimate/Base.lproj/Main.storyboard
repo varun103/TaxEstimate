@@ -173,58 +173,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="401K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHg-dY-asw">
-                                <rect key="frame" x="20" y="356" width="197" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-Kz-Uxa">
-                                <rect key="frame" x="242" y="356" width="144" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" red="0.350621666" green="0.54526453210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="18500" translatesAutoresizingMaskIntoConstraints="NO" id="Q0d-oG-WYP">
-                                <rect key="frame" x="46" y="399" width="323" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" red="0.59215686274509804" green="0.91764705882352937" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="contributionSlider:" destination="yzg-cX-gFl" eventType="valueChanged" id="U2b-R6-VJh"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fed Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-Zr-Qle">
-                                <rect key="frame" x="21" y="197" width="66" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9f-kg-b2P">
-                                <rect key="frame" x="277" y="215" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-SI-Ian">
-                                <rect key="frame" x="20" y="240" width="190" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
-                                <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FSA (Health)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMh-Wd-9cr">
-                                <rect key="frame" x="21" y="499" width="190" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="0.99996405291411039" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gl-5x-AQZ">
+                                <rect key="frame" x="30" y="350.66666666666674" width="354" height="44.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="401K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHg-dY-asw">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="44.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-Kz-Uxa">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="44.333333333333314"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="LH8-xG-o6F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="0.350621666" green="0.54526453210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0gl-5x-AQZ" secondAttribute="height" multiplier="320:40" id="dA7-zw-ECX"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="prc-Gs-tT7">
+                                <rect key="frame" x="30" y="164.33333333333337" width="354" height="38.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fed Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wKD-Zr-Qle">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="38.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                        <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9f-kg-b2P">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="38.666666666666657"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="iIY-78-dhl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="prc-Gs-tT7" secondAttribute="height" multiplier="320:35" id="Ij0-m2-oXB"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-A3-bnC">
+                                <rect key="frame" x="30" y="209" width="354" height="38.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-SI-Ian">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="38.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                        <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agK-Vf-DuY">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="38.666666666666657"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="0jq-sf-GOe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f9W-A3-bnC" secondAttribute="height" multiplier="320:35" id="3Hk-mY-HPl"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57u-5h-Dpq">
                                 <rect key="frame" x="277" y="285" width="117" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -232,53 +249,117 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-eP-ub6">
-                                <rect key="frame" x="269" y="499" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                <color key="textColor" red="0.350621666" green="0.54526453210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tax Savings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBT-qr-egT">
-                                <rect key="frame" x="20" y="137" width="210" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
-                                <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-jr-0X7">
-                                <rect key="frame" x="290" y="149" width="104" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
-                                <color key="textColor" red="0.13333333333333333" green="0.83921568627450982" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb8-Qt-rUc">
-                                <rect key="frame" x="277" y="294" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2600" translatesAutoresizingMaskIntoConstraints="NO" id="EuE-QZ-lLx">
-                                <rect key="frame" x="46" y="564" width="318" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" red="0.59215686270000001" green="0.91764705879999997" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="fsaContributionSlider:" destination="yzg-cX-gFl" eventType="valueChanged" id="z5T-LX-u7W"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overall Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBZ-le-m7N">
-                                <rect key="frame" x="21" y="286" width="132" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rer-Yz-T2Z">
+                                <rect key="frame" x="30" y="114.00000000000001" width="354" height="44.333333333333357"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Savings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eBT-qr-egT">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="44.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
+                                        <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJS-By-kL3">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="44.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="tkn-9V-awV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rer-Yz-T2Z" secondAttribute="height" multiplier="320:40" id="fvN-Pc-aZe"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBZ-le-m7N">
+                                <rect key="frame" x="30" y="285.66666666666669" width="132" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="fEg-jr-yzQ"/>
+                                    <constraint firstAttribute="height" constant="35" id="fhl-46-wKo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                 <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9I1-XN-UJ4">
+                                <rect key="frame" x="30" y="447" width="354" height="44.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FSA (Health)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7K-qT-XBd">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="44.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6j-bS-VgQ">
+                                        <rect key="frame" x="254" y="0.0" width="100" height="44.333333333333314"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="FrS-6E-VAh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9I1-XN-UJ4" secondAttribute="height" multiplier="320:40" id="SPu-4c-dG6"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r59-W8-2l1">
+                                <rect key="frame" x="50" y="397" width="314" height="30"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="18500" translatesAutoresizingMaskIntoConstraints="NO" id="Q0d-oG-WYP">
+                                        <rect key="frame" x="-2" y="0.0" width="318" height="31"/>
+                                        <color key="minimumTrackTintColor" red="0.59215686274509804" green="0.91764705882352937" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="contributionSlider:" destination="yzg-cX-gFl" eventType="valueChanged" id="U2b-R6-VJh"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ivm-cl-AiI">
+                                <rect key="frame" x="50" y="493.33333333333337" width="314" height="30.000000000000114"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2600" translatesAutoresizingMaskIntoConstraints="NO" id="EuE-QZ-lLx">
+                                        <rect key="frame" x="-2" y="0.0" width="318" height="31.000000000000057"/>
+                                        <color key="minimumTrackTintColor" red="0.59215686270000001" green="0.91764705879999997" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="fsaContributionSlider:" destination="yzg-cX-gFl" eventType="valueChanged" id="z5T-LX-u7W"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r59-W8-2l1" firstAttribute="leading" secondItem="rhs-mM-82x" secondAttribute="leadingMargin" constant="30" id="1ej-2h-47y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f9W-A3-bnC" secondAttribute="trailing" constant="10" id="2AB-dw-rXs"/>
+                            <constraint firstItem="9I1-XN-UJ4" firstAttribute="top" secondItem="r59-W8-2l1" secondAttribute="bottom" constant="20" id="515-AC-Vgu"/>
+                            <constraint firstItem="0gl-5x-AQZ" firstAttribute="top" secondItem="SBZ-le-m7N" secondAttribute="bottom" constant="30" id="Arj-9e-T1e"/>
+                            <constraint firstItem="prc-Gs-tT7" firstAttribute="top" secondItem="rer-Yz-T2Z" secondAttribute="bottom" constant="6" id="DDI-eX-QhX"/>
+                            <constraint firstItem="r59-W8-2l1" firstAttribute="top" secondItem="0gl-5x-AQZ" secondAttribute="bottom" constant="2" id="EW1-v8-5wG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="prc-Gs-tT7" secondAttribute="trailing" constant="10" id="G26-e0-JsZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9I1-XN-UJ4" secondAttribute="trailing" constant="10" id="I3R-Xu-aNH"/>
+                            <constraint firstItem="prc-Gs-tT7" firstAttribute="leading" secondItem="rhs-mM-82x" secondAttribute="leadingMargin" constant="10" id="IKJ-Mp-KzG"/>
+                            <constraint firstItem="rer-Yz-T2Z" firstAttribute="leading" secondItem="rhs-mM-82x" secondAttribute="leadingMargin" constant="10" id="Io4-kq-XGG"/>
+                            <constraint firstItem="9I1-XN-UJ4" firstAttribute="leading" secondItem="rhs-mM-82x" secondAttribute="leadingMargin" constant="10" id="Jeo-3P-GTj"/>
+                            <constraint firstItem="ivm-cl-AiI" firstAttribute="top" secondItem="9I1-XN-UJ4" secondAttribute="bottom" constant="2" id="K1V-8h-R71"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r59-W8-2l1" secondAttribute="trailing" constant="30" id="aOe-u0-2b0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0gl-5x-AQZ" secondAttribute="trailing" constant="10" id="bNy-tQ-u9C"/>
+                            <constraint firstItem="f9W-A3-bnC" firstAttribute="top" secondItem="prc-Gs-tT7" secondAttribute="bottom" constant="6" id="bV6-FS-QID"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ivm-cl-AiI" secondAttribute="trailing" constant="30" id="cjL-k4-27B"/>
+                            <constraint firstItem="f9W-A3-bnC" firstAttribute="leading" secondItem="rhs-mM-82x" secondAttribute="leadingMargin" constant="10" id="dOD-yQ-2uR"/>
+                            <constraint firstItem="0gl-5x-AQZ" firstAttribute="leading" secondItem="rhs-mM-82x" secondAttribute="leadingMargin" constant="10" id="drk-hd-44b"/>
+                            <constraint firstItem="ivm-cl-AiI" firstAttribute="leading" secondItem="rhs-mM-82x" secondAttribute="leadingMargin" constant="30" id="fgT-jk-fBv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rer-Yz-T2Z" secondAttribute="trailing" constant="10" id="jOH-Sv-BTe"/>
+                            <constraint firstItem="SBZ-le-m7N" firstAttribute="top" secondItem="f9W-A3-bnC" secondAttribute="bottom" constant="38" id="sNZ-8I-5w7"/>
+                            <constraint firstItem="rer-Yz-T2Z" firstAttribute="top" secondItem="j5y-eU-eSd" secondAttribute="bottom" constant="50" id="xaT-zy-Fcy"/>
+                            <constraint firstItem="SBZ-le-m7N" firstAttribute="leading" secondItem="0gl-5x-AQZ" secondAttribute="leading" id="zhv-xt-lwN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="contribution401" destination="Sud-Kz-Uxa" id="59S-15-rTJ"/>
@@ -286,13 +367,11 @@
                         <outlet property="fedTax" destination="T9f-kg-b2P" id="GJr-c0-cbD"/>
                         <outlet property="fedTaxAmount" destination="T9f-kg-b2P" id="DST-16-DK4"/>
                         <outlet property="fourOOneKSlider" destination="Q0d-oG-WYP" id="wtd-Ct-RKj"/>
-                        <outlet property="fsaContributionAmount" destination="5J1-eP-ub6" id="EYM-2q-Tux"/>
+                        <outlet property="fsaContributionAmount" destination="c6j-bS-VgQ" id="5as-Yn-KLe"/>
                         <outlet property="fsaSlider" destination="EuE-QZ-lLx" id="PLJ-YR-VeG"/>
-                        <outlet property="overallIncome" destination="RQe-jr-0X7" id="it9-7a-ExA"/>
+                        <outlet property="overallIncomeAmount" destination="YJS-By-kL3" id="R0J-Om-qPD"/>
                         <outlet property="stateTax" destination="57u-5h-Dpq" id="MO0-aQ-LzR"/>
                         <outlet property="stateTaxAmount" destination="57u-5h-Dpq" id="8BH-aR-BMe"/>
-                        <outlet property="takeHomeIncome" destination="Pb8-Qt-rUc" id="Gyp-aB-x3w"/>
-                        <outlet property="taxSavings" destination="RQe-jr-0X7" id="8D2-1l-PTG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeU-9G-zX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -311,12 +390,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wme-L0-UwX">
-                                <rect key="frame" x="34" y="92" width="346" height="87"/>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ivA-Nb-ETO">
+                                <rect key="frame" x="33" y="121" width="374" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Savings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZ1-vo-VLT">
+                                        <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
+                                        <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSr-aj-txA">
+                                        <rect key="frame" x="199.66666666666663" y="0.0" width="174.33333333333337" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="yEh-Wt-Ri9">
+                                <rect key="frame" x="33" y="178" width="130" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0h-Vm-eAf">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAY-Q0-nys">
+                                        <rect key="frame" x="80.333333333333343" y="0.0" width="49.333333333333343" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ivA-Nb-ETO" firstAttribute="leading" secondItem="gJg-YY-mr4" secondAttribute="leadingMargin" id="HO6-wp-oph"/>
+                            <constraint firstItem="ivA-Nb-ETO" firstAttribute="top" secondItem="Cdb-gK-7Al" secondAttribute="bottom" constant="50" id="qZx-Kl-6ap"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ivA-Nb-ETO" secondAttribute="trailing" id="tTh-eI-NdU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSp-jf-cGK" userLabel="First Responder" sceneMemberID="firstResponder"/>

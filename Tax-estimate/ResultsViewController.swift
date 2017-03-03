@@ -26,8 +26,9 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var fourOOneKSlider: UISlider!
     @IBOutlet weak var fsaSlider: UISlider!
     @IBOutlet weak var contributionAmount: UILabel!
-    @IBOutlet weak var overallIncomeAmount: UILabel!
+
     @IBOutlet weak var fsaContributionAmount: UILabel!
+    @IBOutlet weak var overallIncomeAmount: UILabel!
     
     private var fourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
     private var fsaPreTaxDeduction: FSAHealthPreTaxDeduction = FSAHealthPreTaxDeduction()
@@ -56,8 +57,8 @@ class ResultsViewController: UIViewController {
 
         self.fedTaxAmount.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
         self.stateTaxAmount.text = Config.addCommasToNumber(number: (user?.getStateTax())!)
-        self.takeHomeIncome.text = Config.addCommasToNumber(number: (user?.getTakeHomeIncome())!)
-        
+//        self.takeHomeIncome.text = Config.addCommasToNumber(number: (user?.getTakeHomeIncome())!)
+//        
         
        // self.fourOOneKSlider.isContinuous = false
         
@@ -68,6 +69,6 @@ class ResultsViewController: UIViewController {
     private func calculateTaxSavings(){
         
         //user?.setContributionAmount()
-        self.taxSavings.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
+        self.overallIncomeAmount.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
     }
 }
