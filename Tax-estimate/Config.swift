@@ -10,7 +10,7 @@ import UIKit
 
 class Config {
     
-    private static let fontType = "Avenir Next Medium"
+    private static let fontType = "AvenirNext-Medium"
     
     // NAVIGATION BAR
     static let navigationBarColor:UIColor =  UIColor(red: 35.0/255.0, green: 220.0/255.0, blue: 147.0/255.0, alpha: 90.0/255.0)
