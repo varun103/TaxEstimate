@@ -10,7 +10,6 @@ import UIKit
 
 class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var uiTaxLabel: UILabel!
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var filingStatusPicker: UIPickerView!
     @IBOutlet weak var statePicker: UIPickerView!
@@ -72,7 +71,6 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
