@@ -115,9 +115,16 @@ class User : UserProtocol, DeductionDelegate {
     }
     
     func getTaxSavings() -> Int {
+        return getFedTaxSavings() + getStateTaxSavings()
+    }
+    
+    func getFedTaxSavings() -> Int {
         return (Int((Double(self.preTaxDeductionAmount)) * self.getFedTaxBracket().getPercentage()))
     }
     
+    func getStateTaxSavings() -> Int {
+        return (Int((Double(self.preTaxDeductionAmount)) * self.getStateTaxBracket().getPercentage()))
+    }
     
     func addPreTaxDeduction(deduction: PreTaxDeduction) {
         self.preTaxDeductions.add(preTaxDeduction: deduction)

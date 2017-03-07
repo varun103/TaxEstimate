@@ -13,24 +13,21 @@ class ResultsViewController: UIViewController {
     
     private final let screenTitle:String = "Pre-Tax Contributions"
     private final let textCellIdentifier = "resultCell"
-    
-    @IBOutlet weak var fedTax: UILabel!
-    @IBOutlet weak var stateTax: UILabel!
-    @IBOutlet weak var contribution401: UILabel!
-    @IBOutlet weak var overallIncome: UILabel!
+
     @IBOutlet weak var taxSavings: UILabel!
-    
-    @IBOutlet weak var fedTaxAmount: UILabel!
-    @IBOutlet weak var stateTaxAmount: UILabel!
-    @IBOutlet weak var fourOOneKSlider: UISlider!
-    @IBOutlet weak var fsaSlider: UISlider!
-    @IBOutlet weak var contributionAmount: UILabel!
-    @IBOutlet weak var spouse401KContribution: UILabel!
-    @IBOutlet weak var spouseFSAContribution: UILabel!
+    @IBOutlet weak var fedTaxSavings: UILabel!
+    @IBOutlet weak var stateTaxSavings: UILabel!
 
     @IBOutlet weak var segmentSelector: UISegmentedControl!
+
+    @IBOutlet weak var fourOOneKSlider: UISlider!
+    @IBOutlet weak var contribution401: UILabel!
+    @IBOutlet weak var spouse401KContribution: UILabel!
+
+    @IBOutlet weak var fsaSlider: UISlider!
     @IBOutlet weak var fsaContributionAmount: UILabel!
-    @IBOutlet weak var overallIncomeAmount: UILabel!
+    @IBOutlet weak var spouseFSAContribution: UILabel!
+
     
     private var fourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
     private var spouseFourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
@@ -39,12 +36,8 @@ class ResultsViewController: UIViewController {
     private var spouseFsaPreTaxDeduction: FSAHealthPreTaxDeduction = FSAHealthPreTaxDeduction()
     
     var user: User?
-
-    @IBOutlet weak var result: UILabel!
-
     
     override func viewDidLoad() {
-        
         
         self.navigationItem.title = self.screenTitle
         self.segmentSelector.isHidden = true
@@ -59,22 +52,9 @@ class ResultsViewController: UIViewController {
         }
         user?.addPreTaxDeduction(deduction: fourOOneKPreTaxDeduction)
         user?.addPreTaxDeduction(deduction: fsaPreTaxDeduction)
-        
-        self.fedTaxAmount.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
-        self.stateTaxAmount.text = Config.addCommasToNumber(number: (user?.getStateTax())!)
-        
-        
-        //        self.takeHomeIncome.text = Config.addCommasToNumber(number: (user?.getTakeHomeIncome())!)
-        //        self.fourOOneKSlider.isContinuous = false
-        
     }
     
     @IBAction func segmentChanged(_ sender: Any) {
-        if self.segmentSelector.selectedSegmentIndex == 0 {
-            
-        } else if self.segmentSelector.selectedSegmentIndex == 1 {
-            
-        }
         prepareContributionSlider()
     }
     
@@ -89,9 +69,9 @@ class ResultsViewController: UIViewController {
         }
         calculateTaxSavings()
     }
+
     @IBAction func contributionSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
-        
         if(self.segmentSelector.selectedSegmentIndex == 0) {
             self.fourOOneKPreTaxDeduction.contributionAmount = currentValue
             self.contribution401.text = "\(currentValue)"
@@ -114,8 +94,8 @@ class ResultsViewController: UIViewController {
     
    
     private func calculateTaxSavings(){
-        
-        //user?.setContributionAmount()
-        self.overallIncomeAmount.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
+        self.taxSavings.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
+        self.fedTaxSavings.text = Config.addCommasToNumber(number: (user?.getFedTaxSavings())!)
+        self.stateTaxSavings.text = Config.addCommasToNumber(number: (user?.getStateTaxSavings())!)
     }
 }
