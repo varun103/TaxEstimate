@@ -10,6 +10,8 @@ import UIKit
 
 class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
+    private let placeHolderText: String = "2016 Income"
+    
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var filingStatusPicker: UIPickerView!
     @IBOutlet weak var statePicker: UIPickerView!
@@ -169,7 +171,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         // Round the edges on the text box
         self.uiTaxField.layer.cornerRadius = 15
         
-        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:"Enter you taxable income", attributes:[NSFontAttributeName : Config.getAppFont(size: 16.0)])
+        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:placeHolderText, attributes:[NSFontAttributeName : Config.getAppFont(size: 16.0)])
         self.uiTaxField.contentVerticalAlignment = UIControlContentVerticalAlignment.bottom
     }
     
