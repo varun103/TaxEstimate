@@ -62,10 +62,10 @@ class ResultsViewController: UIViewController {
         let currentValue = Int(sender.value)
         if(self.segmentSelector.selectedSegmentIndex == 0) {
             self.fsaPreTaxDeduction.contributionAmount = currentValue
-            self.fsaContributionAmount.text = "\(currentValue)"
+            self.fsaContributionAmount.text = Config.addCommasToNumber(number: currentValue)
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
             self.spouseFsaPreTaxDeduction.contributionAmount = currentValue
-            self.spouseFSAContribution.text = "\(currentValue)"
+            self.spouseFSAContribution.text = Config.addCommasToNumber(number: currentValue)
         }
         calculateTaxSavings()
     }
@@ -74,10 +74,10 @@ class ResultsViewController: UIViewController {
         let currentValue = Int(sender.value)
         if(self.segmentSelector.selectedSegmentIndex == 0) {
             self.fourOOneKPreTaxDeduction.contributionAmount = currentValue
-            self.contribution401.text = "\(currentValue)"
+            self.contribution401.text = Config.addCommasToNumber(number: currentValue)
         }else if (self.segmentSelector.selectedSegmentIndex == 1) {
             self.spouseFourOOneKPreTaxDeduction.contributionAmount = currentValue
-            self.spouse401KContribution.text = "\(currentValue)"
+            self.spouse401KContribution.text = Config.addCommasToNumber(number: currentValue)
         }
         calculateTaxSavings()
     }
@@ -86,9 +86,17 @@ class ResultsViewController: UIViewController {
         if(self.segmentSelector.selectedSegmentIndex == 0){
             self.fourOOneKSlider.setValue(Float(self.fourOOneKPreTaxDeduction.contributionAmount), animated: true)
             self.fsaSlider.setValue(Float(self.fsaPreTaxDeduction.contributionAmount), animated: true)
+            self.spouse401KContribution.isEnabled = false
+            self.spouseFSAContribution.isEnabled = false
+            self.contribution401.isEnabled = true
+            self.fsaContributionAmount.isEnabled = true
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
             self.fourOOneKSlider.setValue(Float(self.spouseFourOOneKPreTaxDeduction.contributionAmount), animated: true)
             self.fsaSlider.setValue(Float(self.spouseFsaPreTaxDeduction.contributionAmount), animated: true)
+            self.spouse401KContribution.isEnabled = true
+            self.spouseFSAContribution.isEnabled = true
+            self.contribution401.isEnabled = false
+            self.fsaContributionAmount.isEnabled = false
         }
     }
     

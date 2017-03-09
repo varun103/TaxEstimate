@@ -25,6 +25,16 @@ class AppSelectorViewController: UIViewController {
 //        addGradientToCircularButton(button: self.comingSoonButton)
         
         addShadowToCircularButton(button: self.taxSavings401KButton)
+        addShadowToCircularButton(button: self.comingSoonButton)
+        
+        enhanceNavigationBar()
+
+    }
+    
+    private func enhanceNavigationBar(){
+        self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
+        self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getAppFont(size: 30.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

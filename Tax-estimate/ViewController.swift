@@ -27,7 +27,6 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     private var selectedState: String?
     
     @IBAction func textEntered(_ sender: UITextField) {
-        
         print(uiTaxField.text!)
     }
     
