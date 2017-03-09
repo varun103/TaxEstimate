@@ -52,6 +52,7 @@ class ResultsViewController: UIViewController {
         }
         user?.addPreTaxDeduction(deduction: fourOOneKPreTaxDeduction)
         user?.addPreTaxDeduction(deduction: fsaPreTaxDeduction)
+        setInitialValues()
     }
     
     @IBAction func segmentChanged(_ sender: Any) {
@@ -100,7 +101,13 @@ class ResultsViewController: UIViewController {
         }
     }
     
-   
+    private func setInitialValues(){
+        self.fsaContributionAmount.text = Config.addCommasToNumber(number: 0)
+        self.contribution401.text = Config.addCommasToNumber(number: 0)
+        self.taxSavings.text =   Config.addCommasToNumber(number: 0)
+
+    }
+    
     private func calculateTaxSavings(){
         self.taxSavings.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
         self.fedTaxSavings.text = Config.addCommasToNumber(number: (user?.getFedTaxSavings())!)

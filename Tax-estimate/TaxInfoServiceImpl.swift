@@ -35,7 +35,6 @@ class TaxInfoServiceImpl: TaxInfoService{
         }
     }
     
-    
     func getCatalogue() -> [FilingStatusEnum: [TaxType: TaxBrackets]] {
         return self.taxInfo
     }

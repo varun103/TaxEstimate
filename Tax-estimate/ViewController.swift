@@ -66,7 +66,6 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         self.statePicker.selectRow(0, inComponent: 0, animated: true)
 
-        
         self.uiTaxField.delegate = self
         self.addDoneButton()
     }
@@ -100,6 +99,8 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         label!.font = Config.getAppFont(size: 17.0)
         label!.textColor = UIColor(red: 60.0/255.0, green: 88.0/255.0, blue: 199.0/255.0, alpha: 100.0)
+        label!.adjustsFontSizeToFitWidth = true
+        label!.minimumScaleFactor = 0.5
         if (pickerView.tag == 1)  {
             label!.text = filingStatusValues[row]
         }else if(pickerView.tag == 2){
@@ -207,5 +208,18 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         self.uiTaxField.inputAccessoryView = keyboardToolbar
     }
+    
+    override var shouldAutorotate: Bool {
+        get{
+            return false
+        }
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        get{
+            return UIInterfaceOrientationMask.portrait
+        }
+    }
+    
 }
 
