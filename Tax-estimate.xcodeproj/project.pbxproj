@@ -42,10 +42,10 @@
 		558221911DF387A9008783A0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558221901DF387A9008783A0 /* Config.swift */; };
 		558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */; };
 		558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558B61F21DD1C93E00D644D8 /* TestTax.txt */; };
-		55D2E0271DE52EF6005CCBF2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */; };
 		55D461461DF94B7600454DBC /* Deductions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D461451DF94B7600454DBC /* Deductions.swift */; };
-		55DA161E1DE42945008BCAA0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DA161D1DE42945008BCAA0 /* File.swift */; };
 		55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */; };
+		55E817661E712EE300923EE2 /* AL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817651E712EE300923EE2 /* AL.txt */; };
+		55E817681E71307000923EE2 /* AK.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817671E71307000923EE2 /* AK.txt */; };
 		55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* Bracket.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,10 +99,10 @@
 		558221901DF387A9008783A0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxTypeTests.swift; sourceTree = "<group>"; };
 		558B61F21DD1C93E00D644D8 /* TestTax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTax.txt; sourceTree = "<group>"; };
-		55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		55D461451DF94B7600454DBC /* Deductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deductions.swift; sourceTree = "<group>"; };
-		55DA161D1DE42945008BCAA0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		55E817651E712EE300923EE2 /* AL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AL.txt; sourceTree = "<group>"; };
+		55E817671E71307000923EE2 /* AK.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AK.txt; sourceTree = "<group>"; };
 		55F59B431DC03A7700CA0574 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,8 +169,6 @@
 				558B61F21DD1C93E00D644D8 /* TestTax.txt */,
 				555BF3731DDED6E400C69B48 /* TaxBrackets.swift */,
 				551D85911DDF0AB100FCC1F4 /* TODOs */,
-				55DA161D1DE42945008BCAA0 /* File.swift */,
-				55D2E0261DE52EF6005CCBF2 /* CustomTextField.swift */,
 				55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */,
 				558221901DF387A9008783A0 /* Config.swift */,
 				55D461451DF94B7600454DBC /* Deductions.swift */,
@@ -178,6 +176,8 @@
 				5551137D1E5FD58C00CC7597 /* Settings.swift */,
 				550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */,
 				550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */,
+				55E817651E712EE300923EE2 /* AL.txt */,
+				55E817671E71307000923EE2 /* AK.txt */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -291,6 +291,8 @@
 				554A4B561DF58CED00ABE981 /* MA.txt in Resources */,
 				553594A01DBDD285002478B1 /* Assets.xcassets in Resources */,
 				55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */,
+				55E817661E712EE300923EE2 /* AL.txt in Resources */,
+				55E817681E71307000923EE2 /* AK.txt in Resources */,
 				5535949E1DBDD285002478B1 /* Main.storyboard in Resources */,
 				558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */,
 				554A4B571DF58CED00ABE981 /* WA.txt in Resources */,
@@ -318,7 +320,6 @@
 				55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */,
 				556EC59A1DC5545A0002314A /* User.swift in Sources */,
 				550DC6CF1E643DD6005A459F /* PreTaxDeductions.swift in Sources */,
-				55D2E0271DE52EF6005CCBF2 /* CustomTextField.swift in Sources */,
 				5535949B1DBDD285002478B1 /* ViewController.swift in Sources */,
 				556EC59C1DC554990002314A /* FilingStatus.swift in Sources */,
 				550DC6CB1E6424AD005A459F /* PreTaxDeduction.swift in Sources */,
@@ -329,7 +330,6 @@
 				55D461461DF94B7600454DBC /* Deductions.swift in Sources */,
 				558221911DF387A9008783A0 /* Config.swift in Sources */,
 				55540FB21DC5CD67001800C4 /* AppError.swift in Sources */,
-				55DA161E1DE42945008BCAA0 /* File.swift in Sources */,
 				556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */,
 				553594991DBDD285002478B1 /* AppDelegate.swift in Sources */,
 				555BF3741DDED6E400C69B48 /* TaxBrackets.swift in Sources */,

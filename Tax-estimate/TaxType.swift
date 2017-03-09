@@ -13,6 +13,8 @@ enum TaxType: String{
     case FED = "fedtax"
     case STATE = "state"
     
+    case AL = "AL"
+    case AK = "AK"
     case CA = "CA"
     case MA = "MA"
     case NY = "NY"
@@ -23,9 +25,9 @@ enum TaxType: String{
     
     case TEST = "TestTax"
     
-    static let all = [FED, CA, MA, WA]
+    static let all = [FED, AL, AK, CA, MA, WA]
     
-    static let states = [CA.rawValue, MA.rawValue, NY.rawValue, WA.rawValue]
+    static let states = [AL.rawValue, AK.rawValue, CA.rawValue, MA.rawValue, NY.rawValue, WA.rawValue]
     
     static let test = [TEST]
     

@@ -13,7 +13,7 @@ class Settings {
     
     static let MAX_401K_CONTRIBUTION: Int = 18000
     
-    static let MAX_FSA_CONTRIBUTION: Int = 2600
+    static let MAX_FSA_CONTRIBUTION: Int = 2550
     
     static let MEDICARE_TAX: Double = 1.45
 
