@@ -46,6 +46,10 @@
 		55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */; };
 		55E817661E712EE300923EE2 /* AL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817651E712EE300923EE2 /* AL.txt */; };
 		55E817681E71307000923EE2 /* AK.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817671E71307000923EE2 /* AK.txt */; };
+		55E8176A1E71376A00923EE2 /* NY.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817691E71376A00923EE2 /* NY.txt */; };
+		55E8176C1E713A4900923EE2 /* FL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E8176B1E713A4900923EE2 /* FL.txt */; };
+		55E8176E1E713A8800923EE2 /* IL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E8176D1E713A8800923EE2 /* IL.txt */; };
+		55E817701E713B0100923EE2 /* IN.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E8176F1E713B0100923EE2 /* IN.txt */; };
 		55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* Bracket.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +107,10 @@
 		55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		55E817651E712EE300923EE2 /* AL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AL.txt; sourceTree = "<group>"; };
 		55E817671E71307000923EE2 /* AK.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AK.txt; sourceTree = "<group>"; };
+		55E817691E71376A00923EE2 /* NY.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NY.txt; sourceTree = "<group>"; };
+		55E8176B1E713A4900923EE2 /* FL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FL.txt; sourceTree = "<group>"; };
+		55E8176D1E713A8800923EE2 /* IL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IL.txt; sourceTree = "<group>"; };
+		55E8176F1E713B0100923EE2 /* IN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IN.txt; sourceTree = "<group>"; };
 		55F59B431DC03A7700CA0574 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +186,10 @@
 				550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */,
 				55E817651E712EE300923EE2 /* AL.txt */,
 				55E817671E71307000923EE2 /* AK.txt */,
+				55E817691E71376A00923EE2 /* NY.txt */,
+				55E8176B1E713A4900923EE2 /* FL.txt */,
+				55E8176D1E713A8800923EE2 /* IL.txt */,
+				55E8176F1E713B0100923EE2 /* IN.txt */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -286,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E8176C1E713A4900923EE2 /* FL.txt in Resources */,
 				551D85921DDF0AB100FCC1F4 /* TODOs in Resources */,
 				553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */,
 				554A4B561DF58CED00ABE981 /* MA.txt in Resources */,
@@ -293,6 +306,9 @@
 				55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */,
 				55E817661E712EE300923EE2 /* AL.txt in Resources */,
 				55E817681E71307000923EE2 /* AK.txt in Resources */,
+				55E8176A1E71376A00923EE2 /* NY.txt in Resources */,
+				55E8176E1E713A8800923EE2 /* IL.txt in Resources */,
+				55E817701E713B0100923EE2 /* IN.txt in Resources */,
 				5535949E1DBDD285002478B1 /* Main.storyboard in Resources */,
 				558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */,
 				554A4B571DF58CED00ABE981 /* WA.txt in Resources */,
