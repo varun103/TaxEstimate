@@ -14,3 +14,9 @@ enum TaxCalculationError: Error{
     
     case catalogueProcessingError
 }
+
+enum UserInputError: Error {
+   
+    case deductionAmountExceedError
+
+}

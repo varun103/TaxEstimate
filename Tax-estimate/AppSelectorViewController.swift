@@ -22,7 +22,7 @@ class AppSelectorViewController: UIViewController {
         makeButtonCircular(button: self.comingSoonButton)
         
         addGradientToCircularButton(button: self.taxSavings401KButton)
-//        addGradientToCircularButton(button: self.comingSoonButton)
+        addGradientToSmallerCircularButton(button: self.comingSoonButton)
         
         addShadowToCircularButton(button: self.taxSavings401KButton)
         addShadowToCircularButton(button: self.comingSoonButton)
@@ -34,7 +34,7 @@ class AppSelectorViewController: UIViewController {
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
         self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getAppFont(size: 30.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getMediumAppFont(size: 20.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,6 +60,17 @@ class AppSelectorViewController: UIViewController {
         gradient.frame = button.bounds
         gradient.cornerRadius = 0.5 * button.bounds.size.width
         gradient.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:180.0/255.0).cgColor, UIColor.clear.cgColor]
+        gradient.locations = [0.0 , 1.0]
+        gradient.startPoint = CGPoint(x: 0.5, y: 0.1)
+        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
+        button.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    private func addGradientToSmallerCircularButton(button:UIButton){
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = button.bounds
+        gradient.cornerRadius = 0.5 * button.bounds.size.width
+        gradient.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:220.0/255.0).cgColor, UIColor.clear.cgColor]
         gradient.locations = [0.0 , 1.0]
         gradient.startPoint = CGPoint(x: 0.5, y: 0.1)
         gradient.endPoint = CGPoint(x: 0.5, y: 1.0)

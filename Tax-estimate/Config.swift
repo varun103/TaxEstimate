@@ -23,6 +23,9 @@ class Config {
         return UIFont(name: fontType, size: size)!
     }
     
+    static func getMediumAppFont(size: CGFloat) -> UIFont {
+        return UIFont(name: mediumFont, size: size)!
+    }
     
     // NUMBER FORMATTING
     static func addCommasToNumber(number: Int) -> String{

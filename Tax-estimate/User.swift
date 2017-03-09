@@ -139,6 +139,8 @@ class User : UserProtocol, DeductionDelegate {
         }
         self.preTaxDeductionAmount = amount
         self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
+        if (taxableIncome < 0 ){
+        }
         calculateTax()
     }
 

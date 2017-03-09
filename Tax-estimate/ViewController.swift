@@ -10,7 +10,7 @@ import UIKit
 
 class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
-    private let placeHolderText: String = "2016 Income"
+    private let placeHolderText: String = "Enter your 2016 Income"
     
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var filingStatusPicker: UIPickerView!
@@ -68,6 +68,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
 
         
         self.uiTaxField.delegate = self
+        self.addDoneButton()
     }
     
     override func didReceiveMemoryWarning() {
@@ -194,6 +195,17 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.calculateButton.layer.shadowOpacity = 0.7
         self.calculateButton.layer.cornerRadius = 15
         
+    }
+    
+    func addDoneButton() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                            target: nil, action: nil)
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done,
+                                            target: view, action: #selector(UIView.endEditing(_:)))
+        keyboardToolbar.items = [flexBarButton, doneBarButton]
+        self.uiTaxField.inputAccessoryView = keyboardToolbar
     }
 }
 
