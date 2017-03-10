@@ -11,7 +11,7 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    private final let screenTitle:String = "Pre-Tax Contributions"
+    private final let screenTitle:String = "Select Pre-Tax Contributions"
     private final let textCellIdentifier = "resultCell"
 
     @IBOutlet weak var taxSavings: UILabel!
@@ -59,7 +59,7 @@ class ResultsViewController: UIViewController {
         let path = views.drawLine()
         self.shapeLayer.path = path.cgPath
         self.shapeLayer.strokeColor = UIColor.lightGray.cgColor
-        self.shapeLayer.lineWidth = 0.5
+        self.shapeLayer.lineWidth = 0.3
         
         self.view.layer.addSublayer(shapeLayer)
     }

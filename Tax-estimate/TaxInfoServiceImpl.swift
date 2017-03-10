@@ -125,6 +125,7 @@ class TaxInfoServiceImpl: TaxInfoService{
             self.taxInfo[FilingStatusEnum.single] = singleMap
             self.taxInfo[FilingStatusEnum.married] = marriedMap
             self.taxInfo[FilingStatusEnum.head] = headMap
+            self.taxInfo[FilingStatusEnum.married_s] = singleMap
             
         } catch {
             throw TaxCalculationError.catalogueProcessingError

@@ -97,7 +97,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
             label = UILabel()
         }
         
-        label!.font = Config.getAppFont(size: 17.0)
+        label!.font = Config.getMediumAppFont(size: 17.0)
         label!.textColor = UIColor(red: 60.0/255.0, green: 88.0/255.0, blue: 199.0/255.0, alpha: 100.0)
         label!.adjustsFontSizeToFitWidth = true
         label!.minimumScaleFactor = 0.5
@@ -173,7 +173,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         // Round the edges on the text box
         self.uiTaxField.layer.cornerRadius = 15
         
-        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:placeHolderText, attributes:[NSFontAttributeName : Config.getAppFont(size: 16.0)])
+        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:placeHolderText, attributes:[NSFontAttributeName : Config.getMediumAppFont(size: 16.0)])
         self.uiTaxField.contentVerticalAlignment = UIControlContentVerticalAlignment.bottom
     }
     

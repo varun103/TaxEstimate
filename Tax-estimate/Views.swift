@@ -13,8 +13,8 @@ class Views:UIView {
     
     func drawLine() -> UIBezierPath {
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 5.0, y:250.0))
-        path.addLine(to: CGPoint(x: 400.0, y: 250.0))
+        path.move(to: CGPoint(x: 0.0, y:230.0))
+        path.addLine(to: CGPoint(x: 420.0, y: 230.0))
         path.close()
         path.stroke()
         path.fill()

@@ -17,8 +17,10 @@ enum FilingStatusEnum :String{
     
     case head = "HEAD OF HOUSEHOLD"
     
+    case married_s = "MARRIED FILING SEPARATE"
+    
     static func allValues() -> [String]{
-        return [single.rawValue, married.rawValue, head.rawValue]
+        return [single.rawValue, married_s.rawValue, married.rawValue, head.rawValue]
     }
     
 }
