@@ -21,7 +21,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     let innerShadow: CAGradientLayer = CAGradientLayer()
     
     private var layer = CALayer()
-    private var userIncomeEnterd: Bool = false
+    private var userIncomeEntered: Bool = false
     private var user:User?
     private var filingStatusValues = FilingStatusEnum.allValues()
     private var selectedFilingStatus: String?
@@ -36,15 +36,15 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBAction func calculate(_ sender: UIButton) {
         if let inputValue = uiTaxField.text {
             if let inputSalary = Double(inputValue) {
-                self.userIncomeEnterd = true
+                self.userIncomeEntered = true
                 let inc = self.filingStatusPicker.selectedRow(inComponent: 0)
                 let abc = self.statePicker.selectedRow(inComponent: 0)
                 self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType(rawValue: stateValue[abc])!)
             } else{
-                self.userIncomeEnterd = false
+                self.userIncomeEntered = false
             }
         } else{
-            self.userIncomeEnterd = false
+            self.userIncomeEntered = false
         }
     }
     
@@ -153,7 +153,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return self.userIncomeEnterd
+        return self.userIncomeEntered
     }
     
     func printTextField(){
@@ -211,7 +211,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     override var shouldAutorotate: Bool {
         get{
-            return false
+            return true
         }
     }
     

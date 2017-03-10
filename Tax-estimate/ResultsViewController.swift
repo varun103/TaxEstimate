@@ -35,6 +35,8 @@ class ResultsViewController: UIViewController {
     private var fsaPreTaxDeduction: FSAHealthPreTaxDeduction = FSAHealthPreTaxDeduction()
     private var spouseFsaPreTaxDeduction: FSAHealthPreTaxDeduction = FSAHealthPreTaxDeduction()
     
+    let shapeLayer = CAShapeLayer()
+
     var user: User?
     
     override func viewDidLoad() {
@@ -53,6 +55,17 @@ class ResultsViewController: UIViewController {
         user?.addPreTaxDeduction(deduction: fourOOneKPreTaxDeduction)
         user?.addPreTaxDeduction(deduction: fsaPreTaxDeduction)
         setInitialValues()
+        let views = Views()
+        let path = views.drawLine()
+        self.shapeLayer.path = path.cgPath
+        self.shapeLayer.strokeColor = UIColor.lightGray.cgColor
+        self.shapeLayer.lineWidth = 0.5
+        
+        self.view.layer.addSublayer(shapeLayer)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.shapeLayer.frame = self.view.bounds
     }
     
     @IBAction func segmentChanged(_ sender: Any) {
