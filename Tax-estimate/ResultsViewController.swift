@@ -11,7 +11,7 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    private final let screenTitle:String = "Select Pre-Tax Contributions"
+    private final let screenTitle:String = "View Savings"
     private final let textCellIdentifier = "resultCell"
 
     @IBOutlet weak var taxSavings: UILabel!
@@ -47,8 +47,13 @@ class ResultsViewController: UIViewController {
         if(user?.getStatus() == FilingStatusEnum.married) {
             spouseFourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
             spouseFsaPreTaxDeduction = FSAHealthPreTaxDeduction()
-            self.segmentSelector.setTitleTextAttributes([NSFontAttributeName:Config.getAppFont(size: 16), NSForegroundColorAttributeName: UIColor.blue], for: UIControlState.normal)
+            self.segmentSelector.setTitleTextAttributes([NSFontAttributeName:Config.getAppFont(size: 16), NSForegroundColorAttributeName: UIColor(red: 111.0/255.0, green: 132.0/255.0, blue: 195.0/255.0, alpha: 255.0/255.0)], for: UIControlState.normal)
             self.segmentSelector.isHidden = false
+            self.segmentSelector.layer.cornerRadius = 15.0
+            self.segmentSelector.layer.borderColor = UIColor.white.cgColor
+            self.segmentSelector.layer.borderWidth = 1.0;
+
+            self.segmentSelector.layer.masksToBounds = true
             user?.addPreTaxDeduction(deduction: spouseFsaPreTaxDeduction)
             user?.addPreTaxDeduction(deduction: spouseFourOOneKPreTaxDeduction)
         }
@@ -61,7 +66,11 @@ class ResultsViewController: UIViewController {
         self.shapeLayer.strokeColor = UIColor.lightGray.cgColor
         self.shapeLayer.lineWidth = 0.3
         
-        self.view.layer.addSublayer(shapeLayer)
+        //self.view.layer.addSublayer(shapeLayer)
+        
+        self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
+        self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -117,7 +126,7 @@ class ResultsViewController: UIViewController {
     private func setInitialValues(){
         self.fsaContributionAmount.text = Config.addCommasToNumber(number: 0)
         self.contribution401.text = Config.addCommasToNumber(number: 0)
-        self.taxSavings.text =   Config.addCommasToNumber(number: 0)
+        //self.taxSavings.text =   Config.addCommasToNumber(number: 0)
 
     }
     

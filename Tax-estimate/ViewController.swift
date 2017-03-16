@@ -112,7 +112,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
         self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getMediumAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
     }
     
     

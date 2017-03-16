@@ -75,7 +75,7 @@ class AppSelectorViewController: UIViewController {
     private func addGradientToCircularButton(button:UIButton){
         self.gradient.frame = button.bounds
         self.gradient.cornerRadius = 15
-        self.gradient.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:120.0/255.0).cgColor, UIColor.clear.cgColor]
+        self.gradient.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:80.0/255.0).cgColor, UIColor.clear.cgColor]
         self.gradient.locations = [0.0 , 1.0]
         self.gradient.startPoint = CGPoint(x: 0.5, y: 0.1)
         self.gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
@@ -85,7 +85,7 @@ class AppSelectorViewController: UIViewController {
     private func addGradientToSmallerCircularButton(button:UIButton){
         self.gradient_2.frame = button.bounds
         self.gradient_2.cornerRadius = 15
-        self.gradient_2.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:120.0/255.0).cgColor, UIColor.clear.cgColor]
+        self.gradient_2.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:80.0/255.0).cgColor, UIColor.clear.cgColor]
         self.gradient_2.locations = [0.0 , 1.0]
         self.gradient_2.startPoint = CGPoint(x: 0.5, y: 0.1)
         self.gradient_2.endPoint = CGPoint(x: 0.5, y: 1.0)
@@ -94,7 +94,7 @@ class AppSelectorViewController: UIViewController {
     
     private func addShadowToCircularButton(button:UIButton){
         button.layer.shadowColor = UIColor.gray.cgColor
-        button.layer.shadowOffset = CGSize(width: 5, height: 3)
+        button.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         button.layer.masksToBounds = false
         button.layer.shadowOpacity = 0.9
         button.layer.frame = button.bounds
@@ -105,7 +105,7 @@ class AppSelectorViewController: UIViewController {
 extension UINavigationController {
     override open var shouldAutorotate: Bool {
         get{
-            return false
+            return true
         }
     }
     
