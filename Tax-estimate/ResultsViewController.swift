@@ -60,13 +60,6 @@ class ResultsViewController: UIViewController {
         user?.addPreTaxDeduction(deduction: fourOOneKPreTaxDeduction)
         user?.addPreTaxDeduction(deduction: fsaPreTaxDeduction)
         setInitialValues()
-        let views = Views()
-        let path = views.drawLine()
-        self.shapeLayer.path = path.cgPath
-        self.shapeLayer.strokeColor = UIColor.lightGray.cgColor
-        self.shapeLayer.lineWidth = 0.3
-        
-        //self.view.layer.addSublayer(shapeLayer)
         
         self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
         self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
@@ -108,14 +101,20 @@ class ResultsViewController: UIViewController {
     private func prepareContributionSlider() {
         if(self.segmentSelector.selectedSegmentIndex == 0){
             self.fourOOneKSlider.setValue(Float(self.fourOOneKPreTaxDeduction.contributionAmount), animated: true)
+            self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
             self.fsaSlider.setValue(Float(self.fsaPreTaxDeduction.contributionAmount), animated: true)
+            self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
             self.spouse401KContribution.isEnabled = false
             self.spouseFSAContribution.isEnabled = false
             self.contribution401.isEnabled = true
             self.fsaContributionAmount.isEnabled = true
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
             self.fourOOneKSlider.setValue(Float(self.spouseFourOOneKPreTaxDeduction.contributionAmount), animated: true)
+            self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller.png"), for: UIControlState.normal)
+
             self.fsaSlider.setValue(Float(self.spouseFsaPreTaxDeduction.contributionAmount), animated: true)
+            self.fsaSlider.setThumbImage(UIImage(named:"scroller.png"), for: UIControlState.normal)
+
             self.spouse401KContribution.isEnabled = true
             self.spouseFSAContribution.isEnabled = true
             self.contribution401.isEnabled = false
@@ -126,7 +125,7 @@ class ResultsViewController: UIViewController {
     private func setInitialValues(){
         self.fsaContributionAmount.text = Config.addCommasToNumber(number: 0)
         self.contribution401.text = Config.addCommasToNumber(number: 0)
-        //self.taxSavings.text =   Config.addCommasToNumber(number: 0)
+        self.taxSavings.text =   Config.addCommasToNumber(number: 0)
 
     }
     
