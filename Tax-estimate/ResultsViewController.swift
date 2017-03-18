@@ -28,6 +28,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var fsaContributionAmount: UILabel!
     @IBOutlet weak var spouseFSAContribution: UILabel!
 
+    @IBOutlet weak var estimatedTaxSavings: UILabel!
     
     private var fourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
     private var spouseFourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
@@ -47,7 +48,7 @@ class ResultsViewController: UIViewController {
         if(user?.getStatus() == FilingStatusEnum.married) {
             spouseFourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
             spouseFsaPreTaxDeduction = FSAHealthPreTaxDeduction()
-            self.segmentSelector.setTitleTextAttributes([NSFontAttributeName:Config.getAppFont(size: 16), NSForegroundColorAttributeName: UIColor(red: 111.0/255.0, green: 132.0/255.0, blue: 195.0/255.0, alpha: 255.0/255.0)], for: UIControlState.normal)
+            self.segmentSelector.setTitleTextAttributes([NSFontAttributeName:Config.getAppFont(size: 14), NSForegroundColorAttributeName: UIColor(red: 111.0/255.0, green: 132.0/255.0, blue: 195.0/255.0, alpha: 255.0/255.0)], for: UIControlState.normal)
             self.segmentSelector.isHidden = false
             self.segmentSelector.layer.cornerRadius = 15.0
             self.segmentSelector.layer.borderColor = UIColor.white.cgColor
@@ -102,18 +103,24 @@ class ResultsViewController: UIViewController {
         if(self.segmentSelector.selectedSegmentIndex == 0){
             self.fourOOneKSlider.setValue(Float(self.fourOOneKPreTaxDeduction.contributionAmount), animated: true)
             self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
+            self.fourOOneKSlider.setMinimumTrackImage(UIImage(named:"Line2.png"), for: UIControlState.normal)
+
             self.fsaSlider.setValue(Float(self.fsaPreTaxDeduction.contributionAmount), animated: true)
             self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
+            self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line2.png"), for: UIControlState.normal)
+
             self.spouse401KContribution.isEnabled = false
             self.spouseFSAContribution.isEnabled = false
             self.contribution401.isEnabled = true
             self.fsaContributionAmount.isEnabled = true
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
             self.fourOOneKSlider.setValue(Float(self.spouseFourOOneKPreTaxDeduction.contributionAmount), animated: true)
-            self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller.png"), for: UIControlState.normal)
+            self.fourOOneKSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
+            self.fourOOneKSlider.setMinimumTrackImage(UIImage(named:"Line1.png"), for: UIControlState.normal)
 
             self.fsaSlider.setValue(Float(self.spouseFsaPreTaxDeduction.contributionAmount), animated: true)
-            self.fsaSlider.setThumbImage(UIImage(named:"scroller.png"), for: UIControlState.normal)
+            self.fsaSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
+            self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line1.png"), for: UIControlState.normal)
 
             self.spouse401KContribution.isEnabled = true
             self.spouseFSAContribution.isEnabled = true
@@ -126,11 +133,13 @@ class ResultsViewController: UIViewController {
         self.fsaContributionAmount.text = Config.addCommasToNumber(number: 0)
         self.contribution401.text = Config.addCommasToNumber(number: 0)
         self.taxSavings.text =   Config.addCommasToNumber(number: 0)
+        self.estimatedTaxSavings.text = Config.addCommasToNumber(number: 0)
 
     }
     
     private func calculateTaxSavings(){
         self.taxSavings.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
+        self.estimatedTaxSavings.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
         self.fedTaxSavings.text = Config.addCommasToNumber(number: (user?.getFedTaxSavings())!)
         self.stateTaxSavings.text = Config.addCommasToNumber(number: (user?.getStateTaxSavings())!)
     }

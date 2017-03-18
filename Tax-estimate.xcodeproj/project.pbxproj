@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55014E1F1E7A6CCE004F1599 /* MI.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55014E1E1E7A6CCE004F1599 /* MI.txt */; };
+		55014E211E7A79C4004F1599 /* KS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55014E201E7A79C4004F1599 /* KS.txt */; };
 		5507520E1DD082F900676627 /* BracketEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB91DC74144001800C4 /* BracketEnum.swift */; };
 		550DC6CB1E6424AD005A459F /* PreTaxDeduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */; };
 		550DC6CD1E6437C0005A459F /* PreTaxDeductionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55014E1E1E7A6CCE004F1599 /* MI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MI.txt; sourceTree = "<group>"; };
+		55014E201E7A79C4004F1599 /* KS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KS.txt; sourceTree = "<group>"; };
 		550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeduction.swift; sourceTree = "<group>"; };
 		550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeductionTests.swift; sourceTree = "<group>"; };
 		550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeductions.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				55E8176D1E713A8800923EE2 /* IL.txt */,
 				55E8176F1E713B0100923EE2 /* IN.txt */,
 				55B76AE51E728D4A00C47CCC /* Views.swift */,
+				55014E1E1E7A6CCE004F1599 /* MI.txt */,
+				55014E201E7A79C4004F1599 /* KS.txt */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -311,11 +317,13 @@
 				55E817681E71307000923EE2 /* AK.txt in Resources */,
 				55E8176A1E71376A00923EE2 /* NY.txt in Resources */,
 				55E8176E1E713A8800923EE2 /* IL.txt in Resources */,
+				55014E1F1E7A6CCE004F1599 /* MI.txt in Resources */,
 				55E817701E713B0100923EE2 /* IN.txt in Resources */,
 				5535949E1DBDD285002478B1 /* Main.storyboard in Resources */,
 				558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */,
 				554A4B571DF58CED00ABE981 /* WA.txt in Resources */,
 				554A4B551DF58CED00ABE981 /* CA.txt in Resources */,
+				55014E211E7A79C4004F1599 /* KS.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

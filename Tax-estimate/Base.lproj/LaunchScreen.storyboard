@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Planning Assist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yR0-0x-dUz">
-                                <rect key="frame" x="60" y="200" width="294" height="146"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Mate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yR0-0x-dUz">
+                                <rect key="frame" x="50" y="200" width="314" height="146"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,8 +34,8 @@
                         <constraints>
                             <constraint firstItem="yR0-0x-dUz" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="180" id="0lP-GA-HIM"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="yR0-0x-dUz" secondAttribute="bottom" constant="390" id="Bzm-I0-3fg"/>
-                            <constraint firstItem="yR0-0x-dUz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="40" id="h28-7Y-RS4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yR0-0x-dUz" secondAttribute="trailing" constant="40" id="oAd-Dc-4qJ"/>
+                            <constraint firstItem="yR0-0x-dUz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="30" id="h28-7Y-RS4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yR0-0x-dUz" secondAttribute="trailing" constant="30" id="oAd-Dc-4qJ"/>
                         </constraints>
                     </view>
                 </viewController>
