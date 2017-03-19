@@ -17,6 +17,8 @@ protocol PreTaxDeduction: class {
     var delegate:DeductionDelegate? {get set}
     
     var affects:[TaxType]{get}
+    
+    func getContributionAmount() -> Int
 }
 
 protocol DeductionDelegate {
@@ -37,6 +39,16 @@ class FourOOneKPreTaxDeduction : PreTaxDeduction,CustomStringConvertible {
     public var description: String = "FourOOneKPreTaxDeduction"
     
     var _contributionAmount:Int
+    
+    
+    func getContributionAmount() -> Int {
+        return self._contributionAmount
+    }
+    
+    func setContributionAmount(amount: Int) {
+        self._contributionAmount = amount
+        self.delegate?.deductionAmountChanged(_sender: self)
+    }
     
     var contributionAmount:Int {
         get{
@@ -69,6 +81,15 @@ final class FSAHealthPreTaxDeduction: PreTaxDeduction, CustomStringConvertible{
     
     var _contributionAmount:Int
     
+    func getContributionAmount() -> Int {
+        return self._contributionAmount
+    }
+    
+    func setContributionAmount(amount: Int) {
+        self._contributionAmount = amount
+        self.delegate?.deductionAmountChanged(_sender: self)
+    }
+
     var contributionAmount: Int {
         get{
             return self._contributionAmount

@@ -78,10 +78,10 @@ class ResultsViewController: UIViewController {
     @IBAction func fsaContributionSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         if(self.segmentSelector.selectedSegmentIndex == 0) {
-            self.fsaPreTaxDeduction.contributionAmount = currentValue
+            self.fsaPreTaxDeduction.setContributionAmount(amount: currentValue)
             self.fsaContributionAmount.text = Config.addCommasToNumber(number: currentValue)
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
-            self.spouseFsaPreTaxDeduction.contributionAmount = currentValue
+            self.spouseFsaPreTaxDeduction.setContributionAmount(amount: currentValue)
             self.spouseFSAContribution.text = Config.addCommasToNumber(number: currentValue)
         }
         calculateTaxSavings()
@@ -90,10 +90,10 @@ class ResultsViewController: UIViewController {
     @IBAction func contributionSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         if(self.segmentSelector.selectedSegmentIndex == 0) {
-            self.fourOOneKPreTaxDeduction.contributionAmount = currentValue
+            self.fourOOneKPreTaxDeduction.setContributionAmount(amount: currentValue)
             self.contribution401.text = Config.addCommasToNumber(number: currentValue)
         }else if (self.segmentSelector.selectedSegmentIndex == 1) {
-            self.spouseFourOOneKPreTaxDeduction.contributionAmount = currentValue
+            self.spouseFourOOneKPreTaxDeduction.setContributionAmount(amount: currentValue)
             self.spouse401KContribution.text = Config.addCommasToNumber(number: currentValue)
         }
         calculateTaxSavings()
@@ -101,11 +101,11 @@ class ResultsViewController: UIViewController {
     
     private func prepareContributionSlider() {
         if(self.segmentSelector.selectedSegmentIndex == 0){
-            self.fourOOneKSlider.setValue(Float(self.fourOOneKPreTaxDeduction.contributionAmount), animated: true)
+            self.fourOOneKSlider.setValue(Float(self.fourOOneKPreTaxDeduction.getContributionAmount()), animated: true)
             self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
             self.fourOOneKSlider.setMinimumTrackImage(UIImage(named:"Line2.png"), for: UIControlState.normal)
 
-            self.fsaSlider.setValue(Float(self.fsaPreTaxDeduction.contributionAmount), animated: true)
+            self.fsaSlider.setValue(Float(self.fsaPreTaxDeduction.getContributionAmount()), animated: true)
             self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
             self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line2.png"), for: UIControlState.normal)
 
@@ -114,11 +114,11 @@ class ResultsViewController: UIViewController {
             self.contribution401.isEnabled = true
             self.fsaContributionAmount.isEnabled = true
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
-            self.fourOOneKSlider.setValue(Float(self.spouseFourOOneKPreTaxDeduction.contributionAmount), animated: true)
+            self.fourOOneKSlider.setValue(Float(self.spouseFourOOneKPreTaxDeduction.getContributionAmount()), animated: true)
             self.fourOOneKSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
             self.fourOOneKSlider.setMinimumTrackImage(UIImage(named:"Line1.png"), for: UIControlState.normal)
 
-            self.fsaSlider.setValue(Float(self.spouseFsaPreTaxDeduction.contributionAmount), animated: true)
+            self.fsaSlider.setValue(Float(self.spouseFsaPreTaxDeduction.getContributionAmount()), animated: true)
             self.fsaSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
             self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line1.png"), for: UIControlState.normal)
 

@@ -135,7 +135,7 @@ class User : UserProtocol, DeductionDelegate {
     func deductionAmountChanged(_sender: PreTaxDeduction) {
         var amount:Int = 0
         for preTaxD in self.preTaxDeductions.all {
-            amount = amount + preTaxD.contributionAmount
+            amount = amount + preTaxD.getContributionAmount()
         }
         self.preTaxDeductionAmount = amount
         self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
