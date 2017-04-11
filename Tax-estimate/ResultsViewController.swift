@@ -46,11 +46,10 @@ class ResultsViewController: UIViewController {
         self.segmentSelector.isHidden = true
         
         if(user?.getStatus() == FilingStatusEnum.married) {
-            spouseFourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
-            spouseFsaPreTaxDeduction = FSAHealthPreTaxDeduction()
+            
             self.segmentSelector.setTitleTextAttributes([NSFontAttributeName:Config.getAppFont(size: 14), NSForegroundColorAttributeName: UIColor(red: 111.0/255.0, green: 132.0/255.0, blue: 195.0/255.0, alpha: 255.0/255.0)], for: UIControlState.normal)
             self.segmentSelector.isHidden = false
-            self.segmentSelector.layer.cornerRadius = 15.0
+            self.segmentSelector.layer.cornerRadius = 10.0
             self.segmentSelector.layer.borderColor = UIColor.white.cgColor
             self.segmentSelector.layer.borderWidth = 1.0;
 
@@ -109,10 +108,8 @@ class ResultsViewController: UIViewController {
             self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
             self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line2.png"), for: UIControlState.normal)
 
-            self.spouse401KContribution.isEnabled = false
-            self.spouseFSAContribution.isEnabled = false
-            self.contribution401.isEnabled = true
-            self.fsaContributionAmount.isEnabled = true
+            self.enabledText(enable: false, labels: self.spouse401KContribution, self.spouseFSAContribution)
+            self.enabledText(enable: true, labels: self.contribution401, self.fsaContributionAmount)
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
             self.fourOOneKSlider.setValue(Float(self.spouseFourOOneKPreTaxDeduction.getContributionAmount()), animated: true)
             self.fourOOneKSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
@@ -122,10 +119,8 @@ class ResultsViewController: UIViewController {
             self.fsaSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
             self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line1.png"), for: UIControlState.normal)
 
-            self.spouse401KContribution.isEnabled = true
-            self.spouseFSAContribution.isEnabled = true
-            self.contribution401.isEnabled = false
-            self.fsaContributionAmount.isEnabled = false
+            self.enabledText(enable: true, labels: self.spouse401KContribution, self.spouseFSAContribution)
+            self.enabledText(enable: false, labels: self.contribution401, self.fsaContributionAmount)
         }
     }
     
@@ -142,5 +137,11 @@ class ResultsViewController: UIViewController {
         self.estimatedTaxSavings.text =   Config.addCommasToNumber(number: (user?.getTaxSavings())!)
         self.fedTaxSavings.text = Config.addCommasToNumber(number: (user?.getFedTaxSavings())!)
         self.stateTaxSavings.text = Config.addCommasToNumber(number: (user?.getStateTaxSavings())!)
+    }
+    
+    private func enabledText(enable: Bool, labels: UILabel...){
+        for label in labels {
+            label.isEnabled = enable
+        }
     }
 }

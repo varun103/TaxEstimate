@@ -42,17 +42,17 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
                 self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType(rawValue: stateValue[abc])!)
             } else{
                 self.userIncomeEntered = false
-                self.uiTaxField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSForegroundColorAttributeName:UIColor()])
+//                self.uiTaxField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSForegroundColorAttributeName:UIColor()])
             }
         } else{
             self.userIncomeEntered = false
-            self.uiTaxField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSForegroundColorAttributeName:UIColor()])
+//            self.uiTaxField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSForegroundColorAttributeName:UIColor()])
         }
     }
     
     
     override func viewDidLoad() {
-        enhanceNavigationBar()
+        //enhanceNavigationBar()
         enhanceTextField()
         addGradientToButton()
         

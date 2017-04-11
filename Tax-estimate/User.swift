@@ -138,9 +138,11 @@ class User : UserProtocol, DeductionDelegate {
             amount = amount + preTaxD.getContributionAmount()
         }
         self.preTaxDeductionAmount = amount
-        self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
-        if (taxableIncome < 0 ){
+        if (self.preTaxDeductionAmount > Int(self.initialIncome)) {
+            
         }
+        self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
+        
         calculateTax()
     }
 

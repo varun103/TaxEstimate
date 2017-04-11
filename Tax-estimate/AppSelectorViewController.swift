@@ -23,8 +23,8 @@ class AppSelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        makeEdgesCircular(button: self.taxSavings401KButton, cornerRadius: 15)
-        makeEdgesCircular(button: self.comingSoonButton, cornerRadius: 15)
+        makeEdgesCircular(button: self.taxSavings401KButton, cornerRadius: 18)
+        makeEdgesCircular(button: self.comingSoonButton, cornerRadius: 18)
 
         
         addGradientToCircularButton(button: self.taxSavings401KButton)
@@ -42,7 +42,7 @@ class AppSelectorViewController: UIViewController {
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
         self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getMediumAppFont(size: 20.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getMediumAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -93,7 +93,7 @@ class AppSelectorViewController: UIViewController {
     }
     
     private func addShadowToCircularButton(button:UIButton){
-        button.layer.shadowColor = UIColor.gray.cgColor
+        button.layer.shadowColor = UIColor.lightGray.cgColor
         button.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         button.layer.masksToBounds = false
         button.layer.shadowOpacity = 0.9
