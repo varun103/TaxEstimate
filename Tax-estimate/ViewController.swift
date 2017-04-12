@@ -42,17 +42,14 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
                 self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType(rawValue: stateValue[abc])!)
             } else{
                 self.userIncomeEntered = false
-//                self.uiTaxField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSForegroundColorAttributeName:UIColor()])
             }
         } else{
             self.userIncomeEntered = false
-//            self.uiTaxField.attributedPlaceholder = NSAttributedString(string: placeHolderText, attributes: [NSForegroundColorAttributeName:UIColor()])
         }
     }
     
     
     override func viewDidLoad() {
-        //enhanceNavigationBar()
         enhanceTextField()
         addGradientToButton()
         
@@ -158,10 +155,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         return self.userIncomeEntered
     }
     
-    func printTextField(){
-        print(uiTaxField.text!)
-    }
-        
+    
     private func enhanceTextField(){
         
         self.innerShadow.colors = [UIColor.gray.cgColor, UIColor(red: 240.0/255.0, green: 235/255.0, blue: 235/255.0, alpha:50.0/255.0).cgColor]
@@ -169,7 +163,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.innerShadow.locations = [0.0 , 0.05]
         self.innerShadow.startPoint = CGPoint(x: 0.5, y: 0.0)
         self.innerShadow.endPoint = CGPoint(x: 0.5, y: 1.0)
-        self.innerShadow.frame = self.calculateButton.bounds
+        self.innerShadow.frame = self.uiTaxField.bounds
         self.uiTaxField.layer.addSublayer(self.innerShadow)
         
         // Round the edges on the text box

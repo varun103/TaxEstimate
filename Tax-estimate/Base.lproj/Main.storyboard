@@ -202,7 +202,6 @@
                         <outlet property="filingStatusPicker" destination="qBa-Xr-Z98" id="QeH-qD-fSi"/>
                         <outlet property="statePicker" destination="DkF-pF-rCR" id="7Uj-cC-6tH"/>
                         <outlet property="uiTaxField" destination="lkC-hH-7AY" id="cq3-49-g9g"/>
-                        <segue destination="1Pu-RG-vx9" kind="show" identifier="segueToTaxBracket" id="93X-rj-Prc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
