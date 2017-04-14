@@ -9,6 +9,8 @@
 import UIKit
 
 class AppSelectorViewController: UIViewController {
+
+    private var selectedApp:AppName?
     
     //UI Components
     @IBOutlet weak var taxSavings401KButton: UIButton!
@@ -17,6 +19,16 @@ class AppSelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         enhanceNavigationBar()
+    }
+    
+    @IBAction func taxSavingsButtonClicked(_ sender: Any) {
+        selectedApp = AppName.preTaxDeductionCalculator
+        performSegue(withIdentifier: "appSelected", sender: self)
+    }
+    
+    @IBAction func taxBracketButtonClicked(_ sender: Any) {
+        selectedApp = AppName.taxBracket
+        performSegue(withIdentifier: "appSelected", sender: self)
     }
     
     private func enhanceNavigationBar(){
@@ -29,11 +41,15 @@ class AppSelectorViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
+        
+        if let inputPage = segue.destination as? TaxInputController{
+            inputPage.selectedApp = self.selectedApp
+        }
     }
     
 }
 
-enum AppNames{
+enum AppName{
     case preTaxDeductionCalculator
     case taxBracket
 }

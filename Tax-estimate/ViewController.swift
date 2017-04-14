@@ -28,6 +28,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     private var stateValue = TaxType.states
     private var selectedState: String?
     
+    var selectedApp:AppName?
 
     @IBAction func calculate(_ sender: UIButton) {
         if let inputValue = uiTaxField.text {
@@ -44,6 +45,8 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
     }
     
+    @IBAction func textEntered(_ sender: UITextField) {
+    }
     
     override func viewDidLoad() {
         enhanceTextField()
