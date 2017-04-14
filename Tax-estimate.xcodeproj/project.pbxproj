@@ -44,6 +44,7 @@
 		558221911DF387A9008783A0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558221901DF387A9008783A0 /* Config.swift */; };
 		558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */; };
 		558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558B61F21DD1C93E00D644D8 /* TestTax.txt */; };
+		5593D01A1EA083E20013F923 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D0191EA083E20013F923 /* CustomButton.swift */; };
 		55B76AE61E728D4A00C47CCC /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B76AE51E728D4A00C47CCC /* Views.swift */; };
 		55D461461DF94B7600454DBC /* Deductions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D461451DF94B7600454DBC /* Deductions.swift */; };
 		55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */; };
@@ -108,6 +109,7 @@
 		558221901DF387A9008783A0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxTypeTests.swift; sourceTree = "<group>"; };
 		558B61F21DD1C93E00D644D8 /* TestTax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTax.txt; sourceTree = "<group>"; };
+		5593D0191EA083E20013F923 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		55B76AE51E728D4A00C47CCC /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		55D461451DF94B7600454DBC /* Deductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deductions.swift; sourceTree = "<group>"; };
 		55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				55B76AE51E728D4A00C47CCC /* Views.swift */,
 				55014E1E1E7A6CCE004F1599 /* MI.txt */,
 				55014E201E7A79C4004F1599 /* KS.txt */,
+				5593D0191EA083E20013F923 /* CustomButton.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -359,6 +362,7 @@
 				558221911DF387A9008783A0 /* Config.swift in Sources */,
 				55540FB21DC5CD67001800C4 /* AppError.swift in Sources */,
 				556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */,
+				5593D01A1EA083E20013F923 /* CustomButton.swift in Sources */,
 				553594991DBDD285002478B1 /* AppDelegate.swift in Sources */,
 				555BF3741DDED6E400C69B48 /* TaxBrackets.swift in Sources */,
 				5551137E1E5FD58C00CC7597 /* Settings.swift in Sources */,

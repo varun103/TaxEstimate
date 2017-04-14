@@ -28,11 +28,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     private var stateValue = TaxType.states
     private var selectedState: String?
     
-    @IBAction func textEntered(_ sender: UITextField) {
-        print(uiTaxField.text!)
-    }
-    
-    
+
     @IBAction func calculate(_ sender: UIButton) {
         if let inputValue = uiTaxField.text {
             if let inputSalary = Double(inputValue) {
@@ -62,7 +58,6 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         self.statePicker.delegate = self
         self.statePicker.dataSource = self
-        
         self.statePicker.selectRow(0, inComponent: 0, animated: true)
 
         self.uiTaxField.delegate = self
