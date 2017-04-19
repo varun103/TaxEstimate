@@ -43,6 +43,11 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         } else{
             self.userIncomeEntered = false
         }
+        if selectedApp == AppName.preTaxDeductionCalculator {
+            performSegue(withIdentifier: "preTaxDeductions", sender: self)
+        } else if selectedApp == AppName.taxBracket {
+            performSegue(withIdentifier: "taxBrackets", sender: self)
+        }
     }
     
     @IBAction func textEntered(_ sender: UITextField) {
@@ -137,9 +142,13 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToResults"{
+        if segue.identifier == "preTaxDeductions"{
             
             if let resultsPage = segue.destination as? ResultsViewController{
+                resultsPage.user = self.user
+            }
+        } else if segue.identifier == "taxBrackets" {
+            if let resultsPage = segue.destination as? TaxBracketViewController {
                 resultsPage.user = self.user
             }
         }
@@ -173,21 +182,11 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     
     private func addGradientToButton(){
-        
         gradient.colors = [UIColor(red: 255.0/255.0, green: 255/255.0, blue: 255/255.0, alpha:180.0/255.0).cgColor, UIColor.clear.cgColor]
         gradient.cornerRadius = 15
-        gradient.locations = [0.0 , 1.0]
-        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
-        
         gradient.frame = self.calculateButton.bounds
         self.calculateButton.layer.insertSublayer(gradient, at: 0)
-        
-        self.calculateButton.layer.shadowColor = UIColor.gray.cgColor
-        self.calculateButton.layer.shadowRadius = 2.0
-        self.calculateButton.layer.masksToBounds = false
         self.calculateButton.layer.shadowOffset = CGSize(width: 2, height:-3)
-        self.calculateButton.layer.shadowOpacity = 0.7
         self.calculateButton.layer.cornerRadius = 15
         
     }

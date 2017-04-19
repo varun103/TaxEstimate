@@ -63,7 +63,6 @@ class ResultsViewController: UIViewController {
         
         self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
         self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
-
     }
     
     override func viewDidLayoutSubviews() {
@@ -124,12 +123,12 @@ class ResultsViewController: UIViewController {
         }
     }
     
+    
     private func setInitialValues(){
         self.fsaContributionAmount.text = Config.addCommasToNumber(number: 0)
         self.contribution401.text = Config.addCommasToNumber(number: 0)
         self.taxSavings.text =   Config.addCommasToNumber(number: 0)
         self.estimatedTaxSavings.text = Config.addCommasToNumber(number: 0)
-
     }
     
     private func calculateTaxSavings(){
