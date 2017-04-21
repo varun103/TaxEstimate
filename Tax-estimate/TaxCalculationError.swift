@@ -13,6 +13,7 @@ enum TaxCalculationError: Error{
     case outOfTaxBracket
     
     case catalogueProcessingError
+    
 }
 
 enum UserInputError: Error {
@@ -20,3 +21,4 @@ enum UserInputError: Error {
     case deductionAmountExceedError
 
 }
+

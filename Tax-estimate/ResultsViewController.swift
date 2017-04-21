@@ -28,6 +28,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var fsaContributionAmount: UILabel!
     @IBOutlet weak var spouseFSAContribution: UILabel!
 
+    @IBOutlet weak var summaryButton: CustomButton!
     @IBOutlet weak var estimatedTaxSavings: UILabel!
     
     private var fourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
@@ -39,6 +40,7 @@ class ResultsViewController: UIViewController {
     let shapeLayer = CAShapeLayer()
 
     var user: User?
+    
     
     override func viewDidLoad() {
         
@@ -63,6 +65,9 @@ class ResultsViewController: UIViewController {
         
         self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
         self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
+        self.summaryButton.gradient.removeFromSuperlayer()
+        self.summaryButton.layer.shadowOpacity = 0.0
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -123,6 +128,13 @@ class ResultsViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "summary" {
+            if let viewSummary = segue.destination as? TaxBracketViewController {
+                viewSummary.user = self.user
+            }
+        }
+    }
     
     private func setInitialValues(){
         self.fsaContributionAmount.text = Config.addCommasToNumber(number: 0)
