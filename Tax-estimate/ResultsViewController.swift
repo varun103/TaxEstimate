@@ -134,6 +134,9 @@ class ResultsViewController: UIViewController {
                 viewSummary.user = self.user
             }
         }
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationItem.backBarButtonItem = backItem
     }
     
     private func setInitialValues(){
