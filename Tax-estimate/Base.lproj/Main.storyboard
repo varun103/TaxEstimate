@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V12-B6-42P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V12-B6-42P">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Ue-Dd-jNd">
-                                <rect key="frame" x="30" y="144" width="354" height="59"/>
+                                <rect key="frame" x="25" y="144" width="364" height="60.666666666666657"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lf-cz-jh8" customClass="CustomButton" customModule="Tax_estimate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="60.666666666666657"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1lf-cz-jh8" secondAttribute="height" multiplier="120:20" id="qJR-kT-MdF"/>
@@ -50,10 +50,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H00-4M-1E3">
-                                <rect key="frame" x="30" y="233" width="354" height="59"/>
+                                <rect key="frame" x="25" y="224.66666666666669" width="364" height="60.666666666666686"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dd7-42-czQ" customClass="CustomButton" customModule="Tax_estimate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="60.666666666666657"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Dd7-42-czQ" secondAttribute="height" multiplier="120:20" id="8o3-Cd-x1K"/>
@@ -77,10 +77,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Du1-X9-1Rz">
-                                <rect key="frame" x="30" y="322" width="354" height="59"/>
+                                <rect key="frame" x="25" y="305.33333333333326" width="364" height="60.666666666666686"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-JX-VBU" customClass="CustomButton" customModule="Tax_estimate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="60.666666666666686"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                         <state key="normal" title="COMING SOON">
@@ -95,15 +95,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Du1-X9-1Rz" firstAttribute="top" secondItem="H00-4M-1E3" secondAttribute="bottom" constant="30" id="3Wv-fF-KSw"/>
-                            <constraint firstItem="H00-4M-1E3" firstAttribute="top" secondItem="2Ue-Dd-jNd" secondAttribute="bottom" constant="30" id="5lw-XJ-vQU"/>
+                            <constraint firstItem="Du1-X9-1Rz" firstAttribute="top" secondItem="H00-4M-1E3" secondAttribute="bottom" constant="20" id="3Wv-fF-KSw"/>
+                            <constraint firstItem="H00-4M-1E3" firstAttribute="top" secondItem="2Ue-Dd-jNd" secondAttribute="bottom" constant="20" id="5lw-XJ-vQU"/>
                             <constraint firstItem="2Ue-Dd-jNd" firstAttribute="top" secondItem="i5Q-g2-K5f" secondAttribute="bottom" constant="80" id="Ec3-Vc-pj5"/>
-                            <constraint firstItem="2Ue-Dd-jNd" firstAttribute="leading" secondItem="YJW-gc-teG" secondAttribute="leadingMargin" constant="10" id="Kjv-TR-ofe"/>
-                            <constraint firstItem="Du1-X9-1Rz" firstAttribute="leading" secondItem="YJW-gc-teG" secondAttribute="leadingMargin" constant="10" id="bNO-Fr-diP"/>
-                            <constraint firstItem="H00-4M-1E3" firstAttribute="leading" secondItem="YJW-gc-teG" secondAttribute="leadingMargin" constant="10" id="c7D-qW-goE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2Ue-Dd-jNd" secondAttribute="trailing" constant="10" id="pvM-vL-0y5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Du1-X9-1Rz" secondAttribute="trailing" constant="10" id="sZJ-RA-DAT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="H00-4M-1E3" secondAttribute="trailing" constant="10" id="u9t-zC-Tb0"/>
+                            <constraint firstItem="2Ue-Dd-jNd" firstAttribute="leading" secondItem="YJW-gc-teG" secondAttribute="leadingMargin" constant="5" id="Kjv-TR-ofe"/>
+                            <constraint firstItem="Du1-X9-1Rz" firstAttribute="leading" secondItem="YJW-gc-teG" secondAttribute="leadingMargin" constant="5" id="bNO-Fr-diP"/>
+                            <constraint firstItem="H00-4M-1E3" firstAttribute="leading" secondItem="YJW-gc-teG" secondAttribute="leadingMargin" constant="5" id="c7D-qW-goE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ue-Dd-jNd" secondAttribute="trailing" constant="5" id="pvM-vL-0y5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Du1-X9-1Rz" secondAttribute="trailing" constant="5" id="sZJ-RA-DAT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H00-4M-1E3" secondAttribute="trailing" constant="5" id="u9t-zC-Tb0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tax Planning Assistant" id="xKv-It-QbF"/>
@@ -262,7 +262,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qE-At-G8R">
-                                <rect key="frame" x="30" y="188.33333333333337" width="354" height="24.666666666666657"/>
+                                <rect key="frame" x="30" y="169.33333333333337" width="354" height="24.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Federal Taxes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U3u-9b-Edk">
                                         <rect key="frame" x="0.0" y="0.0" width="308.66666666666669" height="24.666666666666657"/>
@@ -279,16 +279,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVo-8H-P2O">
-                                <rect key="frame" x="30" y="268.66666666666669" width="354" height="24.666666666666629"/>
+                                <rect key="frame" x="30" y="228.33333333333337" width="354" height="24.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="State Taxes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fDJ-qC-EDh">
-                                        <rect key="frame" x="0.0" y="0.0" width="308.66666666666669" height="24.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="308.66666666666669" height="24.666666666666657"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <color key="textColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Dl-HC-pIz">
-                                        <rect key="frame" x="308.66666666666674" y="0.0" width="45.333333333333314" height="24.666666666666629"/>
+                                        <rect key="frame" x="308.66666666666674" y="0.0" width="45.333333333333314" height="24.666666666666657"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -296,55 +296,77 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igG-Yj-0Bm">
-                                <rect key="frame" x="30" y="218" width="354" height="20.666666666666657"/>
+                                <rect key="frame" x="30" y="194" width="354" height="19.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tax Bracket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dCK-Pv-hpa">
-                                        <rect key="frame" x="0.0" y="0.0" width="315.66666666666669" height="20.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="318.33333333333331" height="19.333333333333343"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hLS-V2-bsI">
-                                        <rect key="frame" x="315.66666666666674" y="0.0" width="38.333333333333314" height="20.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                        <rect key="frame" x="318.33333333333326" y="0.0" width="35.666666666666686" height="19.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.56470588235294117" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUd-cT-8d4">
-                                <rect key="frame" x="30" y="298.33333333333326" width="354" height="20.666666666666686"/>
+                                <rect key="frame" x="30" y="258" width="354" height="19.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tax Bracket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ibt-io-Co2">
-                                        <rect key="frame" x="0.0" y="0.0" width="315.66666666666669" height="20.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="318.33333333333331" height="19.333333333333314"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qfE-tA-xDP">
-                                        <rect key="frame" x="315.66666666666674" y="0.0" width="38.333333333333314" height="20.666666666666686"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                        <rect key="frame" x="318.33333333333326" y="0.0" width="35.666666666666686" height="19.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.56470588235294117" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVP-h8-lve">
+                                <rect key="frame" x="0.0" y="158.33333333333334" width="414" height="1"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="00x-Ly-MDD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTa-tl-AAV">
+                                <rect key="frame" x="0.0" y="292.33333333333331" width="414" height="1"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="Eqd-nE-Ice">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dVo-8H-P2O" firstAttribute="top" secondItem="igG-Yj-0Bm" secondAttribute="bottom" constant="30" id="Bc4-hb-QUJ"/>
+                            <constraint firstItem="3qE-At-G8R" firstAttribute="top" secondItem="HVP-h8-lve" secondAttribute="bottom" constant="10" id="B5s-SY-AZU"/>
+                            <constraint firstItem="dVo-8H-P2O" firstAttribute="top" secondItem="igG-Yj-0Bm" secondAttribute="bottom" constant="15" id="Bc4-hb-QUJ"/>
                             <constraint firstItem="RTe-5o-l5g" firstAttribute="top" secondItem="WYI-fQ-MhB" secondAttribute="bottom" constant="40" id="FQS-rv-mpu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="igG-Yj-0Bm" secondAttribute="trailing" constant="10" id="Fnj-Hh-1jY"/>
                             <constraint firstItem="wUd-cT-8d4" firstAttribute="leading" secondItem="ckz-eL-TG5" secondAttribute="leadingMargin" constant="10" id="G8F-ND-NgR"/>
-                            <constraint firstItem="igG-Yj-0Bm" firstAttribute="top" secondItem="3qE-At-G8R" secondAttribute="bottom" constant="5" id="Mw5-gV-dy7"/>
+                            <constraint firstItem="HVP-h8-lve" firstAttribute="leading" secondItem="ckz-eL-TG5" secondAttribute="leading" id="J1g-85-01d"/>
+                            <constraint firstItem="igG-Yj-0Bm" firstAttribute="top" secondItem="3qE-At-G8R" secondAttribute="bottom" id="Mw5-gV-dy7"/>
                             <constraint firstItem="wUd-cT-8d4" firstAttribute="top" secondItem="dVo-8H-P2O" secondAttribute="bottom" constant="5" id="NBe-ex-A3o"/>
                             <constraint firstItem="3qE-At-G8R" firstAttribute="leading" secondItem="ckz-eL-TG5" secondAttribute="leadingMargin" constant="10" id="NPc-QU-qLn"/>
-                            <constraint firstItem="3qE-At-G8R" firstAttribute="top" secondItem="RTe-5o-l5g" secondAttribute="bottom" constant="50" id="OEt-eI-Swa"/>
+                            <constraint firstAttribute="trailing" secondItem="GTa-tl-AAV" secondAttribute="trailing" id="OrW-Wo-ZBx"/>
                             <constraint firstItem="igG-Yj-0Bm" firstAttribute="leading" secondItem="ckz-eL-TG5" secondAttribute="leadingMargin" constant="10" id="PG0-Lm-Eax"/>
                             <constraint firstItem="RTe-5o-l5g" firstAttribute="leading" secondItem="ckz-eL-TG5" secondAttribute="leadingMargin" constant="10" id="VK9-4s-oXS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3qE-At-G8R" secondAttribute="trailing" constant="10" id="Zaz-pD-SxO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RTe-5o-l5g" secondAttribute="trailing" constant="10" id="dnO-Jg-o2i"/>
+                            <constraint firstItem="HVP-h8-lve" firstAttribute="top" secondItem="RTe-5o-l5g" secondAttribute="bottom" constant="20" id="fCG-Qb-Yvo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dVo-8H-P2O" secondAttribute="trailing" constant="10" id="hNL-DY-mn6"/>
+                            <constraint firstItem="GTa-tl-AAV" firstAttribute="top" secondItem="wUd-cT-8d4" secondAttribute="bottom" constant="15" id="hs2-fh-uVX"/>
+                            <constraint firstItem="GTa-tl-AAV" firstAttribute="leading" secondItem="ckz-eL-TG5" secondAttribute="leading" id="jfQ-IR-TPO"/>
+                            <constraint firstAttribute="trailing" secondItem="HVP-h8-lve" secondAttribute="trailing" id="okS-Gy-eml"/>
                             <constraint firstItem="dVo-8H-P2O" firstAttribute="leading" secondItem="ckz-eL-TG5" secondAttribute="leadingMargin" constant="10" id="p9x-P5-gRq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wUd-cT-8d4" secondAttribute="trailing" constant="10" id="xWT-AU-oWa"/>
                         </constraints>
@@ -359,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84N-md-icT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3638" y="404"/>
+            <point key="canvasLocation" x="3637.68115942029" y="403.53260869565219"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="TDx-zi-GY8">
@@ -624,7 +646,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="36"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                        <state key="normal" title="View Summary"/>
+                                        <state key="normal" title="Tax Summary">
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="gyw-gh-ELM" kind="show" identifier="summary" id="c36-SW-mOq"/>
                                         </connections>
@@ -718,6 +742,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Line" width="414" height="1"/>
         <image name="Rectangle" width="386" height="288"/>
     </resources>
     <inferredMetricsTieBreakers>
