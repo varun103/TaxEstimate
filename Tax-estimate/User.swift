@@ -22,10 +22,6 @@ class User : UserProtocol, DeductionDelegate {
     
     var stateTaxBracket: Bracket
     
-//    var medicareTaxBracket: Bracket
-//    
-//    var socialSecurityTaxBracket: Bracket
-    
     var taxInfo: TaxInfoService
     
     var state: TaxType
@@ -50,7 +46,7 @@ class User : UserProtocol, DeductionDelegate {
     func getStatus() -> FilingStatusEnum{
         return self.status
     }
-    
+        
     func getIncome() -> Double{
         return self.initialIncome
     }

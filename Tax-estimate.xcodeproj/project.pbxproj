@@ -47,6 +47,9 @@
 		5593D01A1EA083E20013F923 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D0191EA083E20013F923 /* CustomButton.swift */; };
 		5593D01C1EA1AB470013F923 /* TaxBracketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */; };
 		55B76AE61E728D4A00C47CCC /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B76AE51E728D4A00C47CCC /* Views.swift */; };
+		55BD6FC31EB31844006CA88E /* CapitalGains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC21EB31844006CA88E /* CapitalGains.swift */; };
+		55BD6FC51EB42906006CA88E /* Tax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC41EB42906006CA88E /* Tax.swift */; };
+		55BD6FC71EB4292C006CA88E /* FedTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC61EB4292C006CA88E /* FedTax.swift */; };
 		55D461461DF94B7600454DBC /* Deductions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D461451DF94B7600454DBC /* Deductions.swift */; };
 		55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */; };
 		55E817661E712EE300923EE2 /* AL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817651E712EE300923EE2 /* AL.txt */; };
@@ -113,6 +116,9 @@
 		5593D0191EA083E20013F923 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketViewController.swift; sourceTree = "<group>"; };
 		55B76AE51E728D4A00C47CCC /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		55BD6FC21EB31844006CA88E /* CapitalGains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalGains.swift; sourceTree = "<group>"; };
+		55BD6FC41EB42906006CA88E /* Tax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tax.swift; sourceTree = "<group>"; };
+		55BD6FC61EB4292C006CA88E /* FedTax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FedTax.swift; sourceTree = "<group>"; };
 		55D461451DF94B7600454DBC /* Deductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deductions.swift; sourceTree = "<group>"; };
 		55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		55E817651E712EE300923EE2 /* AL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AL.txt; sourceTree = "<group>"; };
@@ -205,6 +211,9 @@
 				55014E201E7A79C4004F1599 /* KS.txt */,
 				5593D0191EA083E20013F923 /* CustomButton.swift */,
 				5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */,
+				55BD6FC21EB31844006CA88E /* CapitalGains.swift */,
+				55BD6FC41EB42906006CA88E /* Tax.swift */,
+				55BD6FC61EB4292C006CA88E /* FedTax.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -351,8 +360,10 @@
 				556A4D581DC1E5C300529007 /* TaxCalculationError.swift in Sources */,
 				5593D01C1EA1AB470013F923 /* TaxBracketViewController.swift in Sources */,
 				5507520E1DD082F900676627 /* BracketEnum.swift in Sources */,
+				55BD6FC51EB42906006CA88E /* Tax.swift in Sources */,
 				55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */,
 				556EC59A1DC5545A0002314A /* User.swift in Sources */,
+				55BD6FC31EB31844006CA88E /* CapitalGains.swift in Sources */,
 				550DC6CF1E643DD6005A459F /* PreTaxDeductions.swift in Sources */,
 				5535949B1DBDD285002478B1 /* ViewController.swift in Sources */,
 				556EC59C1DC554990002314A /* FilingStatus.swift in Sources */,
@@ -367,6 +378,7 @@
 				55540FB21DC5CD67001800C4 /* AppError.swift in Sources */,
 				556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */,
 				5593D01A1EA083E20013F923 /* CustomButton.swift in Sources */,
+				55BD6FC71EB4292C006CA88E /* FedTax.swift in Sources */,
 				553594991DBDD285002478B1 /* AppDelegate.swift in Sources */,
 				555BF3741DDED6E400C69B48 /* TaxBrackets.swift in Sources */,
 				5551137E1E5FD58C00CC7597 /* Settings.swift in Sources */,
