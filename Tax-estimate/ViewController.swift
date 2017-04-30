@@ -43,10 +43,12 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         } else{
             self.userIncomeEntered = false
         }
-        if selectedApp == AppName.preTaxDeductionCalculator {
-            performSegue(withIdentifier: "preTaxDeductions", sender: self)
-        } else if selectedApp == AppName.taxBracket {
-            performSegue(withIdentifier: "taxBrackets", sender: self)
+        if self.userIncomeEntered {
+            if selectedApp == AppName.preTaxDeductionCalculator {
+                performSegue(withIdentifier: "preTaxDeductions", sender: self)
+            } else if selectedApp == AppName.taxBracket {
+                performSegue(withIdentifier: "taxBrackets", sender: self)
+            }
         }
     }
     
