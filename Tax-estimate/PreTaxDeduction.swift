@@ -28,7 +28,7 @@ protocol DeductionDelegate {
 }
 
 
-class FourOOneKPreTaxDeduction : PreTaxDeduction,CustomStringConvertible {
+class FourOOneKPreTaxDeduction : PreTaxDeduction, CustomStringConvertible {
     
     var delegate: DeductionDelegate?
     

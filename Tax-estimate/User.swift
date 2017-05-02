@@ -12,83 +12,54 @@ class User : UserProtocol, DeductionDelegate {
     
     var status: FilingStatusEnum
     
-    // income before deductions
     var initialIncome: Double
     
-    // income that is taxed
-    var taxableIncome: Double
-    
-    var fedTaxBracket: Bracket
-    
-    var stateTaxBracket: Bracket
-    
-    var taxInfo: TaxInfoService
+    var fedTax: Tax
+    var stateTax: Tax
     
     var state: TaxType
     
     var preTaxDeductionAmount: Int
     
-    var preTaxDeductions: PreTaxDeductions
-    
     init(filingStatus: FilingStatusEnum, income: Double, state: TaxType){
         self.status = filingStatus
         self.initialIncome = income
         self.state = state
-        self.taxInfo = TaxInfoServiceImpl.getInstance()
         self.preTaxDeductionAmount = 0
-        self.taxableIncome = self.initialIncome
-        self.fedTaxBracket = User.setTaxBracket()
-        self.stateTaxBracket = User.setTaxBracket()
-        self.preTaxDeductions = PreTaxDeductionsImpl()
-        calculateTax()
+        self.fedTax = FedTax(income: income, capitalGains: CapitalGains(), status: filingStatus)
+        self.stateTax = StateTax(income: income, capitalGains: CapitalGains(), status: filingStatus, state: state)
     }
     
     func getStatus() -> FilingStatusEnum{
         return self.status
     }
-        
+    
     func getIncome() -> Double{
         return self.initialIncome
     }
     
     func getTaxableIncome() -> Double {
-        return self.taxableIncome
+        return self.fedTax.taxableIncome
     }
     
-    func getFedTaxBracket() -> Bracket{
-        return self.fedTaxBracket
+    func getFedTaxBracket() -> Bracket {
+        return self.fedTax.getBracket()
     }
     
     func getStateTaxBracket() -> Bracket{
-        return self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.getIncome())
+        return self.stateTax.getBracket()
     }
     
     func getTakeHomeIncome() -> Int {
         return Int(self.initialIncome) - (self.getFederalTax() + self.getStateTax())
     }
-
-    func getTakeHomeIncomeAfterOtherTaxes(){
-        
-    }
     
     func getFederalTax() -> Int {
-        var _fedTax:Double = 0.0
-        do {
-            try _fedTax = getFedTaxBracket().getTax(getTaxableIncome())
-        } catch {
-            
-        }
-        return Int(_fedTax)
+        return self.fedTax.getTax()
     }
     
     func getStateTax() -> Int {
-        var _stateTax:Double = 0.0
-        do {
-            try _stateTax = getStateTaxBracket().getTax(getTaxableIncome())
-        } catch {
-            
-        }
-        return Int(_stateTax)
+        return self.stateTax.getTax()
     }
     
     func getState() -> TaxType{
@@ -99,57 +70,37 @@ class User : UserProtocol, DeductionDelegate {
         return self.preTaxDeductionAmount
     }
     
-    func setContributionAmount(){
-
-        var amount:Int = 0
-        for preTaxD in self.preTaxDeductions.all {
-            amount = amount + preTaxD.contributionAmount
-        }
-        self.preTaxDeductionAmount = amount
-        self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
-        calculateTax()
-    }
-    
     func getTaxSavings() -> Int {
         return getFedTaxSavings() + getStateTaxSavings()
     }
     
     func getFedTaxSavings() -> Int {
-        return (Int((Double(self.preTaxDeductionAmount)) * self.getFedTaxBracket().getPercentage()))
+        return self.fedTax.getTaxSavings()
     }
     
     func getStateTaxSavings() -> Int {
-        return (Int((Double(self.preTaxDeductionAmount)) * self.getStateTaxBracket().getPercentage()))
+        return self.stateTax.getTaxSavings()
     }
     
     func addPreTaxDeduction(deduction: PreTaxDeduction) {
-        self.preTaxDeductions.add(preTaxDeduction: deduction)
+        self.fedTax.addPreTaxDeduction(deduction: deduction)
+        self.stateTax.addPreTaxDeduction(deduction: deduction)
         deduction.delegate = self
     }
     
-    
     func deductionAmountChanged(_sender: PreTaxDeduction) {
-        var amount:Int = 0
-        for preTaxD in self.preTaxDeductions.all {
-            amount = amount + preTaxD.getContributionAmount()
+        do {
+            try fedTax.reCalculate()
+            try  stateTax.reCalculate()
+            }
+        catch  {
         }
-        self.preTaxDeductionAmount = amount
-        if (self.preTaxDeductionAmount > Int(self.initialIncome)) {
-            
-        }
-        self.taxableIncome = self.initialIncome - Double(self.preTaxDeductionAmount)
         
-        calculateTax()
+       
     }
 
     static func setTaxBracket() -> Bracket {
         return Bracket(rate:0,startRange: 0,endRange: 0)
-    }
-    
-    private func calculateTax(){
-        self.fedTaxBracket = self.taxInfo.getFedBrackets(self.status).findBracket(income: self.taxableIncome)
-        self.stateTaxBracket = self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.taxableIncome)
-
     }
     
 }

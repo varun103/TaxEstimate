@@ -46,6 +46,8 @@
 		558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558B61F21DD1C93E00D644D8 /* TestTax.txt */; };
 		5593D01A1EA083E20013F923 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D0191EA083E20013F923 /* CustomButton.swift */; };
 		5593D01C1EA1AB470013F923 /* TaxBracketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */; };
+		559ECFF01EB6F108001CE333 /* FedTaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */; };
+		559ECFF21EB7272E001CE333 /* StateTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ECFF11EB7272E001CE333 /* StateTax.swift */; };
 		55B76AE61E728D4A00C47CCC /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B76AE51E728D4A00C47CCC /* Views.swift */; };
 		55BD6FC31EB31844006CA88E /* CapitalGains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC21EB31844006CA88E /* CapitalGains.swift */; };
 		55BD6FC51EB42906006CA88E /* Tax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC41EB42906006CA88E /* Tax.swift */; };
@@ -63,6 +65,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		553594AA1DBDD285002478B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5535948D1DBDD285002478B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 553594941DBDD285002478B1;
+			remoteInfo = "Tax-estimate";
+		};
+		559ECFEA1EB5D93A001CE333 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5535948D1DBDD285002478B1 /* Project object */;
 			proxyType = 1;
@@ -115,6 +124,9 @@
 		558B61F21DD1C93E00D644D8 /* TestTax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTax.txt; sourceTree = "<group>"; };
 		5593D0191EA083E20013F923 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketViewController.swift; sourceTree = "<group>"; };
+		559ECFE51EB5D93A001CE333 /* Tax-estimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tax-estimateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FedTaxTests.swift; sourceTree = "<group>"; };
+		559ECFF11EB7272E001CE333 /* StateTax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateTax.swift; sourceTree = "<group>"; };
 		55B76AE51E728D4A00C47CCC /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		55BD6FC21EB31844006CA88E /* CapitalGains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalGains.swift; sourceTree = "<group>"; };
 		55BD6FC41EB42906006CA88E /* Tax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tax.swift; sourceTree = "<group>"; };
@@ -145,6 +157,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		559ECFE21EB5D93A001CE333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -162,6 +181,7 @@
 			children = (
 				553594951DBDD285002478B1 /* Tax-estimate.app */,
 				553594A91DBDD285002478B1 /* Tax-estimateTests.xctest */,
+				559ECFE51EB5D93A001CE333 /* Tax-estimateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,6 +234,7 @@
 				55BD6FC21EB31844006CA88E /* CapitalGains.swift */,
 				55BD6FC41EB42906006CA88E /* Tax.swift */,
 				55BD6FC61EB4292C006CA88E /* FedTax.swift */,
+				559ECFF11EB7272E001CE333 /* StateTax.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -231,6 +252,7 @@
 				551D858F1DDEF42C00FCC1F4 /* TaxBracketsTests.swift */,
 				55623CA11E5A542A006C0EE3 /* UserTest.swift */,
 				550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */,
+				559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */,
 			);
 			path = "Tax-estimateTests";
 			sourceTree = "<group>";
@@ -273,13 +295,31 @@
 			productReference = 553594A91DBDD285002478B1 /* Tax-estimateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		559ECFE41EB5D93A001CE333 /* Tax-estimateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 559ECFEC1EB5D93A001CE333 /* Build configuration list for PBXNativeTarget "Tax-estimateUITests" */;
+			buildPhases = (
+				559ECFE11EB5D93A001CE333 /* Sources */,
+				559ECFE21EB5D93A001CE333 /* Frameworks */,
+				559ECFE31EB5D93A001CE333 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				559ECFEB1EB5D93A001CE333 /* PBXTargetDependency */,
+			);
+			name = "Tax-estimateUITests";
+			productName = "Tax-estimateUITests";
+			productReference = 559ECFE51EB5D93A001CE333 /* Tax-estimateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5535948D1DBDD285002478B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Varun Ajmera";
 				TargetAttributes = {
@@ -294,6 +334,12 @@
 						DevelopmentTeam = UEMEQ8LN56;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
+						TestTargetID = 553594941DBDD285002478B1;
+					};
+					559ECFE41EB5D93A001CE333 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = UEMEQ8LN56;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 553594941DBDD285002478B1;
 					};
 				};
@@ -313,6 +359,7 @@
 			targets = (
 				553594941DBDD285002478B1 /* Tax-estimate */,
 				553594A81DBDD285002478B1 /* Tax-estimateTests */,
+				559ECFE41EB5D93A001CE333 /* Tax-estimateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,6 +397,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		559ECFE31EB5D93A001CE333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -374,6 +428,7 @@
 				55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */,
 				55B76AE61E728D4A00C47CCC /* Views.swift in Sources */,
 				55D461461DF94B7600454DBC /* Deductions.swift in Sources */,
+				559ECFF21EB7272E001CE333 /* StateTax.swift in Sources */,
 				558221911DF387A9008783A0 /* Config.swift in Sources */,
 				55540FB21DC5CD67001800C4 /* AppError.swift in Sources */,
 				556EC59E1DC558F50002314A /* UserProtocol.swift in Sources */,
@@ -394,10 +449,18 @@
 				55623CA61E5A6D33006C0EE3 /* TaxInfoTests.swift in Sources */,
 				551D85901DDEF42C00FCC1F4 /* TaxBracketsTests.swift in Sources */,
 				558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */,
+				559ECFF01EB6F108001CE333 /* FedTaxTests.swift in Sources */,
 				550DC6CD1E6437C0005A459F /* PreTaxDeductionTests.swift in Sources */,
 				55623CA21E5A542A006C0EE3 /* UserTest.swift in Sources */,
 				55623CA51E5A6D33006C0EE3 /* BracketTests.swift in Sources */,
 				55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		559ECFE11EB5D93A001CE333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +471,11 @@
 			isa = PBXTargetDependency;
 			target = 553594941DBDD285002478B1 /* Tax-estimate */;
 			targetProxy = 553594AA1DBDD285002478B1 /* PBXContainerItemProxy */;
+		};
+		559ECFEB1EB5D93A001CE333 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 553594941DBDD285002478B1 /* Tax-estimate */;
+			targetProxy = 559ECFEA1EB5D93A001CE333 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -583,6 +651,41 @@
 			};
 			name = Release;
 		};
+		559ECFED1EB5D93A001CE333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = UEMEQ8LN56;
+				INFOPLIST_FILE = "Tax-estimateUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.example.Tax-estimateUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Tax-estimate";
+			};
+			name = Debug;
+		};
+		559ECFEE1EB5D93A001CE333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = UEMEQ8LN56;
+				INFOPLIST_FILE = "Tax-estimateUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.example.Tax-estimateUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Tax-estimate";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -609,6 +712,15 @@
 			buildConfigurations = (
 				553594B61DBDD285002478B1 /* Debug */,
 				553594B71DBDD285002478B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		559ECFEC1EB5D93A001CE333 /* Build configuration list for PBXNativeTarget "Tax-estimateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				559ECFED1EB5D93A001CE333 /* Debug */,
+				559ECFEE1EB5D93A001CE333 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

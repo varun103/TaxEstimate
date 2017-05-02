@@ -13,12 +13,7 @@ protocol UserProtocol {
     
     var initialIncome: Double {set get}
     
-    var taxableIncome: Double {get set}
-
     var status: FilingStatusEnum {get}
-    
-    var preTaxDeductions: PreTaxDeductions {get}
-    
     
     func getFederalTax() -> Int
     
