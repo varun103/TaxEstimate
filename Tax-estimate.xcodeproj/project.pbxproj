@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55014E1F1E7A6CCE004F1599 /* MI.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55014E1E1E7A6CCE004F1599 /* MI.txt */; };
-		55014E211E7A79C4004F1599 /* KS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55014E201E7A79C4004F1599 /* KS.txt */; };
 		5507520E1DD082F900676627 /* BracketEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB91DC74144001800C4 /* BracketEnum.swift */; };
 		550DC6CB1E6424AD005A459F /* PreTaxDeduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */; };
 		550DC6CD1E6437C0005A459F /* PreTaxDeductionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */; };
@@ -21,12 +19,8 @@
 		5535949E1DBDD285002478B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5535949C1DBDD285002478B1 /* Main.storyboard */; };
 		553594A01DBDD285002478B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5535949F1DBDD285002478B1 /* Assets.xcassets */; };
 		553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553594A11DBDD285002478B1 /* LaunchScreen.storyboard */; };
-		554A4B551DF58CED00ABE981 /* CA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B521DF58CED00ABE981 /* CA.txt */; };
-		554A4B561DF58CED00ABE981 /* MA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B531DF58CED00ABE981 /* MA.txt */; };
-		554A4B571DF58CED00ABE981 /* WA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 554A4B541DF58CED00ABE981 /* WA.txt */; };
 		5551137E1E5FD58C00CC7597 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551137D1E5FD58C00CC7597 /* Settings.swift */; };
 		55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FAD1DC57D7A001800C4 /* TaxType.swift */; };
-		55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55540FAF1DC5C89C001800C4 /* fedtax.txt */; };
 		55540FB21DC5CD67001800C4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB11DC5CD67001800C4 /* AppError.swift */; };
 		55540FB41DC72F0E001800C4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB31DC72F0E001800C4 /* Utils.swift */; };
 		55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55540FB51DC731D5001800C4 /* UtilsTest.swift */; };
@@ -43,18 +37,24 @@
 		5581C53C1DBF4174006C0A3D /* TaxInfoServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581C53B1DBF4174006C0A3D /* TaxInfoServiceImpl.swift */; };
 		558221911DF387A9008783A0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558221901DF387A9008783A0 /* Config.swift */; };
 		558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */; };
-		558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558B61F21DD1C93E00D644D8 /* TestTax.txt */; };
 		5593D01A1EA083E20013F923 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D0191EA083E20013F923 /* CustomButton.swift */; };
 		5593D01C1EA1AB470013F923 /* TaxBracketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */; };
 		55B76AE61E728D4A00C47CCC /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B76AE51E728D4A00C47CCC /* Views.swift */; };
 		55D461461DF94B7600454DBC /* Deductions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D461451DF94B7600454DBC /* Deductions.swift */; };
+		55E193A01EB879A900137C6A /* fedtax.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E1939F1EB879A900137C6A /* fedtax.csv */; };
+		55E193A21EB87A9200137C6A /* CA.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193A11EB87A9200137C6A /* CA.csv */; };
+		55E193A41EB87B1A00137C6A /* MA.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193A31EB87B1A00137C6A /* MA.csv */; };
+		55E193A61EB87B6E00137C6A /* WA.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193A51EB87B6E00137C6A /* WA.csv */; };
+		55E193A81EB87BC100137C6A /* TestTax.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193A71EB87BC100137C6A /* TestTax.csv */; };
+		55E193AC1EB87E2800137C6A /* AK.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193A91EB87E2800137C6A /* AK.csv */; };
+		55E193AD1EB87E2800137C6A /* AL.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193AA1EB87E2800137C6A /* AL.csv */; };
+		55E193AE1EB87E2800137C6A /* NY.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193AB1EB87E2800137C6A /* NY.csv */; };
+		55E193B41EB87FEA00137C6A /* FL.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193AF1EB87FEA00137C6A /* FL.csv */; };
+		55E193B51EB87FEA00137C6A /* IL.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193B01EB87FEA00137C6A /* IL.csv */; };
+		55E193B61EB87FEA00137C6A /* IN.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193B11EB87FEA00137C6A /* IN.csv */; };
+		55E193B71EB87FEA00137C6A /* KS.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193B21EB87FEA00137C6A /* KS.csv */; };
+		55E193B81EB87FEA00137C6A /* MI.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193B31EB87FEA00137C6A /* MI.csv */; };
 		55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */; };
-		55E817661E712EE300923EE2 /* AL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817651E712EE300923EE2 /* AL.txt */; };
-		55E817681E71307000923EE2 /* AK.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817671E71307000923EE2 /* AK.txt */; };
-		55E8176A1E71376A00923EE2 /* NY.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E817691E71376A00923EE2 /* NY.txt */; };
-		55E8176C1E713A4900923EE2 /* FL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E8176B1E713A4900923EE2 /* FL.txt */; };
-		55E8176E1E713A8800923EE2 /* IL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E8176D1E713A8800923EE2 /* IL.txt */; };
-		55E817701E713B0100923EE2 /* IN.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55E8176F1E713B0100923EE2 /* IN.txt */; };
 		55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* Bracket.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +69,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		55014E1E1E7A6CCE004F1599 /* MI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MI.txt; sourceTree = "<group>"; };
-		55014E201E7A79C4004F1599 /* KS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KS.txt; sourceTree = "<group>"; };
 		550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeduction.swift; sourceTree = "<group>"; };
 		550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeductionTests.swift; sourceTree = "<group>"; };
 		550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTaxDeductions.swift; sourceTree = "<group>"; };
@@ -86,12 +84,8 @@
 		553594A41DBDD285002478B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553594A91DBDD285002478B1 /* Tax-estimateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tax-estimateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553594AF1DBDD285002478B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		554A4B521DF58CED00ABE981 /* CA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CA.txt; sourceTree = "<group>"; };
-		554A4B531DF58CED00ABE981 /* MA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MA.txt; sourceTree = "<group>"; };
-		554A4B541DF58CED00ABE981 /* WA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WA.txt; sourceTree = "<group>"; };
 		5551137D1E5FD58C00CC7597 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		55540FAD1DC57D7A001800C4 /* TaxType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxType.swift; sourceTree = "<group>"; };
-		55540FAF1DC5C89C001800C4 /* fedtax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fedtax.txt; sourceTree = "<group>"; };
 		55540FB11DC5CD67001800C4 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		55540FB31DC72F0E001800C4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		55540FB51DC731D5001800C4 /* UtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
@@ -109,18 +103,24 @@
 		5581C53B1DBF4174006C0A3D /* TaxInfoServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxInfoServiceImpl.swift; sourceTree = "<group>"; };
 		558221901DF387A9008783A0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxTypeTests.swift; sourceTree = "<group>"; };
-		558B61F21DD1C93E00D644D8 /* TestTax.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTax.txt; sourceTree = "<group>"; };
 		5593D0191EA083E20013F923 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketViewController.swift; sourceTree = "<group>"; };
 		55B76AE51E728D4A00C47CCC /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		55D461451DF94B7600454DBC /* Deductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deductions.swift; sourceTree = "<group>"; };
+		55E1939F1EB879A900137C6A /* fedtax.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fedtax.csv; sourceTree = "<group>"; };
+		55E193A11EB87A9200137C6A /* CA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CA.csv; sourceTree = "<group>"; };
+		55E193A31EB87B1A00137C6A /* MA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MA.csv; sourceTree = "<group>"; };
+		55E193A51EB87B6E00137C6A /* WA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WA.csv; sourceTree = "<group>"; };
+		55E193A71EB87BC100137C6A /* TestTax.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestTax.csv; sourceTree = "<group>"; };
+		55E193A91EB87E2800137C6A /* AK.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AK.csv; sourceTree = "<group>"; };
+		55E193AA1EB87E2800137C6A /* AL.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AL.csv; sourceTree = "<group>"; };
+		55E193AB1EB87E2800137C6A /* NY.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NY.csv; sourceTree = "<group>"; };
+		55E193AF1EB87FEA00137C6A /* FL.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FL.csv; sourceTree = "<group>"; };
+		55E193B01EB87FEA00137C6A /* IL.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IL.csv; sourceTree = "<group>"; };
+		55E193B11EB87FEA00137C6A /* IN.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IN.csv; sourceTree = "<group>"; };
+		55E193B21EB87FEA00137C6A /* KS.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KS.csv; sourceTree = "<group>"; };
+		55E193B31EB87FEA00137C6A /* MI.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MI.csv; sourceTree = "<group>"; };
 		55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		55E817651E712EE300923EE2 /* AL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AL.txt; sourceTree = "<group>"; };
-		55E817671E71307000923EE2 /* AK.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AK.txt; sourceTree = "<group>"; };
-		55E817691E71376A00923EE2 /* NY.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NY.txt; sourceTree = "<group>"; };
-		55E8176B1E713A4900923EE2 /* FL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FL.txt; sourceTree = "<group>"; };
-		55E8176D1E713A8800923EE2 /* IL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IL.txt; sourceTree = "<group>"; };
-		55E8176F1E713B0100923EE2 /* IN.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IN.txt; sourceTree = "<group>"; };
 		55F59B431DC03A7700CA0574 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,9 +163,19 @@
 		553594971DBDD285002478B1 /* TaxEstimate */ = {
 			isa = PBXGroup;
 			children = (
-				554A4B521DF58CED00ABE981 /* CA.txt */,
-				554A4B531DF58CED00ABE981 /* MA.txt */,
-				554A4B541DF58CED00ABE981 /* WA.txt */,
+				55E193AF1EB87FEA00137C6A /* FL.csv */,
+				55E193B01EB87FEA00137C6A /* IL.csv */,
+				55E193B11EB87FEA00137C6A /* IN.csv */,
+				55E193B21EB87FEA00137C6A /* KS.csv */,
+				55E193B31EB87FEA00137C6A /* MI.csv */,
+				55E193A91EB87E2800137C6A /* AK.csv */,
+				55E193AA1EB87E2800137C6A /* AL.csv */,
+				55E193AB1EB87E2800137C6A /* NY.csv */,
+				55E193A71EB87BC100137C6A /* TestTax.csv */,
+				55E193A51EB87B6E00137C6A /* WA.csv */,
+				55E193A31EB87B1A00137C6A /* MA.csv */,
+				55E193A11EB87A9200137C6A /* CA.csv */,
+				55E1939F1EB879A900137C6A /* fedtax.csv */,
 				553594981DBDD285002478B1 /* AppDelegate.swift */,
 				5535949A1DBDD285002478B1 /* ViewController.swift */,
 				5535949C1DBDD285002478B1 /* Main.storyboard */,
@@ -180,11 +190,9 @@
 				556EC59D1DC558F50002314A /* UserProtocol.swift */,
 				556EC59F1DC55CFD0002314A /* TaxInfoService.swift */,
 				55540FAD1DC57D7A001800C4 /* TaxType.swift */,
-				55540FAF1DC5C89C001800C4 /* fedtax.txt */,
 				55540FB11DC5CD67001800C4 /* AppError.swift */,
 				55540FB31DC72F0E001800C4 /* Utils.swift */,
 				55540FB91DC74144001800C4 /* BracketEnum.swift */,
-				558B61F21DD1C93E00D644D8 /* TestTax.txt */,
 				555BF3731DDED6E400C69B48 /* TaxBrackets.swift */,
 				551D85911DDF0AB100FCC1F4 /* TODOs */,
 				55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */,
@@ -194,15 +202,7 @@
 				5551137D1E5FD58C00CC7597 /* Settings.swift */,
 				550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */,
 				550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */,
-				55E817651E712EE300923EE2 /* AL.txt */,
-				55E817671E71307000923EE2 /* AK.txt */,
-				55E817691E71376A00923EE2 /* NY.txt */,
-				55E8176B1E713A4900923EE2 /* FL.txt */,
-				55E8176D1E713A8800923EE2 /* IL.txt */,
-				55E8176F1E713B0100923EE2 /* IN.txt */,
 				55B76AE51E728D4A00C47CCC /* Views.swift */,
-				55014E1E1E7A6CCE004F1599 /* MI.txt */,
-				55014E201E7A79C4004F1599 /* KS.txt */,
 				5593D0191EA083E20013F923 /* CustomButton.swift */,
 				5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */,
 			);
@@ -313,23 +313,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55E8176C1E713A4900923EE2 /* FL.txt in Resources */,
+				55E193B41EB87FEA00137C6A /* FL.csv in Resources */,
 				551D85921DDF0AB100FCC1F4 /* TODOs in Resources */,
+				55E193B61EB87FEA00137C6A /* IN.csv in Resources */,
 				553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */,
-				554A4B561DF58CED00ABE981 /* MA.txt in Resources */,
+				55E193A81EB87BC100137C6A /* TestTax.csv in Resources */,
+				55E193AE1EB87E2800137C6A /* NY.csv in Resources */,
+				55E193B51EB87FEA00137C6A /* IL.csv in Resources */,
+				55E193AD1EB87E2800137C6A /* AL.csv in Resources */,
 				553594A01DBDD285002478B1 /* Assets.xcassets in Resources */,
-				55540FB01DC5C89C001800C4 /* fedtax.txt in Resources */,
-				55E817661E712EE300923EE2 /* AL.txt in Resources */,
-				55E817681E71307000923EE2 /* AK.txt in Resources */,
-				55E8176A1E71376A00923EE2 /* NY.txt in Resources */,
-				55E8176E1E713A8800923EE2 /* IL.txt in Resources */,
-				55014E1F1E7A6CCE004F1599 /* MI.txt in Resources */,
-				55E817701E713B0100923EE2 /* IN.txt in Resources */,
+				55E193A01EB879A900137C6A /* fedtax.csv in Resources */,
+				55E193B71EB87FEA00137C6A /* KS.csv in Resources */,
+				55E193AC1EB87E2800137C6A /* AK.csv in Resources */,
+				55E193A41EB87B1A00137C6A /* MA.csv in Resources */,
+				55E193B81EB87FEA00137C6A /* MI.csv in Resources */,
+				55E193A21EB87A9200137C6A /* CA.csv in Resources */,
+				55E193A61EB87B6E00137C6A /* WA.csv in Resources */,
 				5535949E1DBDD285002478B1 /* Main.storyboard in Resources */,
-				558B61F31DD1C93E00D644D8 /* TestTax.txt in Resources */,
-				554A4B571DF58CED00ABE981 /* WA.txt in Resources */,
-				554A4B551DF58CED00ABE981 /* CA.txt in Resources */,
-				55014E211E7A79C4004F1599 /* KS.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
