@@ -1,3 +1,0 @@
-rate,single_start,single_end,married_start,married_end,head_start,head_end
-2.7,0,15000,0,30000,0,15000
-4.6,15000,,30000,,15000,,

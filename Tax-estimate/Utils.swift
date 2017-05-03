@@ -28,11 +28,12 @@ class Utility {
     }
     
     static func csvParser(_ csvLine: String) -> [String]{
-        return splitString(csvLine, separator: ",")
+        return splitString(csvLine.replacingOccurrences(of: "\\r", with:""), separator: ",")
     }
     
     static func splitString(_ content:String, separator: String) -> [String]{
-        return content.components(separatedBy: separator)
+        let newString = content.replacingOccurrences(of: "\r", with:"")
+        return newString.components(separatedBy: separator)
     }
     
     static func getFileContentsAsStringArray(fileName:String, type:String) throws -> [String] {
