@@ -64,7 +64,7 @@ class User : UserProtocol, DeductionDelegate {
     }
     
     func getStateTaxBracket() -> Bracket{
-        return self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.getIncome())
+        return self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.getTaxableIncome())
     }
     
     func getTakeHomeIncome() -> Int {

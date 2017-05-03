@@ -29,7 +29,7 @@ class TaxInfoTests: XCTestCase {
         let taxCatalogue = info.getCatalogue()
         
         XCTAssertNotNil(taxCatalogue)
-        XCTAssertEqual(3, taxCatalogue.count)
+        XCTAssertEqual(4, taxCatalogue.count)
         
         let keys = taxCatalogue.keys
         

@@ -11,7 +11,7 @@ import Darwin
 
 class TaxInfoServiceImpl: TaxInfoService{
     
-    private let file_type = "txt"
+    private let file_type = "csv"
     private var dependencies: Dependencies
     private static var taxInfoServiceImpl:TaxInfoServiceImpl?
 
@@ -75,6 +75,7 @@ class TaxInfoServiceImpl: TaxInfoService{
         var singleMap:[TaxType:TaxBrackets] = [:]
         var marriedMap:[TaxType:TaxBrackets] = [:]
         var headMap:[TaxType:TaxBrackets] = [:]
+        var marriedSMap:[TaxType:TaxBrackets] = [:]
         
         do {
             
@@ -85,6 +86,7 @@ class TaxInfoServiceImpl: TaxInfoService{
                 let singleBrackets: TaxBrackets = TaxBrackets()
                 let marriedBrackets: TaxBrackets = TaxBrackets()
                 let headBrackets: TaxBrackets =  TaxBrackets()
+                let married_s_Brackets: TaxBrackets = TaxBrackets()
                 
                 
                 var count = 0
@@ -114,18 +116,24 @@ class TaxInfoServiceImpl: TaxInfoService{
                     
                     headBrackets.add(bracket: Bracket(rate: rate!, startRange: head_start!, endRange: head_end))
                     
+                    let married_s_start = Double(elements[BracketEnum.married_s_start.rawValue])
+                    let married_s_end = Double(elements[BracketEnum.married_s_end.rawValue])
+                    
+                    married_s_Brackets.add(bracket: Bracket(rate:rate!, startRange: married_s_start!, endRange: married_s_end))
+                    
                     count = count + 1
                     
                 }
                 singleMap[taxType] = singleBrackets
                 marriedMap[taxType] = marriedBrackets
                 headMap[taxType] = headBrackets
+                marriedSMap[taxType] = married_s_Brackets
             }
             
             self.taxInfo[FilingStatusEnum.single] = singleMap
             self.taxInfo[FilingStatusEnum.married] = marriedMap
             self.taxInfo[FilingStatusEnum.head] = headMap
-            self.taxInfo[FilingStatusEnum.married_s] = singleMap
+            self.taxInfo[FilingStatusEnum.married_s] = marriedSMap
             
         } catch {
             throw TaxCalculationError.catalogueProcessingError
