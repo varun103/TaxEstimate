@@ -22,6 +22,12 @@ protocol TaxInfoService {
     /// - Returns: <#return value description#>
     func getFedBrackets(_ filingStatus: FilingStatusEnum) -> TaxBrackets
     
+    
+    ///  Tax Brackets for long term gains
+    ///
+    /// - Parameter filingStatus: <#filingStatus description#>
+    /// - Returns: <#return value description#>
+    func getLongTermGainsTaxBracket(filingStatus :FilingStatusEnum) -> TaxBrackets
  
     /// Return TaxBrackets for the provided state and filing status
     ///

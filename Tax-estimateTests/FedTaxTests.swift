@@ -29,8 +29,17 @@ class FedTaxTests: XCTestCase {
         let fedTax = FedTax(income: 10000, capitalGains: CapitalGains(), status: FilingStatusEnum.married)
         let fourOneK: PreTaxDeduction = FourOOneKPreTaxDeduction()
         fedTax.addPreTaxDeduction(deduction: fourOneK)
-        fourOneK.contributionAmount = 500
-        try fedTax.reCalculate()
+        try fourOneK.setContributionAmount(amount: 500)
+        try fedTax.calculate()
         XCTAssertEqual(fedTax.getTaxableIncome(), 9500)
+    }
+    
+    func testLongTermTax() throws {
+        let fedTax = FedTax(income: 10000, capitalGains: CapitalGains(), status: FilingStatusEnum.married)
+        
+        let longTermTax = try fedTax.getLongTermGainsTax(incMinusLTGains: 0, incPlusLTGains: 100000)
+        XCTAssertEqual(3704, longTermTax)
+
+        
     }
 }

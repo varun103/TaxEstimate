@@ -12,18 +12,20 @@ protocol PreTaxDeduction: class {
     
     var MAX_CONTRIBUTION_AMOUNT:Int {get}
     
-    var contributionAmount:Int {get set}
+    var contributionAmount:Int {get}
     
     var delegate:DeductionDelegate? {get set}
     
     var affects:[TaxType]{get}
     
     func getContributionAmount() -> Int
+    
+    func setContributionAmount(amount: Int) throws
 }
 
 protocol DeductionDelegate {
     
-    func deductionAmountChanged(_sender:PreTaxDeduction)
+    func deductionAmountChanged(_sender:PreTaxDeduction) throws
     
 }
 
@@ -45,19 +47,13 @@ class FourOOneKPreTaxDeduction : PreTaxDeduction, CustomStringConvertible {
         return self._contributionAmount
     }
     
-    func setContributionAmount(amount: Int) {
+    func setContributionAmount(amount: Int) throws {
         self._contributionAmount = amount
-        self.delegate?.deductionAmountChanged(_sender: self)
+        try self.delegate?.deductionAmountChanged(_sender: self)
     }
     
     var contributionAmount:Int {
-        get{
-            return self._contributionAmount
-        }
-        set(amount){
-            self._contributionAmount = amount
-            self.delegate?.deductionAmountChanged(_sender: self)
-        }
+        return self._contributionAmount
     }
 
     init(amount: Int) {
@@ -85,18 +81,13 @@ final class FSAHealthPreTaxDeduction: PreTaxDeduction, CustomStringConvertible{
         return self._contributionAmount
     }
     
-    func setContributionAmount(amount: Int) {
+    func setContributionAmount(amount: Int) throws {
         self._contributionAmount = amount
-        self.delegate?.deductionAmountChanged(_sender: self)
+        try self.delegate?.deductionAmountChanged(_sender: self)
     }
 
     var contributionAmount: Int {
-        get{
-            return self._contributionAmount
-        }set (amount){
-            self._contributionAmount = amount
-            self.delegate?.deductionAmountChanged(_sender: self)
-        }
+        return self._contributionAmount
     }
     
     init(amount: Int) {

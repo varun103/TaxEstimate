@@ -39,6 +39,8 @@
 		558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */; };
 		5593D01A1EA083E20013F923 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D0191EA083E20013F923 /* CustomButton.swift */; };
 		5593D01C1EA1AB470013F923 /* TaxBracketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */; };
+		55952C881EBC651A00DE52A5 /* longTerm.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55952C871EBC651A00DE52A5 /* longTerm.csv */; };
+		55952C8A1EBF13A900DE52A5 /* CapitalGainsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55952C891EBF13A900DE52A5 /* CapitalGainsTest.swift */; };
 		559ECFF01EB6F108001CE333 /* FedTaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */; };
 		559ECFF21EB7272E001CE333 /* StateTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ECFF11EB7272E001CE333 /* StateTax.swift */; };
 		55B76AE61E728D4A00C47CCC /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B76AE51E728D4A00C47CCC /* Views.swift */; };
@@ -117,6 +119,8 @@
 		558B61F01DD1BF4500D644D8 /* TaxTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxTypeTests.swift; sourceTree = "<group>"; };
 		5593D0191EA083E20013F923 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketViewController.swift; sourceTree = "<group>"; };
+		55952C871EBC651A00DE52A5 /* longTerm.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = longTerm.csv; sourceTree = "<group>"; };
+		55952C891EBF13A900DE52A5 /* CapitalGainsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalGainsTest.swift; sourceTree = "<group>"; };
 		559ECFE51EB5D93A001CE333 /* Tax-estimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tax-estimateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FedTaxTests.swift; sourceTree = "<group>"; };
 		559ECFF11EB7272E001CE333 /* StateTax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateTax.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		553594971DBDD285002478B1 /* TaxEstimate */ = {
 			isa = PBXGroup;
 			children = (
+				55952C871EBC651A00DE52A5 /* longTerm.csv */,
 				55E193AF1EB87FEA00137C6A /* FL.csv */,
 				55E193B01EB87FEA00137C6A /* IL.csv */,
 				55E193B11EB87FEA00137C6A /* IN.csv */,
@@ -253,6 +258,7 @@
 				55623CA11E5A542A006C0EE3 /* UserTest.swift */,
 				550DC6CC1E6437C0005A459F /* PreTaxDeductionTests.swift */,
 				559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */,
+				55952C891EBF13A900DE52A5 /* CapitalGainsTest.swift */,
 			);
 			path = "Tax-estimateTests";
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 			files = (
 				55E193B41EB87FEA00137C6A /* FL.csv in Resources */,
 				551D85921DDF0AB100FCC1F4 /* TODOs in Resources */,
+				55952C881EBC651A00DE52A5 /* longTerm.csv in Resources */,
 				55E193B61EB87FEA00137C6A /* IN.csv in Resources */,
 				553594A31DBDD285002478B1 /* LaunchScreen.storyboard in Resources */,
 				55E193A81EB87BC100137C6A /* TestTax.csv in Resources */,
@@ -451,6 +458,7 @@
 				558B61F11DD1BF4500D644D8 /* TaxTypeTests.swift in Sources */,
 				559ECFF01EB6F108001CE333 /* FedTaxTests.swift in Sources */,
 				550DC6CD1E6437C0005A459F /* PreTaxDeductionTests.swift in Sources */,
+				55952C8A1EBF13A900DE52A5 /* CapitalGainsTest.swift in Sources */,
 				55623CA21E5A542A006C0EE3 /* UserTest.swift in Sources */,
 				55623CA51E5A6D33006C0EE3 /* BracketTests.swift in Sources */,
 				55540FB61DC731D5001800C4 /* UtilsTest.swift in Sources */,

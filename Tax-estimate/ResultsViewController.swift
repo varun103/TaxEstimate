@@ -13,21 +13,21 @@ class ResultsViewController: UIViewController {
     
     private final let screenTitle:String = "View Savings"
     private final let textCellIdentifier = "resultCell"
-
+    
     @IBOutlet weak var taxSavings: UILabel!
     @IBOutlet weak var fedTaxSavings: UILabel!
     @IBOutlet weak var stateTaxSavings: UILabel!
-
+    
     @IBOutlet weak var segmentSelector: UISegmentedControl!
-
+    
     @IBOutlet weak var fourOOneKSlider: UISlider!
     @IBOutlet weak var contribution401: UILabel!
     @IBOutlet weak var spouse401KContribution: UILabel!
-
+    
     @IBOutlet weak var fsaSlider: UISlider!
     @IBOutlet weak var fsaContributionAmount: UILabel!
     @IBOutlet weak var spouseFSAContribution: UILabel!
-
+    
     @IBOutlet weak var summaryButton: CustomButton!
     @IBOutlet weak var estimatedTaxSavings: UILabel!
     
@@ -38,7 +38,7 @@ class ResultsViewController: UIViewController {
     private var spouseFsaPreTaxDeduction: FSAHealthPreTaxDeduction = FSAHealthPreTaxDeduction()
     
     let shapeLayer = CAShapeLayer()
-
+    
     var user: User?
     
     
@@ -54,7 +54,7 @@ class ResultsViewController: UIViewController {
             self.segmentSelector.layer.cornerRadius = 10.0
             self.segmentSelector.layer.borderColor = UIColor.white.cgColor
             self.segmentSelector.layer.borderWidth = 1.0;
-
+            
             self.segmentSelector.layer.masksToBounds = true
             user?.addPreTaxDeduction(deduction: spouseFsaPreTaxDeduction)
             user?.addPreTaxDeduction(deduction: spouseFourOOneKPreTaxDeduction)
@@ -67,7 +67,7 @@ class ResultsViewController: UIViewController {
         self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
         self.summaryButton.gradient.removeFromSuperlayer()
         self.summaryButton.layer.shadowOpacity = 0.0
-
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -81,23 +81,39 @@ class ResultsViewController: UIViewController {
     @IBAction func fsaContributionSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         if(self.segmentSelector.selectedSegmentIndex == 0) {
-            self.fsaPreTaxDeduction.setContributionAmount(amount: currentValue)
-            self.fsaContributionAmount.text = Config.addCommasToNumber(number: currentValue)
+            do {
+                try self.fsaPreTaxDeduction.setContributionAmount(amount: currentValue)
+                self.fsaContributionAmount.text = Config.addCommasToNumber(number: currentValue)
+            } catch {
+                self.showAlert()
+            }
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
-            self.spouseFsaPreTaxDeduction.setContributionAmount(amount: currentValue)
-            self.spouseFSAContribution.text = Config.addCommasToNumber(number: currentValue)
+            do {
+                try self.spouseFsaPreTaxDeduction.setContributionAmount(amount: currentValue)
+                self.spouseFSAContribution.text = Config.addCommasToNumber(number: currentValue)
+            } catch {
+                self.showAlert()
+            }
         }
         calculateTaxSavings()
     }
-
+    
     @IBAction func contributionSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         if(self.segmentSelector.selectedSegmentIndex == 0) {
-            self.fourOOneKPreTaxDeduction.setContributionAmount(amount: currentValue)
-            self.contribution401.text = Config.addCommasToNumber(number: currentValue)
+            do {
+                try self.fourOOneKPreTaxDeduction.setContributionAmount(amount: currentValue)
+                self.contribution401.text = Config.addCommasToNumber(number: currentValue)
+            } catch {
+                self.showAlert()
+            }
         }else if (self.segmentSelector.selectedSegmentIndex == 1) {
-            self.spouseFourOOneKPreTaxDeduction.setContributionAmount(amount: currentValue)
-            self.spouse401KContribution.text = Config.addCommasToNumber(number: currentValue)
+            do {
+                try self.spouseFourOOneKPreTaxDeduction.setContributionAmount(amount: currentValue)
+                self.spouse401KContribution.text = Config.addCommasToNumber(number: currentValue)
+            } catch {
+                self.showAlert()
+            }
         }
         calculateTaxSavings()
     }
@@ -107,22 +123,22 @@ class ResultsViewController: UIViewController {
             self.fourOOneKSlider.setValue(Float(self.fourOOneKPreTaxDeduction.getContributionAmount()), animated: true)
             self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
             self.fourOOneKSlider.setMinimumTrackImage(UIImage(named:"Line2.png"), for: UIControlState.normal)
-
+            
             self.fsaSlider.setValue(Float(self.fsaPreTaxDeduction.getContributionAmount()), animated: true)
             self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
             self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line2.png"), for: UIControlState.normal)
-
+            
             self.enabledText(enable: false, labels: self.spouse401KContribution, self.spouseFSAContribution)
             self.enabledText(enable: true, labels: self.contribution401, self.fsaContributionAmount)
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
             self.fourOOneKSlider.setValue(Float(self.spouseFourOOneKPreTaxDeduction.getContributionAmount()), animated: true)
             self.fourOOneKSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
             self.fourOOneKSlider.setMinimumTrackImage(UIImage(named:"Line1.png"), for: UIControlState.normal)
-
+            
             self.fsaSlider.setValue(Float(self.spouseFsaPreTaxDeduction.getContributionAmount()), animated: true)
             self.fsaSlider.setThumbImage(UIImage(named:"Scroller3.png"), for: UIControlState.normal)
             self.fsaSlider.setMinimumTrackImage(UIImage(named:"Line1.png"), for: UIControlState.normal)
-
+            
             self.enabledText(enable: true, labels: self.spouse401KContribution, self.spouseFSAContribution)
             self.enabledText(enable: false, labels: self.contribution401, self.fsaContributionAmount)
         }
@@ -137,6 +153,16 @@ class ResultsViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationItem.backBarButtonItem = backItem
+    }
+    
+    
+    func showAlert() {
+        // create the alert
+        let alert = UIAlertController(title: "Error", message: "Deduction amount cannot exceed income", preferredStyle: UIAlertControllerStyle.alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func setInitialValues(){

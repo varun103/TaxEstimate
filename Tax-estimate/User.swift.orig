@@ -19,10 +19,13 @@ class User : UserProtocol, DeductionDelegate {
     
     var state: TaxType
     
+    var preTaxDeductionAmount: Int
+    
     init(filingStatus: FilingStatusEnum, income: Double, state: TaxType){
         self.status = filingStatus
         self.initialIncome = income
         self.state = state
+        self.preTaxDeductionAmount = 0
         self.fedTax = FedTax(income: income, capitalGains: CapitalGains(), status: filingStatus)
         self.stateTax = StateTax(income: income, capitalGains: CapitalGains(), status: filingStatus, state: state)
     }
@@ -44,7 +47,11 @@ class User : UserProtocol, DeductionDelegate {
     }
     
     func getStateTaxBracket() -> Bracket{
+<<<<<<< HEAD
         return self.stateTax.getBracket()
+=======
+        return self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.getTaxableIncome())
+>>>>>>> master
     }
     
     func getTakeHomeIncome() -> Int {
@@ -61,6 +68,10 @@ class User : UserProtocol, DeductionDelegate {
     
     func getState() -> TaxType{
         return self.state
+    }
+    
+    func getContributionAmount() -> Int{
+        return self.preTaxDeductionAmount
     }
     
     func getTaxSavings() -> Int {
@@ -81,13 +92,12 @@ class User : UserProtocol, DeductionDelegate {
         deduction.delegate = self
     }
     
-    func deductionAmountChanged(_sender: PreTaxDeduction) throws {
+    func deductionAmountChanged(_sender: PreTaxDeduction) {
         do {
-            try fedTax.calculate()
-            try stateTax.calculate()
+            try fedTax.reCalculate()
+            try  stateTax.reCalculate()
             }
         catch  {
-            throw UserInputError.deductionAmountExceedError
         }
         
        

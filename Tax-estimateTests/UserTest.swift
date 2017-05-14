@@ -32,14 +32,14 @@ class UserTest: XCTestCase {
         
         user = User(filingStatus: FilingStatusEnum.married, income: 231451, state: TaxType.CA)
         XCTAssertEqual(33, user.getFedTaxBracket().getRate())
-        XCTAssertEqual(51791, user.getFederalTax())
+        XCTAssertEqual(51790, user.getFederalTax())
         
-        user = User(filingStatus: FilingStatusEnum.head, income: 115726, state: TaxType.CA)
+        user = User(filingStatus: FilingStatusEnum.married_s, income: 115726, state: TaxType.CA)
         XCTAssertEqual(33, user.getFedTaxBracket().getRate())
         XCTAssertEqual(25895, user.getFederalTax())
     }
     
-    func testPreTaxDeductions() {
+    func testPreTaxDeductions() throws {
         let user =  User(filingStatus: FilingStatusEnum.single, income: 10000, state: TaxType.FED)
         XCTAssertEqual(15,user.getFedTaxBracket().getRate())
         XCTAssertEqual(10000, user.getTaxableIncome())
@@ -53,12 +53,12 @@ class UserTest: XCTestCase {
         XCTAssertEqual(15,user.getFedTaxBracket().getRate())
         XCTAssertEqual(10000, user.getTaxableIncome())
         
-        deduction1.contributionAmount = 2000
+        try deduction1.setContributionAmount(amount: 2000)
         
         XCTAssertEqual(10,user.getFedTaxBracket().getRate())
         XCTAssertEqual(8000, user.getTaxableIncome())
         
-        deduction2.contributionAmount = 4000
+        try deduction2.setContributionAmount(amount: 4000)
         
         XCTAssertEqual(10,user.getFedTaxBracket().getRate())
         XCTAssertEqual(4000, user.getTaxableIncome())

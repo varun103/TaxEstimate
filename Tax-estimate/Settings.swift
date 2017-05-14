@@ -20,4 +20,7 @@ class Settings {
     static let SOCIAL_SECURITY_TAX: Double = 6.2
     static let SOCIAL_SECURITY_MAX: Double = 118500
     
+    //Capital Gains
+    static let MAX_DEDUCTIBLE_LOSS = -3000
+    
 }

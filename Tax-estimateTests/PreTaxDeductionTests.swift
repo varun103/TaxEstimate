@@ -19,11 +19,11 @@ class PreTaxDeductionTests: XCTestCase {
         super.tearDown()
     }
     
-    func testGetterSetter() {
+    func testGetterSetter() throws {
         var fourOOnePreTaxDeduction:PreTaxDeduction = FourOOneKPreTaxDeduction()
         XCTAssertEqual(0, fourOOnePreTaxDeduction.contributionAmount)
 
-        fourOOnePreTaxDeduction.contributionAmount = 400
+        try fourOOnePreTaxDeduction.setContributionAmount(amount:400)
         XCTAssertEqual(400, fourOOnePreTaxDeduction.contributionAmount)
         
         

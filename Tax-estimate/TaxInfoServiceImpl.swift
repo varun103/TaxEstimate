@@ -57,6 +57,15 @@ class TaxInfoServiceImpl: TaxInfoService{
         }
     }
     
+    func getLongTermGainsTaxBracket(filingStatus: FilingStatusEnum) -> TaxBrackets {
+        var abc = self.taxInfo[filingStatus]!
+        if let bc = abc[TaxType.LONG_TERM] {
+            return bc
+        } else{
+            exit(0)
+        }
+    }
+    
     /// Dependancy injection - only to be used for testing
     ///
     /// - Parameter dependencies: dependencies
@@ -98,7 +107,13 @@ class TaxInfoServiceImpl: TaxInfoService{
                         count = count + 1
                         continue
                     }
+                    
                     var elements = Utility.splitString(bracketInfo, separator: ",")
+                    
+                    if elements.count < 2 {
+                        continue
+                    }
+                    
                     let rate = Double(elements[BracketEnum.rate.rawValue])
                     
                     let single_start = Double(elements[BracketEnum.single_start.rawValue])

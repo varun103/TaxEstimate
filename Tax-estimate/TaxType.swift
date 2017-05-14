@@ -28,9 +28,11 @@ enum TaxType: String{
     case MED = "medicare"
     case SS = "socical security"
     
+    case LONG_TERM = "longTerm"
+    
     case TEST = "TestTax"
     
-    static let all = [FED, AL, AK, CA, FL, IL, IN, KS, MA, MI, NY, WA]
+    static let all = [FED, AL, AK, CA, FL, IL, IN, KS, MA, MI, NY, WA, LONG_TERM]
     
     static let states = [AL.rawValue, AK.rawValue, CA.rawValue, FL.rawValue,
                          IL.rawValue, IN.rawValue, KS.rawValue, MA.rawValue,

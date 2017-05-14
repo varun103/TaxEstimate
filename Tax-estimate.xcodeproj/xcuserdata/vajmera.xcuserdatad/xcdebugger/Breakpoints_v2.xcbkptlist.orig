@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ResultsViewController.swift"
-            timestampString = "516268722.781277"
+            timestampString = "514451006.655926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "calculateTaxSavings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/User.swift"
-            timestampString = "516257374.016975"
+            timestampString = "515324671.478851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "getState()"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "getFederalTax()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ResultsViewController.swift"
-            timestampString = "516268722.781277"
+            timestampString = "514451006.655926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "calculateTaxSavings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ResultsViewController.swift"
-            timestampString = "516268722.781277"
+            timestampString = "514449511.884103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "contributionSlider(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/PreTaxDeduction.swift"
-            timestampString = "516269709.24037"
+            timestampString = "511575143.460923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "FourOOneKPreTaxDeduction"
             landmarkType = "3">
          </BreakpointContent>
@@ -186,11 +186,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/PreTaxDeduction.swift"
-            timestampString = "516269709.24037"
+            timestampString = "511575143.460923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "contributionAmount"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/PreTaxDeduction.swift"
+            timestampString = "511575143.460923"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "contributionAmount"
             landmarkType = "24">
          </BreakpointContent>
@@ -218,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ResultsViewController.swift"
-            timestampString = "516268722.781277"
+            timestampString = "514451006.655926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "setInitialValues()"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ResultsViewController.swift"
-            timestampString = "516268722.781277"
+            timestampString = "514449511.884103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "fsaContributionSlider(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxInfoServiceImpl.swift"
-            timestampString = "515915776.092609"
+            timestampString = "515408715.911322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "initializeTaxBracketMap()"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxInfoServiceImpl.swift"
-            timestampString = "515915776.092609"
+            timestampString = "515408715.911322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "initializeTaxBracketMap()"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxInfoServiceImpl.swift"
-            timestampString = "515915776.092609"
+            timestampString = "515408715.911322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "initializeTaxBracketMap()"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/TaxInfoServiceImpl.swift"
-            timestampString = "515915776.092609"
+            timestampString = "515408715.911322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "initializeTaxBracketMap()"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/PreTaxDeduction.swift"
-            timestampString = "516269709.24037"
+            timestampString = "513851265.340494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "FourOOneKPreTaxDeduction"
             landmarkType = "3">
             <Locations>
@@ -538,7 +554,11 @@
                   moduleName = "Tax-estimate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/TaxEstimate/Tax-estimate/PreTaxDeduction.swift"
-                  timestampString = "516266954.600672"
+<<<<<<< HEAD
+                  timestampString = "515324672.56534"
+=======
+                  timestampString = "515409919.025525"
+>>>>>>> master
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -553,7 +573,11 @@
                   moduleName = "Tax-estimate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/TaxEstimate/Tax-estimate/PreTaxDeduction.swift"
-                  timestampString = "516266954.602167"
+<<<<<<< HEAD
+                  timestampString = "515324672.566801"
+=======
+                  timestampString = "515409919.026711"
+>>>>>>> master
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -634,11 +658,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/ResultsViewController.swift"
-            timestampString = "516268722.781277"
+            timestampString = "514449511.884103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
             <Locations>
@@ -650,7 +674,11 @@
                   moduleName = "Tax-estimate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/TaxEstimate/Tax-estimate/ResultsViewController.swift"
+<<<<<<< HEAD
                   timestampString = "515124272.99311"
+=======
+                  timestampString = "515409919.031959"
+>>>>>>> master
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -665,7 +693,11 @@
                   moduleName = "Tax-estimate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/TaxEstimate/Tax-estimate/ResultsViewController.swift"
+<<<<<<< HEAD
                   timestampString = "515124272.994362"
+=======
+                  timestampString = "515409919.033142"
+>>>>>>> master
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "133"
@@ -681,6 +713,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Tax-estimate/ResultsViewController.swift"
             timestampString = "515211109.938082"
             startingColumnNumber = "9223372036854775807"
@@ -761,14 +794,78 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tax-estimate/User.swift"
-            timestampString = "516268722.781277"
+            filePath = "Tax-estimate/Tax.swift"
+            timestampString = "515303218.613815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "setTaxBracket()"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Tax"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/User.swift"
+            timestampString = "515324671.478851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "deductionAmountChanged(_sender:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/FedTax.swift"
+            timestampString = "515405017.73806"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "reCalculate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/FedTax.swift"
+            timestampString = "515405017.73806"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "reCalculate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tax-estimate/PreTaxDeduction.swift"
+            timestampString = "515315361.722887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "contributionAmount"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -810,11 +907,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/Tax.swift"
-            timestampString = "516266912.462123"
+            timestampString = "515405017.73806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "getTaxSavings()"
             landmarkType = "7">
          </BreakpointContent>
@@ -858,11 +955,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/User.swift"
-            timestampString = "516268722.781277"
+            timestampString = "515324671.478851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "User"
             landmarkType = "3">
          </BreakpointContent>
@@ -870,16 +967,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/StateTax.swift"
-            timestampString = "515662246.732311"
+            timestampString = "515405017.73806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getPreTaxDeduction()"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "reCalculate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -890,44 +987,20 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tax-estimate/User.swift"
-            timestampString = "516268722.781277"
+            timestampString = "515324671.478851"
+=======
+            filePath = "Tax-estimate/TaxInfoServiceImpl.swift"
+            timestampString = "515408715.911322"
+>>>>>>> master
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "setTaxBracket()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tax-estimate/Tax.swift"
-            timestampString = "516266912.462123"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "getPreTaxDeduction()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tax-estimate/Tax.swift"
-            timestampString = "516266912.462123"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "addPreTaxDeduction(deduction:)"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+<<<<<<< HEAD
+            landmarkName = "deductionAmountChanged(_sender:)"
+=======
+            landmarkName = "initializeTaxBracketMap()"
+>>>>>>> master
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -937,13 +1010,23 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Tax-estimate/FedTax.swift"
-            timestampString = "516269709.24037"
+            timestampString = "515405017.73806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "getLongTermGainsTax(incMinusLTGains:incPlusLTGains:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "reCalculate()"
+=======
+            filePath = "Tax-estimate/TaxInfoServiceImpl.swift"
+            timestampString = "515408920.739734"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "initializeTaxBracketMap()"
+>>>>>>> master
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -953,14 +1036,25 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tax-estimate/FedTax.swift"
-            timestampString = "516267933.51761"
+<<<<<<< HEAD
+            filePath = "Tax-estimate/Tax.swift"
+            timestampString = "515404658.836727"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "getTaxSavings()"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "Tax"
+            landmarkType = "3">
+=======
+            filePath = "Tax-estimate/TaxInfoServiceImpl.swift"
+            timestampString = "515409101.977941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "initializeTaxBracketMap()"
             landmarkType = "7">
+>>>>>>> master
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,23 +10,33 @@ import UIKit
 
 class Tax {
     
-    var income: Double
-    var preTaxDeductions: PreTaxDeductions
+    // wages and salary
+    var initialIncome: Double
+    // income to be taxed at marginal tax rate
     var taxableIncome: Double
+    // tax amount
+    var taxAmount : Int
+    
+    var preTaxDeductions: PreTaxDeductions
+    
     var status: FilingStatusEnum
-    var preTaxDeductionAmount: Int
+    
     var bracket: Bracket
     var capitalGains: CapitalGains
     var taxInfo: TaxInfoService = TaxInfoServiceImpl.getInstance()
-
-    init(income: Double, capitalGains: CapitalGains, status: FilingStatusEnum){
-        self.income = income
-        self.taxableIncome = self.income
+    
+    init(income: Double, capitalGains: CapitalGains, status: FilingStatusEnum) {
+        self.initialIncome = income
+        self.taxableIncome = self.initialIncome
         self.status = status
-        self.preTaxDeductionAmount = 0
         self.bracket = Tax.setTaxBracket()
         self.preTaxDeductions = PreTaxDeductionsImpl()
         self.capitalGains = capitalGains
+        self.taxAmount = 0
+        do {
+            try calculate()
+        }catch{}
+        
     }
     
     func getBracket() -> Bracket{
@@ -42,24 +52,33 @@ class Tax {
     func getTax() -> Int {
         var _tax:Double = 0.0
         do {
-            try _tax = self.getBracket().getTax(self.taxableIncome)
+            try _tax = self.bracket.getTax(self.taxableIncome)
         } catch {
         }
         return Int(_tax)
     }
     
     func getTaxSavings() -> Int {
-        return (Int((Double(self.preTaxDeductionAmount)) * self.getBracket().getPercentage()))
+        do {
+            return try (Int((Double(getPreTaxDeduction())) * self.bracket.getPercentage()))
+        }catch {}
+        return 0
     }
-
-
+    
     func addPreTaxDeduction(deduction: PreTaxDeduction) {
         self.preTaxDeductions.add(preTaxDeduction: deduction)
+        do {
+            try calculate()
+        }catch{}
     }
     
-    func reCalculate() throws {}
+    func getPreTaxDeduction() throws -> Int {
+        return 0;
+    }
     
     func capitalGainsTax() {}
+    
+    func calculate() throws {}
     
     static func setTaxBracket() -> Bracket {
         return Bracket(rate:0,startRange: 0,endRange: 0)

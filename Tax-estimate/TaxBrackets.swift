@@ -62,6 +62,10 @@ class TaxBrackets {
         return self.head == nil
     }
     
+    func getTax(income:Double) throws -> Double {
+        return try self.findBracket(income: income).getTax(income)
+    }
+    
     func findBracket(income:Double)-> Bracket{
         return _findBracket(income: income, node: self.head!)
     }
