@@ -17,6 +17,8 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var uiTaxField: UITextField!
     
+    @IBOutlet weak var capitalGainsButton: UIButton!
+    
     let gradient: CAGradientLayer = CAGradientLayer()
     let innerShadow: CAGradientLayer = CAGradientLayer()
     
@@ -102,7 +104,9 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         }
         
         label!.font = Config.getMediumAppFont(size: 17.0)
-        label!.textColor = UIColor(red: 60.0/255.0, green: 88.0/255.0, blue: 199.0/255.0, alpha: 100.0)
+        //label!.textColor = UIColor(red: 60.0/255.0, green: 88.0/255.0, blue: 199.0/255.0, alpha: 100.0)
+        label!.textColor = UIColor(red: 44.0/255.0, green: 56.0/255.0, blue: 147.0/255.0, alpha: 100.0)
+
         label!.adjustsFontSizeToFitWidth = true
         label!.minimumScaleFactor = 0.5
         if (pickerView.tag == 1)  {
@@ -111,6 +115,21 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
             label!.text = stateValue[row]
         }
         return label!
+    }
+    
+    
+    @IBAction func addCapitalGains(_ sender: Any) {
+        self.popUpCapitalGainsWindown()
+    }
+    
+    
+    private func popUpCapitalGainsWindown() {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cgPopupView") as! CGPopupViewController
+        
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParentViewController: self)
     }
     
     private func enhanceNavigationBar(){
@@ -178,7 +197,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         // Round the edges on the text box
         self.uiTaxField.layer.cornerRadius = 15
         
-        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:placeHolderText, attributes:[NSFontAttributeName : Config.getMediumAppFont(size: 16.0)])
+        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:placeHolderText, attributes:[NSFontAttributeName : Config.getMediumAppFont(size: 15.0)])
         self.uiTaxField.contentVerticalAlignment = UIControlContentVerticalAlignment.bottom
     }
     

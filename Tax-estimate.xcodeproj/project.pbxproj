@@ -62,6 +62,8 @@
 		55E193B71EB87FEA00137C6A /* KS.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193B21EB87FEA00137C6A /* KS.csv */; };
 		55E193B81EB87FEA00137C6A /* MI.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193B31EB87FEA00137C6A /* MI.csv */; };
 		55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */; };
+		55F15A451EC7F379005CF8DE /* CGPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F15A441EC7F379005CF8DE /* CGPopViewController.swift */; };
+		55F15A471EC98035005CF8DE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F15A461EC98035005CF8DE /* CustomTextField.swift */; };
 		55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* Bracket.swift */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +145,8 @@
 		55E193B21EB87FEA00137C6A /* KS.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KS.csv; sourceTree = "<group>"; };
 		55E193B31EB87FEA00137C6A /* MI.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MI.csv; sourceTree = "<group>"; };
 		55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		55F15A441EC7F379005CF8DE /* CGPopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPopViewController.swift; sourceTree = "<group>"; };
+		55F15A461EC98035005CF8DE /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		55F59B431DC03A7700CA0574 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +244,8 @@
 				55BD6FC41EB42906006CA88E /* Tax.swift */,
 				55BD6FC61EB4292C006CA88E /* FedTax.swift */,
 				559ECFF11EB7272E001CE333 /* StateTax.swift */,
+				55F15A441EC7F379005CF8DE /* CGPopViewController.swift */,
+				55F15A461EC98035005CF8DE /* CustomTextField.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -432,7 +438,9 @@
 				55E242CF1DEEC88600AADE38 /* ResultsViewController.swift in Sources */,
 				5581C53C1DBF4174006C0A3D /* TaxInfoServiceImpl.swift in Sources */,
 				556EC5A01DC55CFD0002314A /* TaxInfoService.swift in Sources */,
+				55F15A471EC98035005CF8DE /* CustomTextField.swift in Sources */,
 				55540FAE1DC57D7A001800C4 /* TaxType.swift in Sources */,
+				55F15A451EC7F379005CF8DE /* CGPopViewController.swift in Sources */,
 				55B76AE61E728D4A00C47CCC /* Views.swift in Sources */,
 				55D461461DF94B7600454DBC /* Deductions.swift in Sources */,
 				559ECFF21EB7272E001CE333 /* StateTax.swift in Sources */,

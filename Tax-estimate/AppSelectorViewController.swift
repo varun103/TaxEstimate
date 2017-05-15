@@ -45,8 +45,7 @@ class AppSelectorViewController: UIViewController {
         if let inputPage = segue.destination as? TaxInputController{
             inputPage.selectedApp = self.selectedApp
         }
-    }
-    
+    }    
 }
 
 enum AppName{
