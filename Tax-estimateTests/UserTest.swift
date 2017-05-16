@@ -65,6 +65,16 @@ class UserTest: XCTestCase {
         
     }
     
+    func testSetGetCapitalGains() {
+        let capitalGains = CapitalGains(shortTerm: 0, longTerm: 500)
+        let user = User(filingStatus: FilingStatusEnum.single, income: 20000, state: TaxType.FED, capitalGains: capitalGains)
+        XCTAssertEqual(0, user.capitalGains.shortTermGains)
+        XCTAssertEqual(500, user.capitalGains.longTermGains)
+        
+        capitalGains.setLongTermGains(amount:1000)
+        XCTAssertEqual(1000, user.capitalGains.longTermGains)
+        
+    }
     func testFederalTaxAfterContribution() {
 //        let user =  User(filingStatus: FilingStatusEnum.single, income: 10000, state: TaxType.FED)
 //        user.setContributionAmount(newContributionAmout: 1200)

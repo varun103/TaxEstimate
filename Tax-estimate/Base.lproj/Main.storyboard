@@ -170,7 +170,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="exitPopup:" destination="RLh-Um-xDj" eventType="touchUpInside" id="bcC-0J-HgA"/>
-                                                            <action selector="gainsEntered:" destination="RLh-Um-xDj" eventType="touchUpInside" id="ngQ-nT-dUT"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -253,13 +252,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Select Filing Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7TH-J3-dPy">
                                         <rect key="frame" x="0.0" y="0.0" width="278.66666666666669" height="19.333333333333343"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                                        <color key="textColor" red="0.96078431372549022" green="0.75294117647058822" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.97647058823529409" green="0.71764705882352942" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoW-aM-kKl">
                                         <rect key="frame" x="278.66666666666674" y="0.0" width="75.333333333333314" height="19.333333333333343"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                                        <color key="textColor" red="0.96078431372549022" green="0.75294117647058822" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.97647058823529409" green="0.71764705882352942" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -295,14 +294,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="yrg-gf-kRg">
                                 <rect key="frame" x="30" y="350.33333333333331" width="354" height="28.333333333333371"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital Gains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-uN-nzi">
-                                        <rect key="frame" x="0.0" y="0.0" width="204" height="28.333333333333371"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                        <color key="textColor" red="0.96078431372549022" green="0.75294117647058822" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPs-2v-cJP">
-                                        <rect key="frame" x="204" y="0.0" width="25" height="28.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="28.333333333333371"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="eVE-98-jIR"/>
                                             <constraint firstAttribute="width" secondItem="WPs-2v-cJP" secondAttribute="height" multiplier="15:17" id="gR7-mF-QcB"/>
@@ -317,6 +310,12 @@
                                             <action selector="addCapitalGains:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dRb-wc-Tc3"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Capital Gains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HVe-uN-nzi">
+                                        <rect key="frame" x="25" y="0.0" width="204" height="28.333333333333371"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                        <color key="textColor" red="0.97647058823529409" green="0.71764705882352942" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHc-Zh-JhR">
                                         <rect key="frame" x="229" y="0.0" width="125" height="28.333333333333371"/>
                                         <constraints>
@@ -352,6 +351,7 @@
                     <navigationItem key="navigationItem" title="Tax Filing Information" id="OvI-xb-wib"/>
                     <connections>
                         <outlet property="calculateButton" destination="L9x-Gg-XXc" id="NSG-QP-loY"/>
+                        <outlet property="capitalGainsDisplay" destination="fHc-Zh-JhR" id="azk-oK-A3E"/>
                         <outlet property="filingStatusPicker" destination="qBa-Xr-Z98" id="QeH-qD-fSi"/>
                         <outlet property="statePicker" destination="DkF-pF-rCR" id="7Uj-cC-6tH"/>
                         <outlet property="uiTaxField" destination="lkC-hH-7AY" id="cq3-49-g9g"/>
@@ -873,7 +873,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add button" width="35" height="33"/>
+        <image name="Add button" width="54" height="53"/>
         <image name="Line" width="414" height="1"/>
         <image name="Rectangle" width="386" height="288"/>
     </resources>

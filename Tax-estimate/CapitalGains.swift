@@ -8,12 +8,16 @@
 
 import UIKit
 
+protocol CapitalGainsDelegate {
+    
+    func amountChanged()
+}
 
 class CapitalGains {
     
     private(set) var shortTermGains:Int
-    
     private(set) var longTermGains:Int
+    var delegate: CapitalGainsDelegate?
     
     init(shortTerm:Int, longTerm:Int) {
         self.shortTermGains = shortTerm
@@ -39,6 +43,7 @@ class CapitalGains {
         return _effectivelongTermGain
     }
     
+    /// Combined amount -> capped on the lower end at max deductible loss amount (-3000)
     var net : Int {
         let _net = self.shortTermGains + self.longTermGains
         if _net < Settings.MAX_DEDUCTIBLE_LOSS {
@@ -46,5 +51,16 @@ class CapitalGains {
         }
         return _net
     }
+    
+    func setShortTermGains(amount:Int) {
+        self.shortTermGains = amount
+        delegate?.amountChanged()
+    }
+    
+    func setLongTermGains(amount:Int) {
+        self.longTermGains = amount
+        delegate?.amountChanged()
+    }
 }
+
 

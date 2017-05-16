@@ -13,25 +13,22 @@ class FedTax: Tax {
     // tax on long term capital gains
     private(set) var longTermGainsTax: Int
     
-    // total income to be taxed
-    private(set) var totalIncome: Double
-    
     override init(income: Double, capitalGains: CapitalGains, status: FilingStatusEnum) {
         self.longTermGainsTax = 0
-        self.totalIncome = 0
         super.init(income: income, capitalGains: capitalGains, status: status)
     }
     
     /// Main method to calculate the tax. Should be called anytime there is a change to any params
     override func calculate() throws {
-        // calculate the total income
-        self.totalIncome = try self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net)
         
-        if (self.totalIncome < 0) {
+        // calculate the total income
+        self.totalTaxableIncome = try self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net)
+        
+        if (self.totalTaxableIncome < 0) {
             //TODO
         }
         
-        var _incomeMinusLTGain = self.totalIncome - Double(self.capitalGains.effectiveLongTerm)
+        var _incomeMinusLTGain = self.totalTaxableIncome - Double(self.capitalGains.effectiveLongTerm)
         if (_incomeMinusLTGain < 0) {
             _incomeMinusLTGain = 0
         }

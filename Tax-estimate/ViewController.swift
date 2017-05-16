@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, CapitalGainsDelegate {
     
     private let placeHolderText: String = "Enter your 2016 Income"
     
@@ -16,7 +16,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var filingStatusPicker: UIPickerView!
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var uiTaxField: UITextField!
-    
+    @IBOutlet weak var capitalGainsDisplay: UILabel!
     @IBOutlet weak var capitalGainsButton: UIButton!
     
     let gradient: CAGradientLayer = CAGradientLayer()
@@ -29,6 +29,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     private var selectedFilingStatus: String?
     private var stateValue = TaxType.states
     private var selectedState: String?
+    private var capitalGains = CapitalGains(shortTerm: 0, longTerm: 0)
     
     var selectedApp:AppName?
 
@@ -38,7 +39,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
                 self.userIncomeEntered = true
                 let inc = self.filingStatusPicker.selectedRow(inComponent: 0)
                 let abc = self.statePicker.selectedRow(inComponent: 0)
-                self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType(rawValue: stateValue[abc])!)
+                self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType(rawValue: stateValue[abc])!, capitalGains: self.capitalGains)
             } else{
                 self.userIncomeEntered = false
             }
@@ -71,9 +72,9 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.statePicker.delegate = self
         self.statePicker.dataSource = self
         self.statePicker.selectRow(0, inComponent: 0, animated: true)
-
+        
+        self.capitalGains.delegate = self
         self.uiTaxField.delegate = self
-        self.addDoneButton()
     }
     
     override func didReceiveMemoryWarning() {
@@ -119,13 +120,8 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     
     @IBAction func addCapitalGains(_ sender: Any) {
-        self.popUpCapitalGainsWindown()
-    }
-    
-    
-    private func popUpCapitalGainsWindown() {
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cgPopupView") as! CGPopupViewController
-        
+        popUpVC.capitalGains = self.capitalGains
         self.addChildViewController(popUpVC)
         popUpVC.view.frame = self.view.frame
         self.view.addSubview(popUpVC.view)
@@ -184,8 +180,15 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     }
     
     
+    // capital gains delegate
+    func amountChanged() {
+        self.capitalGainsDisplay.text = String(self.capitalGains.shortTermGains + self.capitalGains.longTermGains)
+    }
+    
+    
     private func enhanceTextField(){
         
+        self.uiTaxField.inputAccessoryView = CustomKeyboard.keyboardWDoneButton(view: self.view)
         self.innerShadow.colors = [UIColor.gray.cgColor, UIColor(red: 240.0/255.0, green: 235/255.0, blue: 235/255.0, alpha:50.0/255.0).cgColor]
         self.innerShadow.cornerRadius = 5
         self.innerShadow.locations = [0.0 , 0.05]
@@ -210,17 +213,6 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.calculateButton.layer.shadowOffset = CGSize(width: 2, height:-3)
         self.calculateButton.layer.cornerRadius = 15
         
-    }
-    
-    func addDoneButton() {
-        let keyboardToolbar = UIToolbar()
-        keyboardToolbar.sizeToFit()
-        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
-                                            target: nil, action: nil)
-        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done,
-                                            target: view, action: #selector(UIView.endEditing(_:)))
-        keyboardToolbar.items = [flexBarButton, doneBarButton]
-        self.uiTaxField.inputAccessoryView = keyboardToolbar
     }
     
     override var shouldAutorotate: Bool {

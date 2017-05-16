@@ -22,7 +22,8 @@ class TaxInfoServiceImpl: TaxInfoService{
         if let _instance = taxInfoServiceImpl {
             return _instance
         }else{
-            return TaxInfoServiceImpl()
+            taxInfoServiceImpl = TaxInfoServiceImpl()
+            return taxInfoServiceImpl!
         }
     }
     

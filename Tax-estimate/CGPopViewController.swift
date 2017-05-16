@@ -11,7 +11,7 @@ import UIKit
 
 class CGPopupViewController: UIViewController {
     
-    var user: User?
+    var capitalGains: CapitalGains?
     
     @IBOutlet weak var shortTermGainsAmount: CustomTextField!
     
@@ -19,18 +19,30 @@ class CGPopupViewController: UIViewController {
     
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.shortTermGainsAmount.inputAccessoryView = CustomKeyboard.keyboardWDoneButton(view: self.view)
+        self.longTermGainsAmount.inputAccessoryView = CustomKeyboard.keyboardWDoneButton(view: self.view)
         self.showAnimate()
     }
     
     @IBAction func exitPopup(_ sender: Any) {
+        if let x = Int(self.shortTermGainsAmount.text!) {
+            self.capitalGains?.setShortTermGains(amount: x)
+        } else {
+            self.capitalGains?.setShortTermGains(amount: 0)
+        }
+
+        if let x = Int(self.longTermGainsAmount.text!) {
+            self.capitalGains?.setLongTermGains(amount: x)
+        } else {
+            self.capitalGains?.setLongTermGains(amount: 0)
+        }
         self.removeAnimate()
     }
     
     @IBAction func gainsEntered(_ sender: Any) {
-        
-        
+        self.capitalGains?.setShortTermGains(amount: Int(self.shortTermGainsAmount.text!)!)
+        self.capitalGains?.setLongTermGains(amount: Int(self.longTermGainsAmount.text!)!)
     }
-    
     
     
     func showAnimate()

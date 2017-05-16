@@ -12,6 +12,8 @@ class Tax {
     
     // wages and salary
     var initialIncome: Double
+    // income to be taxed
+    var totalTaxableIncome: Double
     // income to be taxed at marginal tax rate
     var taxableIncome: Double
     // tax amount
@@ -33,6 +35,7 @@ class Tax {
         self.preTaxDeductions = PreTaxDeductionsImpl()
         self.capitalGains = capitalGains
         self.taxAmount = 0
+        self.totalTaxableIncome = 0
         do {
             try calculate()
         }catch{}
