@@ -80,12 +80,19 @@ class ResultsViewController: UIViewController {
     
     @IBAction func fsaContributionSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
+        let prevValue = self.fsaPreTaxDeduction.contributionAmount
+        let prevValueSpouse = self.spouseFsaPreTaxDeduction.contributionAmount
         if(self.segmentSelector.selectedSegmentIndex == 0) {
             do {
                 try self.fsaPreTaxDeduction.setContributionAmount(amount: currentValue)
                 self.fsaContributionAmount.text = Config.addCommasToNumber(number: currentValue)
             } catch {
                 self.showAlert()
+                do {
+                    try self.fsaPreTaxDeduction.setContributionAmount(amount: prevValue)
+                    self.fsaContributionAmount.text = Config.addCommasToNumber(number: prevValue)
+                } catch {}
+
             }
         } else if (self.segmentSelector.selectedSegmentIndex == 1) {
             do {
@@ -93,6 +100,10 @@ class ResultsViewController: UIViewController {
                 self.spouseFSAContribution.text = Config.addCommasToNumber(number: currentValue)
             } catch {
                 self.showAlert()
+                do {
+                    try self.spouseFsaPreTaxDeduction.setContributionAmount(amount: prevValueSpouse)
+                    self.spouseFSAContribution.text = Config.addCommasToNumber(number: prevValue)
+                } catch {}
             }
         }
         calculateTaxSavings()
@@ -100,12 +111,18 @@ class ResultsViewController: UIViewController {
     
     @IBAction func contributionSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
+        let prevValue = self.fourOOneKPreTaxDeduction.contributionAmount
+        let prevValueSpouse = self.spouseFourOOneKPreTaxDeduction.contributionAmount
         if(self.segmentSelector.selectedSegmentIndex == 0) {
             do {
                 try self.fourOOneKPreTaxDeduction.setContributionAmount(amount: currentValue)
                 self.contribution401.text = Config.addCommasToNumber(number: currentValue)
             } catch {
                 self.showAlert()
+                do {
+                     try self.fourOOneKPreTaxDeduction.setContributionAmount(amount: prevValue)
+                     self.contribution401.text = Config.addCommasToNumber(number: prevValue)
+                } catch {}
             }
         }else if (self.segmentSelector.selectedSegmentIndex == 1) {
             do {
@@ -113,6 +130,10 @@ class ResultsViewController: UIViewController {
                 self.spouse401KContribution.text = Config.addCommasToNumber(number: currentValue)
             } catch {
                 self.showAlert()
+                do {
+                      try self.spouseFourOOneKPreTaxDeduction.setContributionAmount(amount: prevValueSpouse)
+                      self.spouse401KContribution.text = Config.addCommasToNumber(number: prevValue)
+                } catch {}
             }
         }
         calculateTaxSavings()

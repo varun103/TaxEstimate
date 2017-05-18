@@ -27,7 +27,7 @@ class Tax {
     var capitalGains: CapitalGains
     var taxInfo: TaxInfoService = TaxInfoServiceImpl.getInstance()
     
-    init(income: Double, capitalGains: CapitalGains, status: FilingStatusEnum) {
+    init(income: Double, capitalGains: CapitalGains, status: FilingStatusEnum, preTaxDeductions: PreTaxDeductions) {
         self.initialIncome = income
         self.taxableIncome = self.initialIncome
         self.status = status
@@ -39,7 +39,10 @@ class Tax {
         do {
             try calculate()
         }catch{}
-        
+    }
+    
+    convenience init(income: Double, capitalGains: CapitalGains, status: FilingStatusEnum) {
+        self.init(income: income, capitalGains: capitalGains, status: status, preTaxDeductions: PreTaxDeductionsImpl())
     }
     
     func getBracket() -> Bracket{
@@ -76,7 +79,12 @@ class Tax {
     }
     
     func getPreTaxDeduction() throws -> Int {
-        return 0;
+        let amount = self.preTaxDeductions.getAmount()
+        
+        if (amount > Int(self.initialIncome)) {
+            throw UserInputError.deductionAmountExceedError
+        }
+        return amount
     }
     
     func capitalGainsTax() {}

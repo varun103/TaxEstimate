@@ -14,6 +14,10 @@ class TaxBracketViewController: UIViewController {
     
     var user:User?
     
+    @IBOutlet weak var income: UILabel!
+    
+    @IBOutlet weak var preTaxDeductions: UILabel!
+    @IBOutlet weak var capitalGains: UILabel!
     @IBOutlet weak var taxableIncome: UILabel!
     @IBOutlet weak var fedTax: UILabel!
     @IBOutlet weak var fedTaxBracket: UILabel!
@@ -24,13 +28,14 @@ class TaxBracketViewController: UIViewController {
     override func viewDidLoad() {
         
         self.navigationItem.title = self.screenTitle
-
+        income.text = Config.addCommasToNumber(number: Int((user?.getIncome())!))
+        preTaxDeductions.text = Config.addCommasToNumber(number: Int((user?.getPreTaxDeductions().getAmount())!))
+        capitalGains.text = Config.addCommasToNumber(number: (user?.capitalGains.net)!)
         taxableIncome.text = Config.addCommasToNumber(number: Int((user?.getTaxableIncome())!))
         fedTax.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
         stateTax.text = Config.addCommasToNumber(number: (user?.getStateTax())!)
         fedTaxBracket.text = doubleToString(value: (user?.getFedTaxBracket().getRate())!) + "%"
         stateTaxBracket.text = doubleToString(value: (user?.getStateTaxBracket().getRate())!) + "%"
-
         
     }
     

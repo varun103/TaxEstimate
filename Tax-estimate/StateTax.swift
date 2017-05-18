@@ -12,28 +12,15 @@ class StateTax: Tax {
     
     var state: TaxType
     
-    init(income:Double, capitalGains:CapitalGains, status:FilingStatusEnum , state: TaxType) {
+    init(income:Double, capitalGains:CapitalGains, status:FilingStatusEnum , state: TaxType, preTaxDeductions:PreTaxDeductions) {
         self.state = state
-        super.init(income: income, capitalGains: capitalGains, status: status)
+        super.init(income: income, capitalGains: capitalGains, status: status, preTaxDeductions: preTaxDeductions)
     }
     
     /// - Returns: Bracket Info
     override func getBracket() -> Bracket {
         return self.bracket
     }
-    
-    override func getPreTaxDeduction() throws -> Int {
-        
-        var amount:Int = 0
-        for preTaxD in self.preTaxDeductions.all {
-            amount = amount + preTaxD.getContributionAmount()
-        }
-        if (amount > Int(self.initialIncome)) {
-            
-        }
-        return amount
-    }
-    
     
     override func calculate() throws {
         try self.taxableIncome  = self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net)

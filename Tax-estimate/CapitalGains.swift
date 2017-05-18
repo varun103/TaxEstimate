@@ -51,7 +51,7 @@ class CapitalGains {
         }
         return _net
     }
-    
+        
     func setShortTermGains(amount:Int) {
         self.shortTermGains = amount
         delegate?.amountChanged()

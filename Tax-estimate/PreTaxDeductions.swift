@@ -15,6 +15,8 @@ protocol PreTaxDeductions: Deductions {
     
     func add(preTaxDeduction: PreTaxDeduction)
     
+    func getAmount() -> Int
+    
 }
 
 class PreTaxDeductionsImpl: PreTaxDeductions {
@@ -32,6 +34,15 @@ class PreTaxDeductionsImpl: PreTaxDeductions {
     
     func apply() -> Double {
         return 0
+    }
+    
+    func getAmount() -> Int {
+        
+        var amount:Int = 0
+        for preTaxD in self.all {
+            amount = amount + preTaxD.getContributionAmount()
+        }
+        return amount
     }
     
 }

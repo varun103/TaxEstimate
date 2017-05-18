@@ -182,7 +182,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     // capital gains delegate
     func amountChanged() {
-        self.capitalGainsDisplay.text = String(self.capitalGains.shortTermGains + self.capitalGains.longTermGains)
+        self.capitalGainsDisplay.text = Config.addCommasToNumber(number: self.capitalGains.shortTermGains + self.capitalGains.longTermGains)
     }
     
     

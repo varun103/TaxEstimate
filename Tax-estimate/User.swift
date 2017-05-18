@@ -11,23 +11,20 @@ import UIKit
 class User : UserProtocol, DeductionDelegate {
     
     var status: FilingStatusEnum
-    
     var initialIncome: Double
-    
     var fedTax: Tax
     var stateTax: Tax
     var state: TaxType
-    
     var capitalGains:CapitalGains
-    
+    var preTaxDeductions = PreTaxDeductionsImpl()
     
     init(filingStatus: FilingStatusEnum, income: Double, state: TaxType, capitalGains: CapitalGains) {
         self.status = filingStatus
         self.initialIncome = income
         self.state = state
         self.capitalGains = capitalGains
-        self.fedTax = FedTax(income: income, capitalGains: capitalGains, status: filingStatus)
-        self.stateTax = StateTax(income: income, capitalGains: capitalGains, status: filingStatus, state: state)
+        self.fedTax = FedTax(income: income, capitalGains: capitalGains, status: filingStatus, preTaxDeductions:self.preTaxDeductions)
+        self.stateTax = StateTax(income: income, capitalGains: capitalGains, status: filingStatus, state: state, preTaxDeductions: self.preTaxDeductions)
     }
     
     convenience init(filingStatus: FilingStatusEnum, income: Double, state: TaxType) {
@@ -86,7 +83,12 @@ class User : UserProtocol, DeductionDelegate {
         return self.stateTax.getTaxSavings()
     }
     
+    func getPreTaxDeductions() -> PreTaxDeductions {
+        return self.preTaxDeductions
+    }
+    
     func addPreTaxDeduction(deduction: PreTaxDeduction) {
+        self.preTaxDeductions.add(preTaxDeduction: deduction)
         self.fedTax.addPreTaxDeduction(deduction: deduction)
         self.stateTax.addPreTaxDeduction(deduction: deduction)
         deduction.delegate = self
