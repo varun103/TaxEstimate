@@ -66,6 +66,7 @@
 		55F15A471EC98035005CF8DE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F15A461EC98035005CF8DE /* CustomTextField.swift */; };
 		55F15A491EC9A9D5005CF8DE /* customKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F15A481EC9A9D5005CF8DE /* customKeyboard.swift */; };
 		55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F59B431DC03A7700CA0574 /* Bracket.swift */; };
+		55FB49661EDFF44200C29F8C /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB49651EDFF44200C29F8C /* CustomAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,7 @@
 		55F15A461EC98035005CF8DE /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		55F15A481EC9A9D5005CF8DE /* customKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customKeyboard.swift; sourceTree = "<group>"; };
 		55F59B431DC03A7700CA0574 /* Bracket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bracket.swift; sourceTree = "<group>"; };
+		55FB49651EDFF44200C29F8C /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 				55F15A441EC7F379005CF8DE /* CGPopViewController.swift */,
 				55F15A461EC98035005CF8DE /* CustomTextField.swift */,
 				55F15A481EC9A9D5005CF8DE /* customKeyboard.swift */,
+				55FB49651EDFF44200C29F8C /* CustomAlert.swift */,
 			);
 			name = TaxEstimate;
 			path = "Tax-estimate";
@@ -432,6 +435,7 @@
 				5593D01C1EA1AB470013F923 /* TaxBracketViewController.swift in Sources */,
 				5507520E1DD082F900676627 /* BracketEnum.swift in Sources */,
 				55BD6FC51EB42906006CA88E /* Tax.swift in Sources */,
+				55FB49661EDFF44200C29F8C /* CustomAlert.swift in Sources */,
 				55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */,
 				556EC59A1DC5545A0002314A /* User.swift in Sources */,
 				55BD6FC31EB31844006CA88E /* CapitalGains.swift in Sources */,

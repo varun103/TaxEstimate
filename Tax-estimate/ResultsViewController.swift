@@ -179,10 +179,8 @@ class ResultsViewController: UIViewController {
     
     func showAlert() {
         // create the alert
-        let alert = UIAlertController(title: "Error", message: "Deduction amount cannot exceed income", preferredStyle: UIAlertControllerStyle.alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        // show the alert
+        let alert = CustomAlert.create(message: "Deduction amount cannot exceed income")
+        
         self.present(alert, animated: true, completion: nil)
     }
     

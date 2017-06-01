@@ -42,9 +42,11 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
                 self.user = User(filingStatus: FilingStatusEnum(rawValue: filingStatusValues[inc])!, income: inputSalary, state: TaxType(rawValue: stateValue[abc])!, capitalGains: self.capitalGains)
             } else{
                 self.userIncomeEntered = false
+                showAlert()
             }
         } else{
             self.userIncomeEntered = false
+            showAlert()
         }
         if self.userIncomeEntered {
             if selectedApp == AppName.preTaxDeductionCalculator {
@@ -213,6 +215,11 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.calculateButton.layer.shadowOffset = CGSize(width: 2, height:-3)
         self.calculateButton.layer.cornerRadius = 15
         
+    }
+    
+    private func showAlert() {
+        let alert = CustomAlert.create(title:"", message: "Enter your income")
+        self.present(alert, animated: true, completion: nil)
     }
     
     override var shouldAutorotate: Bool {
