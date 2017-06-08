@@ -9,6 +9,7 @@
 import UIKit
 
 
+/// 
 class Views:UIView {
     
     func drawLine() -> UIBezierPath {
@@ -18,8 +19,6 @@ class Views:UIView {
         path.close()
         path.stroke()
         path.fill()
-        
        return path
     }
-
 }

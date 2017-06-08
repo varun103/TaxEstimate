@@ -26,6 +26,5 @@ class StateTax: Tax {
         try self.taxableIncome  = self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net)
         self.bracket = self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.taxableIncome)
     }
-    
 
 }

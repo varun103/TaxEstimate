@@ -24,9 +24,7 @@ protocol PreTaxDeduction: class {
 }
 
 protocol DeductionDelegate {
-    
     func deductionAmountChanged(_sender:PreTaxDeduction) throws
-    
 }
 
 

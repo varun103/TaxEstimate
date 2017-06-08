@@ -22,5 +22,4 @@ class CustomAlert {
         return CustomAlert.create(title:"Error",message:message)
     }
     
-    
 }

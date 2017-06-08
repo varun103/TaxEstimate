@@ -22,7 +22,7 @@ class Utility {
         do {
             readString = try String(contentsOfFile: fileURL!, encoding: String.Encoding.utf8)
         } catch let error as NSError {
-            print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+            print("Failed reading from URL: \(String(describing: fileURL)), Error: " + error.localizedDescription)
         }
         return readString
     }

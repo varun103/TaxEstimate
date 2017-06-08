@@ -34,7 +34,7 @@ class AppSelectorViewController: UIViewController {
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
         self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getMediumAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font.rawValue: Config.getMediumAppFont(size: 18.0) , NSAttributedStringKey.foregroundColor.rawValue: Config.navigationBarTextColor]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
