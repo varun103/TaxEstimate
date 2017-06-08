@@ -10,7 +10,7 @@ import UIKit
 
 class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, CapitalGainsDelegate {
     
-    private let placeHolderText: String = "Enter your 2016 Income"
+    private let placeHolderText: String = "Enter your 2017 Income"
     
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var filingStatusPicker: UIPickerView!

@@ -9,7 +9,7 @@
 import UIKit
 import Darwin
 
-class TaxInfoServiceImpl: TaxInfoService{
+class TaxInfoServiceImpl: TaxInfoService {
     
     private let file_type = "csv"
     private var dependencies: Dependencies
@@ -98,12 +98,10 @@ class TaxInfoServiceImpl: TaxInfoService{
                 let headBrackets: TaxBrackets =  TaxBrackets()
                 let married_s_Brackets: TaxBrackets = TaxBrackets()
                 
-                
                 var count = 0
-                
                 for bracketInfo in bracketInfoArray {
                     
-                    //first line is the heading
+                    // first line is the heading
                     if count == 0 {
                         count = count + 1
                         continue
@@ -111,6 +109,7 @@ class TaxInfoServiceImpl: TaxInfoService{
                     
                     var elements = Utility.splitString(bracketInfo, separator: ",")
                     
+                    // if there are less than 2 values
                     if elements.count < 2 {
                         continue
                     }

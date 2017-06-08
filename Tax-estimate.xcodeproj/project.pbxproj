@@ -41,6 +41,8 @@
 		5593D01C1EA1AB470013F923 /* TaxBracketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */; };
 		55952C881EBC651A00DE52A5 /* longTerm.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55952C871EBC651A00DE52A5 /* longTerm.csv */; };
 		55952C8A1EBF13A900DE52A5 /* CapitalGainsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55952C891EBF13A900DE52A5 /* CapitalGainsTest.swift */; };
+		559A484F1EE9E90300656B14 /* CO.csv in Resources */ = {isa = PBXBuildFile; fileRef = 559A484E1EE9E90300656B14 /* CO.csv */; };
+		559A48511EE9E99B00656B14 /* NV.csv in Resources */ = {isa = PBXBuildFile; fileRef = 559A48501EE9E99B00656B14 /* NV.csv */; };
 		559ECFF01EB6F108001CE333 /* FedTaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */; };
 		559ECFF21EB7272E001CE333 /* StateTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559ECFF11EB7272E001CE333 /* StateTax.swift */; };
 		55B76AE61E728D4A00C47CCC /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B76AE51E728D4A00C47CCC /* Views.swift */; };
@@ -125,6 +127,22 @@
 		5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxBracketViewController.swift; sourceTree = "<group>"; };
 		55952C871EBC651A00DE52A5 /* longTerm.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = longTerm.csv; sourceTree = "<group>"; };
 		55952C891EBF13A900DE52A5 /* CapitalGainsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalGainsTest.swift; sourceTree = "<group>"; };
+		559A48401EE9D8C900656B14 /* AK.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = AK.16.csv; sourceTree = "<group>"; };
+		559A48411EE9D8C900656B14 /* AL.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = AL.16.csv; sourceTree = "<group>"; };
+		559A48421EE9DD4200656B14 /* IN.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = IN.16.csv; sourceTree = "<group>"; };
+		559A48431EE9DD4200656B14 /* CA.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = CA.16.csv; sourceTree = "<group>"; };
+		559A48441EE9DD4200656B14 /* TestTax.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestTax.16.csv; sourceTree = "<group>"; };
+		559A48451EE9DD4200656B14 /* NY.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NY.16.csv; sourceTree = "<group>"; };
+		559A48461EE9DD4200656B14 /* WA.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = WA.16.csv; sourceTree = "<group>"; };
+		559A48471EE9DD4200656B14 /* FL.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = FL.16.csv; sourceTree = "<group>"; };
+		559A48481EE9DD4200656B14 /* MI.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = MI.16.csv; sourceTree = "<group>"; };
+		559A48491EE9DD4200656B14 /* fedtax.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = fedtax.16.csv; sourceTree = "<group>"; };
+		559A484A1EE9DD4200656B14 /* IL.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = IL.16.csv; sourceTree = "<group>"; };
+		559A484B1EE9DD4200656B14 /* KS.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = KS.16.csv; sourceTree = "<group>"; };
+		559A484C1EE9DD4200656B14 /* MA.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = MA.16.csv; sourceTree = "<group>"; };
+		559A484D1EE9DD4200656B14 /* longTerm.16.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = longTerm.16.csv; sourceTree = "<group>"; };
+		559A484E1EE9E90300656B14 /* CO.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = CO.csv; sourceTree = "<group>"; };
+		559A48501EE9E99B00656B14 /* NV.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NV.csv; sourceTree = "<group>"; };
 		559ECFE51EB5D93A001CE333 /* Tax-estimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tax-estimateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		559ECFEF1EB6F108001CE333 /* FedTaxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FedTaxTests.swift; sourceTree = "<group>"; };
 		559ECFF11EB7272E001CE333 /* StateTax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateTax.swift; sourceTree = "<group>"; };
@@ -201,20 +219,7 @@
 		553594971DBDD285002478B1 /* TaxEstimate */ = {
 			isa = PBXGroup;
 			children = (
-				55952C871EBC651A00DE52A5 /* longTerm.csv */,
-				55E193AF1EB87FEA00137C6A /* FL.csv */,
-				55E193B01EB87FEA00137C6A /* IL.csv */,
-				55E193B11EB87FEA00137C6A /* IN.csv */,
-				55E193B21EB87FEA00137C6A /* KS.csv */,
-				55E193B31EB87FEA00137C6A /* MI.csv */,
-				55E193A91EB87E2800137C6A /* AK.csv */,
-				55E193AA1EB87E2800137C6A /* AL.csv */,
-				55E193AB1EB87E2800137C6A /* NY.csv */,
-				55E193A71EB87BC100137C6A /* TestTax.csv */,
-				55E193A51EB87B6E00137C6A /* WA.csv */,
-				55E193A31EB87B1A00137C6A /* MA.csv */,
-				55E193A11EB87A9200137C6A /* CA.csv */,
-				55E1939F1EB879A900137C6A /* fedtax.csv */,
+				559A483D1EE92F1A00656B14 /* tax files */,
 				553594981DBDD285002478B1 /* AppDelegate.swift */,
 				5535949A1DBDD285002478B1 /* ViewController.swift */,
 				5535949C1DBDD285002478B1 /* Main.storyboard */,
@@ -273,6 +278,59 @@
 				55952C891EBF13A900DE52A5 /* CapitalGainsTest.swift */,
 			);
 			path = "Tax-estimateTests";
+			sourceTree = "<group>";
+		};
+		559A483D1EE92F1A00656B14 /* tax files */ = {
+			isa = PBXGroup;
+			children = (
+				559A483F1EE9D81700656B14 /* 2017 */,
+				559A483E1EE9D7E300656B14 /* 2016 */,
+			);
+			path = "tax files";
+			sourceTree = "<group>";
+		};
+		559A483E1EE9D7E300656B14 /* 2016 */ = {
+			isa = PBXGroup;
+			children = (
+				559A48431EE9DD4200656B14 /* CA.16.csv */,
+				559A48491EE9DD4200656B14 /* fedtax.16.csv */,
+				559A48471EE9DD4200656B14 /* FL.16.csv */,
+				559A484A1EE9DD4200656B14 /* IL.16.csv */,
+				559A48421EE9DD4200656B14 /* IN.16.csv */,
+				559A484B1EE9DD4200656B14 /* KS.16.csv */,
+				559A484D1EE9DD4200656B14 /* longTerm.16.csv */,
+				559A484C1EE9DD4200656B14 /* MA.16.csv */,
+				559A48481EE9DD4200656B14 /* MI.16.csv */,
+				559A48451EE9DD4200656B14 /* NY.16.csv */,
+				559A48441EE9DD4200656B14 /* TestTax.16.csv */,
+				559A48461EE9DD4200656B14 /* WA.16.csv */,
+				559A48401EE9D8C900656B14 /* AK.16.csv */,
+				559A48411EE9D8C900656B14 /* AL.16.csv */,
+			);
+			path = 2016;
+			sourceTree = "<group>";
+		};
+		559A483F1EE9D81700656B14 /* 2017 */ = {
+			isa = PBXGroup;
+			children = (
+				55E193B11EB87FEA00137C6A /* IN.csv */,
+				55E193B21EB87FEA00137C6A /* KS.csv */,
+				55E193B31EB87FEA00137C6A /* MI.csv */,
+				55E193AA1EB87E2800137C6A /* AL.csv */,
+				55E193AB1EB87E2800137C6A /* NY.csv */,
+				55E193A71EB87BC100137C6A /* TestTax.csv */,
+				55E193A51EB87B6E00137C6A /* WA.csv */,
+				55E193A11EB87A9200137C6A /* CA.csv */,
+				55E193A31EB87B1A00137C6A /* MA.csv */,
+				55E1939F1EB879A900137C6A /* fedtax.csv */,
+				55E193A91EB87E2800137C6A /* AK.csv */,
+				55E193B01EB87FEA00137C6A /* IL.csv */,
+				55E193AF1EB87FEA00137C6A /* FL.csv */,
+				55952C871EBC651A00DE52A5 /* longTerm.csv */,
+				559A484E1EE9E90300656B14 /* CO.csv */,
+				559A48501EE9E99B00656B14 /* NV.csv */,
+			);
+			path = 2017;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559A48511EE9E99B00656B14 /* NV.csv in Resources */,
 				55E193B41EB87FEA00137C6A /* FL.csv in Resources */,
 				551D85921DDF0AB100FCC1F4 /* TODOs in Resources */,
 				55952C881EBC651A00DE52A5 /* longTerm.csv in Resources */,
@@ -405,6 +464,7 @@
 				55E193A21EB87A9200137C6A /* CA.csv in Resources */,
 				55E193A61EB87B6E00137C6A /* WA.csv in Resources */,
 				5535949E1DBDD285002478B1 /* Main.storyboard in Resources */,
+				559A484F1EE9E90300656B14 /* CO.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
