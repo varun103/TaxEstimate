@@ -49,7 +49,7 @@ class ResultsViewController: UIViewController {
         
         if(user?.getStatus() == FilingStatusEnum.married) {
             
-            self.segmentSelector.setTitleTextAttributes([NSAttributedStringKey.font:Config.getAppFont(size: 14), NSAttributedStringKey.foregroundColor: UIColor(red: 111.0/255.0, green: 132.0/255.0, blue: 195.0/255.0, alpha: 255.0/255.0)], for: UIControlState.normal)
+            self.segmentSelector.setTitleTextAttributes([NSFontAttributeName:Config.getAppFont(size: 14), NSForegroundColorAttributeName: UIColor(red: 111.0/255.0, green: 132.0/255.0, blue: 195.0/255.0, alpha: 255.0/255.0)], for: UIControlState.normal)
             self.segmentSelector.isHidden = false
             self.segmentSelector.layer.cornerRadius = 10.0
             self.segmentSelector.layer.borderColor = UIColor.white.cgColor

@@ -133,7 +133,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
         self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font.rawValue: Config.getMediumAppFont(size: 18.0) , NSAttributedStringKey.foregroundColor.rawValue: Config.navigationBarTextColor]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: Config.getMediumAppFont(size: 18.0) , NSForegroundColorAttributeName: Config.navigationBarTextColor]
     }
     
     
@@ -202,7 +202,7 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         // Round the edges on the text box
         self.uiTaxField.layer.cornerRadius = 15
         
-        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:placeHolderText, attributes:[NSAttributedStringKey.font : Config.getMediumAppFont(size: 15.0)])
+        self.uiTaxField.attributedPlaceholder = NSAttributedString(string:placeHolderText, attributes:[NSFontAttributeName : Config.getMediumAppFont(size: 15.0)])
         self.uiTaxField.contentVerticalAlignment = UIControlContentVerticalAlignment.bottom
     }
     
