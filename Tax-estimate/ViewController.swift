@@ -53,6 +53,8 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
                 performSegue(withIdentifier: "preTaxDeductions", sender: self)
             } else if selectedApp == AppName.taxBracket {
                 performSegue(withIdentifier: "taxBrackets", sender: self)
+            } else if selectedApp == AppName.capitalGains {
+                performSegue(withIdentifier: "capitalGains", sender: self)
             }
         }
     }
@@ -77,6 +79,10 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         
         self.capitalGains.delegate = self
         self.uiTaxField.delegate = self
+        
+        if selectedApp == AppName.capitalGains {
+            addCapitalGains(self)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -162,12 +168,15 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "preTaxDeductions"{
-            
             if let resultsPage = segue.destination as? ResultsViewController{
                 resultsPage.user = self.user
             }
         } else if segue.identifier == "taxBrackets" {
             if let resultsPage = segue.destination as? TaxBracketViewController {
+                resultsPage.user = self.user
+            }
+        } else if segue.identifier == "capitalGains" {
+            if let resultsPage = segue.destination as? CapitalGainsTaxViewController {
                 resultsPage.user = self.user
             }
         }

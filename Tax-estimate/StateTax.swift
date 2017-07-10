@@ -23,8 +23,12 @@ class StateTax: Tax {
     }
     
     override func calculate() throws {
-        try self.taxableIncome  = self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net)
+        try self.taxableIncome  = self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net(status: status))
+        if (self.taxableIncome < 0){
+            self.taxableIncome = 0
+        }
         self.bracket = self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.taxableIncome)
     }
+
 
 }

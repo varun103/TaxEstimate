@@ -35,10 +35,10 @@ class FedTaxTests: XCTestCase {
     }
     
     func testLongTermTax() throws {
-        let fedTax = FedTax(income: 10000, capitalGains: CapitalGains(), status: FilingStatusEnum.married)
+        let fedTax = FedTax(income: 10000, capitalGains: CapitalGains(shortTerm: 0, longTerm: 90000), status: FilingStatusEnum.married)
         
-        let longTermTax = try fedTax.getLongTermGainsTax(incMinusLTGains: 0, incPlusLTGains: 100000)
-        XCTAssertEqual(3704, longTermTax)
+        let longTermTax = try fedTax.longTermCapitalGainsTax()
+        XCTAssertEqual(3615, longTermTax)
 
         
     }

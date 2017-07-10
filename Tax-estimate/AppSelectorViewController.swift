@@ -31,6 +31,12 @@ class AppSelectorViewController: UIViewController {
         performSegue(withIdentifier: "appSelected", sender: self)
     }
     
+    @IBAction func capitalGainsButtonClicked(_ sender: Any) {
+        selectedApp = AppName.capitalGains
+        performSegue(withIdentifier: "appSelected", sender: self)
+    }
+    
+    
     private func enhanceNavigationBar(){
         self.navigationController?.navigationBar.barTintColor = Config.navigationBarColor
         self.navigationController?.navigationBar.tintColor = Config.navigationBarTextColor;
@@ -51,6 +57,7 @@ class AppSelectorViewController: UIViewController {
 enum AppName{
     case preTaxDeductionCalculator
     case taxBracket
+    case capitalGains
 }
 
 

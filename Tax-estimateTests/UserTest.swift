@@ -21,27 +21,27 @@ class UserTest: XCTestCase {
     
     func testTaxableIncome() {
         let user =  User(filingStatus: FilingStatusEnum.single, income: 10000, state: TaxType.FED)
-        XCTAssertEqual(15,user.getFedTaxBracket().getRate())
+        XCTAssertEqual(15,user.fedTax.getBracket().getRate())
         XCTAssertEqual(10000, user.getTaxableIncome())
     }
     
     func testFederalTax() {
-        var user =  User(filingStatus: FilingStatusEnum.single, income: 10000, state: TaxType.FED)
-        XCTAssertEqual(15,user.getFedTaxBracket().getRate())
+        var user =  User(filingStatus: FilingStatusEnum.single, income: 10000, state: TaxType.TEST)
+        XCTAssertEqual(15,user.fedTax.getBracket().getRate())
         XCTAssertEqual(1036, user.getFederalTax())
         
         user = User(filingStatus: FilingStatusEnum.married, income: 231451, state: TaxType.CA)
-        XCTAssertEqual(33, user.getFedTaxBracket().getRate())
+        XCTAssertEqual(33, user.fedTax.getBracket().getRate())
         XCTAssertEqual(51790, user.getFederalTax())
         
         user = User(filingStatus: FilingStatusEnum.married_s, income: 115726, state: TaxType.CA)
-        XCTAssertEqual(33, user.getFedTaxBracket().getRate())
+        XCTAssertEqual(33, user.fedTax.getBracket().getRate())
         XCTAssertEqual(25895, user.getFederalTax())
     }
     
     func testPreTaxDeductions() throws {
         let user =  User(filingStatus: FilingStatusEnum.single, income: 10000, state: TaxType.FED)
-        XCTAssertEqual(15,user.getFedTaxBracket().getRate())
+        XCTAssertEqual(15,user.fedTax.getBracket().getRate())
         XCTAssertEqual(10000, user.getTaxableIncome())
         
         let deduction1: PreTaxDeduction = FourOOneKPreTaxDeduction()
@@ -50,17 +50,17 @@ class UserTest: XCTestCase {
         user.addPreTaxDeduction(deduction: deduction1)
         user.addPreTaxDeduction(deduction: deduction2)
         
-        XCTAssertEqual(15,user.getFedTaxBracket().getRate())
+        XCTAssertEqual(15,user.fedTax.getBracket().getRate())
         XCTAssertEqual(10000, user.getTaxableIncome())
         
         try deduction1.setContributionAmount(amount: 2000)
         
-        XCTAssertEqual(10,user.getFedTaxBracket().getRate())
+        XCTAssertEqual(10,user.fedTax.getBracket().getRate())
         XCTAssertEqual(8000, user.getTaxableIncome())
         
         try deduction2.setContributionAmount(amount: 4000)
         
-        XCTAssertEqual(10,user.getFedTaxBracket().getRate())
+        XCTAssertEqual(10,user.fedTax.getBracket().getRate())
         XCTAssertEqual(4000, user.getTaxableIncome())
         
     }

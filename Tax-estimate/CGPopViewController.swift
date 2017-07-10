@@ -17,8 +17,11 @@ class CGPopupViewController: UIViewController {
     
     @IBOutlet weak var longTermGainsAmount: CustomTextField!
     
+    @IBOutlet weak var popUpView: UIView!
+    
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.popUpView.layer.cornerRadius = 12.0
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         self.shortTermGainsAmount.inputAccessoryView = CustomKeyboard.keyboardWDoneButton(view: self.view)
         self.longTermGainsAmount.inputAccessoryView = CustomKeyboard.keyboardWDoneButton(view: self.view)
         self.showAnimate()

@@ -11,7 +11,7 @@ import UIKit
 
 protocol UserProtocol {
     
-    var initialIncome: Double {set get}
+    var initialIncome: Double {get}
     
     var status: FilingStatusEnum {get}
     

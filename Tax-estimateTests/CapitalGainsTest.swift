@@ -24,26 +24,28 @@ class CapitalGainsTest: XCTestCase {
     func testSetterGetters() {
         let cg: CapitalGains = CapitalGains()
         XCTAssertEqual(0, cg.effectiveLongTerm)
-        XCTAssertEqual(0, cg.net)
-
+        XCTAssertEqual(0, cg.net(status: FilingStatusEnum.married_s))
     }
     
     func testVariousValues() {
         var cg = CapitalGains(shortTerm: 200, longTerm: -4000)
         XCTAssertEqual(0, cg.effectiveLongTerm)
-        XCTAssertEqual(-3000, cg.net)
+        XCTAssertEqual(-3000, cg.effectiveShortTerm)
+        XCTAssertEqual(-1500, cg.net(status: FilingStatusEnum.married_s))
         
         cg = CapitalGains(shortTerm: -400, longTerm: -8000)
         XCTAssertEqual(0, cg.effectiveLongTerm)
-        XCTAssertEqual(-3000, cg.net)
+        XCTAssertEqual(-3000, cg.effectiveShortTerm)
+        XCTAssertEqual(-3000, cg.net(status: FilingStatusEnum.married))
         
         cg = CapitalGains(shortTerm: 200, longTerm: 1800)
         XCTAssertEqual(1800, cg.effectiveLongTerm)
-        XCTAssertEqual(2000, cg.net)
+        XCTAssertEqual(200, cg.effectiveShortTerm)
+        XCTAssertEqual(2000, cg.net(status: FilingStatusEnum.married_s))
         
         cg = CapitalGains(shortTerm: -2000, longTerm: 10000)
         XCTAssertEqual(8000, cg.effectiveLongTerm)
-        XCTAssertEqual(8000, cg.net)
+        XCTAssertEqual(8000, cg.net(status: FilingStatusEnum.married_s))
     }
     
 }

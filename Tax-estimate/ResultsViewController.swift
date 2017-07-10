@@ -8,10 +8,9 @@
 
 import UIKit
 
-
 class ResultsViewController: UIViewController {
     
-    private final let screenTitle:String = "View Savings"
+    private final let screenTitle:String = "Pre-Tax Contribution Savings"
     private final let textCellIdentifier = "resultCell"
     
     @IBOutlet weak var taxSavings: UILabel!
@@ -47,7 +46,7 @@ class ResultsViewController: UIViewController {
         self.navigationItem.title = self.screenTitle
         self.segmentSelector.isHidden = true
         
-        if(user?.getStatus() == FilingStatusEnum.married) {
+        if(user?.status == FilingStatusEnum.married) {
             
             self.segmentSelector.setTitleTextAttributes([NSFontAttributeName:Config.getAppFont(size: 14), NSForegroundColorAttributeName: UIColor(red: 111.0/255.0, green: 132.0/255.0, blue: 195.0/255.0, alpha: 255.0/255.0)], for: UIControlState.normal)
             self.segmentSelector.isHidden = false

@@ -8,10 +8,12 @@
 
 import UIKit
 
+/// Description
 class FedTax: Tax {
     
     // tax on long term capital gains
     private(set) var longTermGainsTax: Int
+    
     
     override init(income: Double, capitalGains: CapitalGains, status: FilingStatusEnum, preTaxDeductions: PreTaxDeductions) {
         self.longTermGainsTax = 0
@@ -22,8 +24,8 @@ class FedTax: Tax {
     override func calculate() throws {
         
         // calculate the total income
-        self.totalTaxableIncome = try self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net)
-        
+        self.totalTaxableIncome = try self.initialIncome - Double(getPreTaxDeduction()) + Double(self.capitalGains.net(status: status))
+
         if (self.totalTaxableIncome < 0) {
             //TODO
         }
@@ -45,7 +47,6 @@ class FedTax: Tax {
             self.taxAmount = Int(_taxForIncomeMinusLTGain) + self.longTermGainsTax
             
         }catch {}
-        
     }
 
     
@@ -58,7 +59,6 @@ class FedTax: Tax {
     override func getTax() -> Int {
         return self.taxAmount
     }
-    
     
     // To calculate pre-tax deduction savings
     var taxableAmountWoPreTaxDeduction : Int {
@@ -77,12 +77,34 @@ class FedTax: Tax {
         return 0
     }
     
+    override func longTermCapitalGainsTax() -> Int {
+        return self.longTermGainsTax
+    }
     
-    func getLongTermGainsTax(incMinusLTGains:Double, incPlusLTGains:Double) throws -> Int {
+    override func shortTermCapitalGainsTax() -> Int {
+        var _tax = 0
+        if (self.capitalGains.shortTermGains > 0 ) {
+            do {
+                _tax = try self.getShortTermGainsTax(incMinusSTGains: self.taxableIncome - Double(self.capitalGains.shortTermGains), incPlusSTGains: self.taxableIncome)
+            } catch {}
+        }
+        return _tax
+    }
+
+    
+    private func getLongTermGainsTax(incMinusLTGains:Double, incPlusLTGains:Double) throws -> Int {
         let taxForIncomeMinusLT = try self.taxInfo.getLongTermGainsTaxBracket(filingStatus: self.status).getTax(income: incMinusLTGains)
         
         let taxForIncomePlusLT = try self.taxInfo.getLongTermGainsTaxBracket(filingStatus: self.status).getTax(income: incPlusLTGains)
         
         return Int(taxForIncomePlusLT - taxForIncomeMinusLT)
+    }
+    
+    private func getShortTermGainsTax(incMinusSTGains:Double, incPlusSTGains:Double) throws -> Int {
+        let taxForIncomeMinusST = try self.taxInfo.getFedBrackets(self.status).getTax(income: incMinusSTGains)
+        
+        let taxForIncomePlusST = try self.taxInfo.getFedBrackets(self.status).getTax(income: incPlusSTGains)
+        
+        return Int(taxForIncomePlusST - taxForIncomeMinusST)
     }
 }

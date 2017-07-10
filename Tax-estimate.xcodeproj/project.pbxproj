@@ -49,6 +49,7 @@
 		55BD6FC31EB31844006CA88E /* CapitalGains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC21EB31844006CA88E /* CapitalGains.swift */; };
 		55BD6FC51EB42906006CA88E /* Tax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC41EB42906006CA88E /* Tax.swift */; };
 		55BD6FC71EB4292C006CA88E /* FedTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD6FC61EB4292C006CA88E /* FedTax.swift */; };
+		55C117A51EF26F1F00426230 /* CapitalGainsTaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C117A41EF26F1F00426230 /* CapitalGainsTaxViewController.swift */; };
 		55D461461DF94B7600454DBC /* Deductions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D461451DF94B7600454DBC /* Deductions.swift */; };
 		55E193A01EB879A900137C6A /* fedtax.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E1939F1EB879A900137C6A /* fedtax.csv */; };
 		55E193A21EB87A9200137C6A /* CA.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55E193A11EB87A9200137C6A /* CA.csv */; };
@@ -150,6 +151,7 @@
 		55BD6FC21EB31844006CA88E /* CapitalGains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapitalGains.swift; sourceTree = "<group>"; };
 		55BD6FC41EB42906006CA88E /* Tax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tax.swift; sourceTree = "<group>"; };
 		55BD6FC61EB4292C006CA88E /* FedTax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FedTax.swift; sourceTree = "<group>"; };
+		55C117A41EF26F1F00426230 /* CapitalGainsTaxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CapitalGainsTaxViewController.swift; path = "tax files/CapitalGainsTaxViewController.swift"; sourceTree = "<group>"; };
 		55D461451DF94B7600454DBC /* Deductions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deductions.swift; sourceTree = "<group>"; };
 		55E1939F1EB879A900137C6A /* fedtax.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fedtax.csv; sourceTree = "<group>"; };
 		55E193A11EB87A9200137C6A /* CA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CA.csv; sourceTree = "<group>"; };
@@ -220,8 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				559A483D1EE92F1A00656B14 /* tax files */,
-				553594981DBDD285002478B1 /* AppDelegate.swift */,
-				5535949A1DBDD285002478B1 /* ViewController.swift */,
+				55C117A61EF4B3E600426230 /* views */,
 				5535949C1DBDD285002478B1 /* Main.storyboard */,
 				5535949F1DBDD285002478B1 /* Assets.xcassets */,
 				553594A11DBDD285002478B1 /* LaunchScreen.storyboard */,
@@ -229,6 +230,7 @@
 				5581C53B1DBF4174006C0A3D /* TaxInfoServiceImpl.swift */,
 				55F59B431DC03A7700CA0574 /* Bracket.swift */,
 				556A4D571DC1E5C300529007 /* TaxCalculationError.swift */,
+				553594981DBDD285002478B1 /* AppDelegate.swift */,
 				556EC5991DC5545A0002314A /* User.swift */,
 				556EC59B1DC554990002314A /* FilingStatus.swift */,
 				556EC59D1DC558F50002314A /* UserProtocol.swift */,
@@ -239,21 +241,17 @@
 				55540FB91DC74144001800C4 /* BracketEnum.swift */,
 				555BF3731DDED6E400C69B48 /* TaxBrackets.swift */,
 				551D85911DDF0AB100FCC1F4 /* TODOs */,
-				55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */,
 				558221901DF387A9008783A0 /* Config.swift */,
 				55D461451DF94B7600454DBC /* Deductions.swift */,
-				552877E41E4B1250002408FD /* AppSelectorViewController.swift */,
 				5551137D1E5FD58C00CC7597 /* Settings.swift */,
 				550DC6CA1E6424AD005A459F /* PreTaxDeduction.swift */,
 				550DC6CE1E643DD6005A459F /* PreTaxDeductions.swift */,
 				55B76AE51E728D4A00C47CCC /* Views.swift */,
 				5593D0191EA083E20013F923 /* CustomButton.swift */,
-				5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */,
 				55BD6FC21EB31844006CA88E /* CapitalGains.swift */,
 				55BD6FC41EB42906006CA88E /* Tax.swift */,
 				55BD6FC61EB4292C006CA88E /* FedTax.swift */,
 				559ECFF11EB7272E001CE333 /* StateTax.swift */,
-				55F15A441EC7F379005CF8DE /* CGPopViewController.swift */,
 				55F15A461EC98035005CF8DE /* CustomTextField.swift */,
 				55F15A481EC9A9D5005CF8DE /* customKeyboard.swift */,
 				55FB49651EDFF44200C29F8C /* CustomAlert.swift */,
@@ -331,6 +329,19 @@
 				559A48501EE9E99B00656B14 /* NV.csv */,
 			);
 			path = 2017;
+			sourceTree = "<group>";
+		};
+		55C117A61EF4B3E600426230 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				552877E41E4B1250002408FD /* AppSelectorViewController.swift */,
+				55E242CE1DEEC88600AADE38 /* ResultsViewController.swift */,
+				5535949A1DBDD285002478B1 /* ViewController.swift */,
+				55C117A41EF26F1F00426230 /* CapitalGainsTaxViewController.swift */,
+				55F15A441EC7F379005CF8DE /* CGPopViewController.swift */,
+				5593D01B1EA1AB470013F923 /* TaxBracketViewController.swift */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +509,7 @@
 				55BD6FC51EB42906006CA88E /* Tax.swift in Sources */,
 				55FB49661EDFF44200C29F8C /* CustomAlert.swift in Sources */,
 				55F59B441DC03A7700CA0574 /* Bracket.swift in Sources */,
+				55C117A51EF26F1F00426230 /* CapitalGainsTaxViewController.swift in Sources */,
 				556EC59A1DC5545A0002314A /* User.swift in Sources */,
 				55BD6FC31EB31844006CA88E /* CapitalGains.swift in Sources */,
 				550DC6CF1E643DD6005A459F /* PreTaxDeductions.swift in Sources */,
@@ -720,7 +732,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tax-estimateTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tax-estimate.app/Tax-estimate";
 			};
 			name = Debug;
@@ -737,7 +749,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Tax-estimateTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tax-estimate.app/Tax-estimate";
 			};
 			name = Release;

@@ -10,13 +10,14 @@ import UIKit
 
 class User : UserProtocol, DeductionDelegate {
     
-    var status: FilingStatusEnum
-    var initialIncome: Double
+    private(set)var status: FilingStatusEnum
+    private(set)var initialIncome: Double
+    private(set)var state: TaxType
+    private(set)var capitalGains:CapitalGains
+    private(set)var preTaxDeductions = PreTaxDeductionsImpl()
+
     var fedTax: Tax
     var stateTax: Tax
-    var state: TaxType
-    var capitalGains:CapitalGains
-    var preTaxDeductions = PreTaxDeductionsImpl()
     
     init(filingStatus: FilingStatusEnum, income: Double, state: TaxType, capitalGains: CapitalGains) {
         self.status = filingStatus
@@ -31,30 +32,10 @@ class User : UserProtocol, DeductionDelegate {
        self.init(filingStatus: filingStatus, income: income, state: state, capitalGains: CapitalGains())
     }
     
-    func getStatus() -> FilingStatusEnum{
-        return self.status
-    }
-    
-    func getIncome() -> Double{
-        return self.initialIncome
-    }
-    
-    func getCapitalGains() -> CapitalGains {
-        return self.capitalGains
-    }
-    
     func getTaxableIncome() -> Double {
         return self.fedTax.totalTaxableIncome
     }
-    
-    func getFedTaxBracket() -> Bracket {
-        return self.fedTax.getBracket()
-    }
-    
-    func getStateTaxBracket() -> Bracket{
-        return self.stateTax.getBracket()
-    }
-    
+        
     func getTakeHomeIncome() -> Int {
         return Int(self.initialIncome) - (self.getFederalTax() + self.getStateTax())
     }
@@ -65,10 +46,6 @@ class User : UserProtocol, DeductionDelegate {
     
     func getStateTax() -> Int {
         return self.stateTax.getTax()
-    }
-    
-    func getState() -> TaxType{
-        return self.state
     }
     
     func getTaxSavings() -> Int {
@@ -82,11 +59,7 @@ class User : UserProtocol, DeductionDelegate {
     func getStateTaxSavings() -> Int {
         return self.stateTax.getTaxSavings()
     }
-    
-    func getPreTaxDeductions() -> PreTaxDeductions {
-        return self.preTaxDeductions
-    }
-    
+        
     func addPreTaxDeduction(deduction: PreTaxDeduction) {
         self.preTaxDeductions.add(preTaxDeduction: deduction)
         self.fedTax.addPreTaxDeduction(deduction: deduction)

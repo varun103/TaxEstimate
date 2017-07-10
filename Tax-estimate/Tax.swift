@@ -89,6 +89,10 @@ class Tax {
     
     func capitalGainsTax() {}
     
+    func longTermCapitalGainsTax() -> Int {return 0}
+    
+    func shortTermCapitalGainsTax() -> Int {return 0}
+    
     func calculate() throws {}
     
     static func setTaxBracket() -> Bracket {

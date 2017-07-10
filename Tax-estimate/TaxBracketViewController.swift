@@ -28,14 +28,14 @@ class TaxBracketViewController: UIViewController {
     override func viewDidLoad() {
         
         self.navigationItem.title = self.screenTitle
-        income.text = Config.addCommasToNumber(number: Int((user?.getIncome())!))
-        preTaxDeductions.text = Config.addCommasToNumber(number: Int((user?.getPreTaxDeductions().getAmount())!))
-        capitalGains.text = Config.addCommasToNumber(number: (user?.capitalGains.net)!)
+        income.text = Config.addCommasToNumber(number: Int((user?.initialIncome)!))
+        preTaxDeductions.text = Config.addCommasToNumber(number: Int((user?.preTaxDeductions.getAmount())!))
+        capitalGains.text = Config.addCommasToNumber(number: (user?.capitalGains.net(status: (user?.status)!))!)
         taxableIncome.text = Config.addCommasToNumber(number: Int((user?.getTaxableIncome())!))
         fedTax.text = Config.addCommasToNumber(number: (user?.getFederalTax())!)
         stateTax.text = Config.addCommasToNumber(number: (user?.getStateTax())!)
-        fedTaxBracket.text = doubleToString(value: (user?.getFedTaxBracket().getRate())!) + "%"
-        stateTaxBracket.text = doubleToString(value: (user?.getStateTaxBracket().getRate())!) + "%"
+        fedTaxBracket.text = doubleToString(value: (user?.fedTax.getBracket().getRate())!) + "%"
+        stateTaxBracket.text = doubleToString(value: (user?.stateTax.getBracket().getRate())!) + "%"
         
     }
     
