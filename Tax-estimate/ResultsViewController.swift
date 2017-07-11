@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class ResultsViewController: UIViewController {
+class ResultsViewController: UIViewController, GADBannerViewDelegate {
     
     private final let screenTitle:String = "Pre-Tax Contribution Savings"
     private final let textCellIdentifier = "resultCell"
@@ -30,6 +31,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var summaryButton: CustomButton!
     @IBOutlet weak var estimatedTaxSavings: UILabel!
     
+    @IBOutlet weak var adsBannerView: GADBannerView!
     private var fourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
     private var spouseFourOOneKPreTaxDeduction: FourOOneKPreTaxDeduction = FourOOneKPreTaxDeduction()
     
@@ -64,8 +66,15 @@ class ResultsViewController: UIViewController {
         
         self.fourOOneKSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
         self.fsaSlider.setThumbImage(UIImage(named:"scroller1.png"), for: UIControlState.normal)
-        self.summaryButton.gradient.removeFromSuperlayer()
-        self.summaryButton.layer.shadowOpacity = 0.0
+        //self.summaryButton.gradient.removeFromSuperlayer()
+        //self.summaryButton.layer.shadowOpacity = 0.0
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        adsBannerView.adUnitID = "ca-app-pub-1253615041445374/5188157448"
+        adsBannerView.rootViewController = self
+        adsBannerView.load(request)
+
         
     }
     

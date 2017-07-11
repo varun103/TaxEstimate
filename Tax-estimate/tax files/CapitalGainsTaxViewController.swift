@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class CapitalGainsTaxViewController: UIViewController, CGPopupViewControllerDelegate {
+class CapitalGainsTaxViewController: UIViewController, CGPopupViewControllerDelegate, GADBannerViewDelegate {
     
     private var screenTitle:String = "Tax on Capital Gains"
     
@@ -29,6 +30,7 @@ class CapitalGainsTaxViewController: UIViewController, CGPopupViewControllerDele
     
     @IBOutlet weak var totalFederalCapitalGainTaxLabel: UILabel!
     
+    @IBOutlet weak var adsBannerView: GADBannerView!
     override func viewDidLoad() {
         
         self.navigationItem.title = screenTitle
@@ -51,6 +53,14 @@ class CapitalGainsTaxViewController: UIViewController, CGPopupViewControllerDele
         
         self.longTermGains.setTitle( Config.addCommasToNumber(number: (user?.capitalGains.effectiveLongTerm)!), for: UIControlState.normal)
         self.longTermGainsFedTax.text = Config.addCommasToNumber(number:(user?.fedTax.longTermCapitalGainsTax())!)
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        adsBannerView.delegate = self
+        adsBannerView.adUnitID = "ca-app-pub-1253615041445374/5188157448"
+        adsBannerView.rootViewController = self
+        adsBannerView.load(request)
+
         
     }
     

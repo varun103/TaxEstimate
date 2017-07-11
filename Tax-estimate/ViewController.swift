@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, CapitalGainsDelegate {
+class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, CapitalGainsDelegate, GADBannerViewDelegate {
     
     private let placeHolderText: String = "Enter your 2017 Income"
     
@@ -18,6 +19,8 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var uiTaxField: UITextField!
     @IBOutlet weak var capitalGainsDisplay: UILabel!
     @IBOutlet weak var capitalGainsButton: UIButton!
+    
+    @IBOutlet weak var adsBannerView: GADBannerView!
     
     let gradient: CAGradientLayer = CAGradientLayer()
     let innerShadow: CAGradientLayer = CAGradientLayer()
@@ -83,6 +86,13 @@ class TaxInputController: UIViewController, UIPickerViewDataSource, UIPickerView
         if selectedApp == AppName.capitalGains {
             addCapitalGains(self)
         }
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        adsBannerView.delegate = self
+        adsBannerView.adUnitID = "ca-app-pub-1253615041445374/5188157448"
+        adsBannerView.rootViewController = self
+        adsBannerView.load(request)
     }
     
     override func didReceiveMemoryWarning() {

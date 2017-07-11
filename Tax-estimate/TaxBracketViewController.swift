@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class TaxBracketViewController: UIViewController {
+class TaxBracketViewController: UIViewController, GADBannerViewDelegate {
     
     let screenTitle = "Tax Summary"
     
@@ -24,6 +25,7 @@ class TaxBracketViewController: UIViewController {
     @IBOutlet weak var stateTax: UILabel!
     @IBOutlet weak var stateTaxBracket: UILabel!
     
+    @IBOutlet weak var adsBannerView: GADBannerView!
     
     override func viewDidLoad() {
         
@@ -37,6 +39,13 @@ class TaxBracketViewController: UIViewController {
         fedTaxBracket.text = doubleToString(value: (user?.fedTax.getBracket().getRate())!) + "%"
         stateTaxBracket.text = doubleToString(value: (user?.stateTax.getBracket().getRate())!) + "%"
         
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        adsBannerView.delegate = self
+        adsBannerView.adUnitID = "ca-app-pub-1253615041445374/5188157448"
+        adsBannerView.rootViewController = self
+        adsBannerView.load(request)
+
     }
     
     private func doubleToString(value:Double) -> String {
