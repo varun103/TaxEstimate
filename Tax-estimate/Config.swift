@@ -34,4 +34,6 @@ class Config {
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         return numberFormatter.string(from: NSNumber(value: number))!
     }
+    
+    
 }

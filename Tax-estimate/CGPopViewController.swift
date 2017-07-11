@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol CGPopupViewControllerDelegate {
+    func valuesChanged()
+}
 
 class CGPopupViewController: UIViewController {
     
     var capitalGains: CapitalGains?
+    
+    var delegate: CGPopupViewControllerDelegate?
     
     @IBOutlet weak var shortTermGainsAmount: CustomTextField!
     
@@ -25,6 +30,7 @@ class CGPopupViewController: UIViewController {
         self.shortTermGainsAmount.inputAccessoryView = CustomKeyboard.keyboardWDoneButton(view: self.view)
         self.longTermGainsAmount.inputAccessoryView = CustomKeyboard.keyboardWDoneButton(view: self.view)
         self.showAnimate()
+        displayExistingValues()
     }
     
     @IBAction func exitPopup(_ sender: Any) {
@@ -67,7 +73,19 @@ class CGPopupViewController: UIViewController {
             if (finished)
             {
                 self.view.removeFromSuperview()
+                self.delegate?.valuesChanged()
             }
         });
+    }
+    
+    private func displayExistingValues() {
+        if !(capitalGains?.shortTermGains == 0 && capitalGains?.longTermGains == 0) {
+            if (capitalGains?.shortTermGains != 0){
+                self.shortTermGainsAmount.text = "\(capitalGains?.shortTermGains ?? 0)"
+            }
+            if (capitalGains?.longTermGains != 0) {
+                self.longTermGainsAmount.text = "\(capitalGains?.longTermGains ?? 0)"
+            }
+        }
     }
 }

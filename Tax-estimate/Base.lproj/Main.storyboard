@@ -395,13 +395,20 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfW-xt-kY5">
                                                 <rect key="frame" x="234" y="0.0" width="100" height="20"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.84999999999999998" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="SzE-1D-oiO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                <size key="titleShadowOffset" width="0.0" height="1"/>
                                                 <state key="normal" title="200">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="resetCapitalGains:" destination="oie-rf-wfn" eventType="touchUpInside" id="BwT-eB-SlC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

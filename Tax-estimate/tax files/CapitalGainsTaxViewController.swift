@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CapitalGainsTaxViewController: UIViewController {
+class CapitalGainsTaxViewController: UIViewController, CGPopupViewControllerDelegate {
     
     private var screenTitle:String = "Tax on Capital Gains"
     
@@ -33,6 +33,8 @@ class CapitalGainsTaxViewController: UIViewController {
         
         self.navigationItem.title = screenTitle
         
+        self.netCapitalGains.layer.cornerRadius = 10.0
+        
         let netCapitalGains = user?.capitalGains.absoluteNet
         
         if (netCapitalGains! < 0) {
@@ -52,7 +54,20 @@ class CapitalGainsTaxViewController: UIViewController {
         
     }
     
+    @IBAction func resetCapitalGains(_ sender: Any) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cgPopupView") as!CGPopupViewController
+        popUpVC.capitalGains = self.user?.capitalGains
+        popUpVC.delegate = self
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParentViewController: self)
+    }
     
+    func valuesChanged() {
+        viewDidLoad()
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let resultsPage = segue.destination as? TaxBracketViewController {
             resultsPage.user = self.user

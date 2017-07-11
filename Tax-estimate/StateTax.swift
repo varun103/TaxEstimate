@@ -29,6 +29,4 @@ class StateTax: Tax {
         }
         self.bracket = self.taxInfo.getStateBrackets(self.state, filingStatus: self.status).findBracket(income: self.taxableIncome)
     }
-
-
 }

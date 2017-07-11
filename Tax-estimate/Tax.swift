@@ -87,10 +87,13 @@ class Tax {
         return amount
     }
     
+    /// Tax on capital Gains
     func capitalGainsTax() {}
     
+    /// Tax on long term capital gains
     func longTermCapitalGainsTax() -> Int {return 0}
     
+    /// Tax on short term capital gains
     func shortTermCapitalGainsTax() -> Int {return 0}
     
     func calculate() throws {}
